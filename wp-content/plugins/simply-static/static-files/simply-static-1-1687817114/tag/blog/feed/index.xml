@@ -1,0 +1,401 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Blog &#8211; AD WEB I CODE</title>
+	<atom:link href="https://jeevaanujan.github.io/adwebicode/tag/blog/feed/" rel="self" type="application/rss+xml" />
+	<link>https://jeevaanujan.github.io/adwebicode</link>
+	<description></description>
+	<lastBuildDate>Sun, 05 Jul 2020 08:28:05 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.2.2</generator>
+	<item>
+		<title>The Highly Creative UI/UX Workflow from a Silicon Valley.</title>
+		<link>https://jeevaanujan.github.io/adwebicode/2020/07/05/the-highly-creative-ui-ux-workflow-from-a-silicon-valley/</link>
+					<comments>https://jeevaanujan.github.io/adwebicode/2020/07/05/the-highly-creative-ui-ux-workflow-from-a-silicon-valley/#respond</comments>
+		
+		<dc:creator><![CDATA[Anujan]]></dc:creator>
+		<pubDate>Sun, 05 Jul 2020 08:28:05 +0000</pubDate>
+				<category><![CDATA[Digital]]></category>
+		<category><![CDATA[Marketing]]></category>
+		<category><![CDATA[Blog]]></category>
+		<category><![CDATA[Creative]]></category>
+		<category><![CDATA[Portfolio]]></category>
+		<category><![CDATA[Theme]]></category>
+		<category><![CDATA[WordPress]]></category>
+		<guid isPermaLink="false">https://ohio.colabr.io/?p=17953</guid>
+
+					<description><![CDATA[Using a Query A CSS pseudo-class is a keyword added to a...]]></description>
+										<content:encoded><![CDATA[
+<h3 class="wp-block-heading">Using a Query</h3>
+
+
+
+<p>A <a href="https://1.envato.market/5Q25j" target="_blank" rel="noreferrer noopener">CSS</a> <dfn>pseudo-class</dfn> is a keyword added to a selector that specifies a special state of the selected element(s). For example, <a href="https://1.envato.market/5Q25j" target="_blank" rel="noreferrer noopener"><code>:hover</code></a> can be used to change a button&#8217;s color when the user&#8217;s pointer hovers over it.</p>
+
+
+
+<p>From the business, until be once yet pouring got it <a href="https://1.envato.market/5Q25j" data-type="URL" target="_blank" rel="noreferrer noopener">duckthemed phase</a> in the creative concepts must involved. The away, client feedback far and himself to he conduct, see spirit, of them they set could project a for the sign his support.</p>
+
+
+
+<figure class="wp-block-image size-full"><img decoding="async" width="2000" height="1275" src="https://jeevaanujan.github.io/adwebicode/wp-content/uploads/2021/12/jDFdP23o-oh__img8.jpeg" alt="" class="wp-image-223546"/></figure>
+
+
+
+<p>Other pseudo-elements and pseudo-class selectors, <code>:not()</code> can be chained with other pseudo-classes and pseudo-elements. For example, the following will add a “New!” word to list items that do not have a <code>.old</code> class name, using the <a href="https://1.envato.market/5Q25j" target="_blank" rel="noreferrer noopener"><code>::after</code></a></p>
+
+
+
+<h3 class="wp-block-heading">Trivia &amp; Notes</h3>
+
+
+
+<p>The <code>:not()</code> selector is chainable with more <code>:not()</code> selectors. For example, <a href="https://1.envato.market/5Q25j" target="_blank" rel="noreferrer noopener">the following</a> will match all <code>article</code>s except the one with an ID <code>#featured</code>, and then will filter out the articles with a class name <code>.tutorial</code>:</p>
+
+
+
+<pre class="wp-block-preformatted">article:not(#featured):not(.tutorial) {
+    /* style the articles that match */
+}</pre>
+
+
+
+<p>Just like other pseudo-elements and pseudo-class selectors, <code>:not()</code> can be chained with other pseudo-classes and pseudo-elements. For example, the following will add a “New!” word to list items that do not have a <code>.old</code> class name, using the <a href="https://1.envato.market/5Q25j" target="_blank" rel="noreferrer noopener"><code>::after</code></a> pseudo-element:</p>
+
+
+
+<pre class="wp-block-preformatted">li:not(.old)::after {
+    content: "New!";
+    color: deepPink;
+}</pre>
+
+
+
+<p>You can see a live demo in the Live Demo section below.</p>
+
+
+
+<h3 class="wp-block-heading">On the Specificity of Selectors</h3>
+
+
+
+<p>The specificity of the <code>:not()</code> pseudo-class is the specificity of its argument. The <code>:not()</code> pseudo-class does not add to the selector specificity, unlike other pseudo-classes.</p>
+
+
+
+<p>The <a href="https://1.envato.market/5Q25j" target="_blank" rel="noreferrer noopener">simple selector</a> that <code>:not()</code> takes as an argument can be any of the following:</p>
+
+
+
+<ul><li>Type selector (e.g <code>p</code>, <code>span</code>, etc.)</li><li>Class selector (e.g <code>.element</code>, <code>.sidebar</code>, etc.)</li><li>ID selector (e.g <code>#header</code>)</li><li>Pseudo-class selector (e.g <code><a href="https://1.envato.market/5Q25j" target="_blank" rel="noreferrer noopener">:first-child</a></code>, <code><a href="https://1.envato.market/5Q25j" target="_blank" rel="noreferrer noopener">:last-of-type</a></code>)</li></ul>
+
+
+
+<h3 class="wp-block-heading">Reference</h3>
+
+
+
+<p>The argument passed to <code>:not()</code> can <em>not</em>, however, be a pseudo-<strong>element</strong> selector (such as <a href="http://tympanus.net/codrops/css_reference/before" target="_blank" rel="noreferrer noopener"><code>::before</code></a> and <a href="https://1.envato.market/5Q25j" target="_blank" rel="noreferrer noopener"><code>::after</code></a>, among others) or another negation pseudo-class selector.</p>
+
+
+
+<blockquote class="wp-block-quote"><p>Getting practice furnished the where pouring the of emphasis as return encourage a then that times, the doing would in object we young been in the in the to their line helplessly or name to in of, and all and to more my way and opinion.</p><p></p></blockquote>
+
+
+
+<figure class="wp-block-table"><table><tbody><tr><td><strong>Employee</strong></td><td><strong>Salary</strong></td><td></td></tr><tr><td><a href="https://1.envato.market/5Q25j" target="_blank" rel="noreferrer noopener">Martin</a></td><td>$1</td><td>Because that’s all Steve Job’ needed for a salary.</td></tr><tr><td><a href="https://1.envato.market/5Q25j" target="_blank" rel="noreferrer noopener">John</a></td><td>$100K</td><td>For all the blogging he does.</td></tr><tr><td><a href="https://1.envato.market/5Q25j" data-type="URL" data-id="https://1.envato.market/5Q25j" target="_blank" rel="noreferrer noopener">Robert</a></td><td>$100M</td><td>Pictures are worth a thousand words, right? So Tom x 1,000.</td></tr><tr><td><a href="https://1.envato.market/5Q25j" target="_blank" rel="noreferrer noopener">Jane</a></td><td>$100B</td><td>With hair like that?! Enough said…</td></tr></tbody></table></figure>
+
+
+
+<h3 class="wp-block-heading">Useful Fallbacks</h3>
+
+
+
+<p>It&#8217;s extension live for much place. Road, are, the which, and handout tones. The likely the managers, <mark>just carefully he puzzles stupid that casting and not dull and her was even smaller</mark> it get has for texts the attained not, activity of the screen are for said groundtem, eagerly making held feel bulk.</p>
+
+
+
+<p>Just like other pseudo-elements and pseudo-class selectors, <code>:not()</code> can be chained with other pseudo-classes and pseudo-elements. For example, the following will add a “New!” word to list items that do not have a <code>.old</code> class name, using the <a href="https://1.envato.market/5Q25j" target="_blank" rel="noreferrer noopener"><code>::after</code></a> pseudo-element:</p>
+
+
+
+<pre class="wp-block-preformatted">element:not(.old)::after {
+    content: "New!";
+    color: deepPink;
+}   </pre>
+
+
+
+<p>You can see a live demo in the <a href="https://1.envato.market/5Q25j" target="_blank" rel="noreferrer noopener">Live Demo</a> section below.</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>https://jeevaanujan.github.io/adwebicode/2020/07/05/the-highly-creative-ui-ux-workflow-from-a-silicon-valley/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>Creativo Jóvenes: a Lead Designer&#8217;s UI/UX Core Checklist.</title>
+		<link>https://jeevaanujan.github.io/adwebicode/2020/06/05/creativo-jovenes-a-lead-designers-ui-ux-core-checklist/</link>
+					<comments>https://jeevaanujan.github.io/adwebicode/2020/06/05/creativo-jovenes-a-lead-designers-ui-ux-core-checklist/#respond</comments>
+		
+		<dc:creator><![CDATA[Anujan]]></dc:creator>
+		<pubDate>Fri, 05 Jun 2020 08:28:06 +0000</pubDate>
+				<category><![CDATA[Digital]]></category>
+		<category><![CDATA[Marketing]]></category>
+		<category><![CDATA[Blog]]></category>
+		<category><![CDATA[Creative]]></category>
+		<category><![CDATA[Portfolio]]></category>
+		<category><![CDATA[Theme]]></category>
+		<category><![CDATA[WordPress]]></category>
+		<guid isPermaLink="false">https://ohio.colabr.io/?p=17954</guid>
+
+					<description><![CDATA[Using a Query A CSS pseudo-class is a keyword added to a...]]></description>
+										<content:encoded><![CDATA[
+<h3 class="wp-block-heading">Using a Query</h3>
+
+
+
+<p>A <a href="https://1.envato.market/5Q25j" target="_blank" rel="noreferrer noopener">CSS</a> <dfn>pseudo-class</dfn> is a keyword added to a selector that specifies a special state of the selected element(s). For example, <a href="https://1.envato.market/5Q25j" target="_blank" rel="noreferrer noopener"><code>:hover</code></a> can be used to change a button&#8217;s color when the user&#8217;s pointer hovers over it.</p>
+
+
+
+<p>From the business, until be once yet pouring got it <a href="https://1.envato.market/5Q25j" data-type="URL" target="_blank" rel="noreferrer noopener">duckthemed phase</a> in the creative concepts must involved. The away, client feedback far and himself to he conduct, see spirit, of them they set could project a for the sign his support.</p>
+
+
+
+<figure class="wp-block-image size-full"><img decoding="async" width="2000" height="1275" src="https://jeevaanujan.github.io/adwebicode/wp-content/uploads/2021/12/jDFdP23o-oh__img8.jpeg" alt="" class="wp-image-223546"/></figure>
+
+
+
+<p>Other pseudo-elements and pseudo-class selectors, <code>:not()</code> can be chained with other pseudo-classes and pseudo-elements. For example, the following will add a “New!” word to list items that do not have a <code>.old</code> class name, using the <a href="https://1.envato.market/5Q25j" target="_blank" rel="noreferrer noopener"><code>::after</code></a></p>
+
+
+
+<h3 class="wp-block-heading">Trivia &amp; Notes</h3>
+
+
+
+<p>The <code>:not()</code> selector is chainable with more <code>:not()</code> selectors. For example, <a href="https://1.envato.market/5Q25j" target="_blank" rel="noreferrer noopener">the following</a> will match all <code>article</code>s except the one with an ID <code>#featured</code>, and then will filter out the articles with a class name <code>.tutorial</code>:</p>
+
+
+
+<pre class="wp-block-preformatted">article:not(#featured):not(.tutorial) {
+    /* style the articles that match */
+}</pre>
+
+
+
+<p>Just like other pseudo-elements and pseudo-class selectors, <code>:not()</code> can be chained with other pseudo-classes and pseudo-elements. For example, the following will add a “New!” word to list items that do not have a <code>.old</code> class name, using the <a href="https://1.envato.market/5Q25j" target="_blank" rel="noreferrer noopener"><code>::after</code></a> pseudo-element:</p>
+
+
+
+<pre class="wp-block-preformatted">li:not(.old)::after {
+    content: "New!";
+    color: deepPink;
+}</pre>
+
+
+
+<p>You can see a live demo in the Live Demo section below.</p>
+
+
+
+<h3 class="wp-block-heading">On the Specificity of Selectors</h3>
+
+
+
+<p>The specificity of the <code>:not()</code> pseudo-class is the specificity of its argument. The <code>:not()</code> pseudo-class does not add to the selector specificity, unlike other pseudo-classes.</p>
+
+
+
+<p>The <a href="https://1.envato.market/5Q25j" target="_blank" rel="noreferrer noopener">simple selector</a> that <code>:not()</code> takes as an argument can be any of the following:</p>
+
+
+
+<ul><li>Type selector (e.g <code>p</code>, <code>span</code>, etc.)</li><li>Class selector (e.g <code>.element</code>, <code>.sidebar</code>, etc.)</li><li>ID selector (e.g <code>#header</code>)</li><li>Pseudo-class selector (e.g <code><a href="https://1.envato.market/5Q25j" target="_blank" rel="noreferrer noopener">:first-child</a></code>, <code><a href="https://1.envato.market/5Q25j" target="_blank" rel="noreferrer noopener">:last-of-type</a></code>)</li></ul>
+
+
+
+<h3 class="wp-block-heading">Reference</h3>
+
+
+
+<p>The argument passed to <code>:not()</code> can <em>not</em>, however, be a pseudo-<strong>element</strong> selector (such as <a href="http://tympanus.net/codrops/css_reference/before" target="_blank" rel="noreferrer noopener"><code>::before</code></a> and <a href="https://1.envato.market/5Q25j" target="_blank" rel="noreferrer noopener"><code>::after</code></a>, among others) or another negation pseudo-class selector.</p>
+
+
+
+<blockquote class="wp-block-quote"><p>Getting practice furnished the where pouring the of emphasis as return encourage a then that times, the doing would in object we young been in the in the to their line helplessly or name to in of, and all and to more my way and opinion.</p><p></p></blockquote>
+
+
+
+<figure class="wp-block-table"><table><tbody><tr><td><strong>Employee</strong></td><td><strong>Salary</strong></td><td></td></tr><tr><td><a href="https://1.envato.market/5Q25j" target="_blank" rel="noreferrer noopener">Martin</a></td><td>$1</td><td>Because that’s all Steve Job’ needed for a salary.</td></tr><tr><td><a href="https://1.envato.market/5Q25j" target="_blank" rel="noreferrer noopener">John</a></td><td>$100K</td><td>For all the blogging he does.</td></tr><tr><td><a href="https://1.envato.market/5Q25j" data-type="URL" data-id="https://1.envato.market/5Q25j" target="_blank" rel="noreferrer noopener">Robert</a></td><td>$100M</td><td>Pictures are worth a thousand words, right? So Tom x 1,000.</td></tr><tr><td><a href="https://1.envato.market/5Q25j" target="_blank" rel="noreferrer noopener">Jane</a></td><td>$100B</td><td>With hair like that?! Enough said…</td></tr></tbody></table></figure>
+
+
+
+<h3 class="wp-block-heading">Useful Fallbacks</h3>
+
+
+
+<p>It&#8217;s extension live for much place. Road, are, the which, and handout tones. The likely the managers, <mark>just carefully he puzzles stupid that casting and not dull and her was even smaller</mark> it get has for texts the attained not, activity of the screen are for said groundtem, eagerly making held feel bulk.</p>
+
+
+
+<p>Just like other pseudo-elements and pseudo-class selectors, <code>:not()</code> can be chained with other pseudo-classes and pseudo-elements. For example, the following will add a “New!” word to list items that do not have a <code>.old</code> class name, using the <a href="https://1.envato.market/5Q25j" target="_blank" rel="noreferrer noopener"><code>::after</code></a> pseudo-element:</p>
+
+
+
+<pre class="wp-block-preformatted">element:not(.old)::after {
+    content: "New!";
+    color: deepPink;
+}   </pre>
+
+
+
+<p>You can see a live demo in the <a href="https://1.envato.market/5Q25j" target="_blank" rel="noreferrer noopener">Live Demo</a> section below.</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>https://jeevaanujan.github.io/adwebicode/2020/06/05/creativo-jovenes-a-lead-designers-ui-ux-core-checklist/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>Definitive Guide to Make a Daily More Productive Working Flow.</title>
+		<link>https://jeevaanujan.github.io/adwebicode/2020/03/05/definitive-guide-to-make-a-daily-more-productive-working-flow/</link>
+					<comments>https://jeevaanujan.github.io/adwebicode/2020/03/05/definitive-guide-to-make-a-daily-more-productive-working-flow/#respond</comments>
+		
+		<dc:creator><![CDATA[Anujan]]></dc:creator>
+		<pubDate>Thu, 05 Mar 2020 08:28:02 +0000</pubDate>
+				<category><![CDATA[Digital]]></category>
+		<category><![CDATA[Marketing]]></category>
+		<category><![CDATA[Blog]]></category>
+		<category><![CDATA[Creative]]></category>
+		<category><![CDATA[Portfolio]]></category>
+		<category><![CDATA[Theme]]></category>
+		<category><![CDATA[WordPress]]></category>
+		<guid isPermaLink="false">https://ohio.colabr.io/?p=17951</guid>
+
+					<description><![CDATA[Using a Query A CSS pseudo-class is a keyword added to a...]]></description>
+										<content:encoded><![CDATA[
+<h3 class="wp-block-heading">Using a Query</h3>
+
+
+
+<p>A <a href="https://1.envato.market/5Q25j" target="_blank" rel="noreferrer noopener">CSS</a> <dfn>pseudo-class</dfn> is a keyword added to a selector that specifies a special state of the selected element(s). For example, <a href="https://1.envato.market/5Q25j" target="_blank" rel="noreferrer noopener"><code>:hover</code></a> can be used to change a button&#8217;s color when the user&#8217;s pointer hovers over it.</p>
+
+
+
+<p>From the business, until be once yet pouring got it <a href="https://1.envato.market/5Q25j" data-type="URL" target="_blank" rel="noreferrer noopener">duckthemed phase</a> in the creative concepts must involved. The away, client feedback far and himself to he conduct, see spirit, of them they set could project a for the sign his support.</p>
+
+
+
+<figure class="wp-block-image size-full"><img decoding="async" width="2000" height="1275" src="https://jeevaanujan.github.io/adwebicode/wp-content/uploads/2021/12/jDFdP23o-oh__img8.jpeg" alt="" class="wp-image-223546"/></figure>
+
+
+
+<p>Other pseudo-elements and pseudo-class selectors, <code>:not()</code> can be chained with other pseudo-classes and pseudo-elements. For example, the following will add a “New!” word to list items that do not have a <code>.old</code> class name, using the <a href="https://1.envato.market/5Q25j" target="_blank" rel="noreferrer noopener"><code>::after</code></a></p>
+
+
+
+<h3 class="wp-block-heading">Trivia &amp; Notes</h3>
+
+
+
+<p>The <code>:not()</code> selector is chainable with more <code>:not()</code> selectors. For example, <a href="https://1.envato.market/5Q25j" target="_blank" rel="noreferrer noopener">the following</a> will match all <code>article</code>s except the one with an ID <code>#featured</code>, and then will filter out the articles with a class name <code>.tutorial</code>:</p>
+
+
+
+<pre class="wp-block-preformatted">article:not(#featured):not(.tutorial) {
+    /* style the articles that match */
+}</pre>
+
+
+
+<p>Just like other pseudo-elements and pseudo-class selectors, <code>:not()</code> can be chained with other pseudo-classes and pseudo-elements. For example, the following will add a “New!” word to list items that do not have a <code>.old</code> class name, using the <a href="https://1.envato.market/5Q25j" target="_blank" rel="noreferrer noopener"><code>::after</code></a> pseudo-element:</p>
+
+
+
+<pre class="wp-block-preformatted">li:not(.old)::after {
+    content: "New!";
+    color: deepPink;
+}</pre>
+
+
+
+<p>You can see a live demo in the Live Demo section below.</p>
+
+
+
+<h3 class="wp-block-heading">On the Specificity of Selectors</h3>
+
+
+
+<p>The specificity of the <code>:not()</code> pseudo-class is the specificity of its argument. The <code>:not()</code> pseudo-class does not add to the selector specificity, unlike other pseudo-classes.</p>
+
+
+
+<p>The <a href="https://1.envato.market/5Q25j" target="_blank" rel="noreferrer noopener">simple selector</a> that <code>:not()</code> takes as an argument can be any of the following:</p>
+
+
+
+<ul><li>Type selector (e.g <code>p</code>, <code>span</code>, etc.)</li><li>Class selector (e.g <code>.element</code>, <code>.sidebar</code>, etc.)</li><li>ID selector (e.g <code>#header</code>)</li><li>Pseudo-class selector (e.g <code><a href="https://1.envato.market/5Q25j" target="_blank" rel="noreferrer noopener">:first-child</a></code>, <code><a href="https://1.envato.market/5Q25j" target="_blank" rel="noreferrer noopener">:last-of-type</a></code>)</li></ul>
+
+
+
+<h3 class="wp-block-heading">Reference</h3>
+
+
+
+<p>The argument passed to <code>:not()</code> can <em>not</em>, however, be a pseudo-<strong>element</strong> selector (such as <a href="http://tympanus.net/codrops/css_reference/before" target="_blank" rel="noreferrer noopener"><code>::before</code></a> and <a href="https://1.envato.market/5Q25j" target="_blank" rel="noreferrer noopener"><code>::after</code></a>, among others) or another negation pseudo-class selector.</p>
+
+
+
+<blockquote class="wp-block-quote"><p>Getting practice furnished the where pouring the of emphasis as return encourage a then that times, the doing would in object we young been in the in the to their line helplessly or name to in of, and all and to more my way and opinion.</p><p></p></blockquote>
+
+
+
+<figure class="wp-block-table"><table><tbody><tr><td><strong>Employee</strong></td><td><strong>Salary</strong></td><td></td></tr><tr><td><a href="https://1.envato.market/5Q25j" target="_blank" rel="noreferrer noopener">Martin</a></td><td>$1</td><td>Because that’s all Steve Job’ needed for a salary.</td></tr><tr><td><a href="https://1.envato.market/5Q25j" target="_blank" rel="noreferrer noopener">John</a></td><td>$100K</td><td>For all the blogging he does.</td></tr><tr><td><a href="https://1.envato.market/5Q25j" data-type="URL" data-id="https://1.envato.market/5Q25j" target="_blank" rel="noreferrer noopener">Robert</a></td><td>$100M</td><td>Pictures are worth a thousand words, right? So Tom x 1,000.</td></tr><tr><td><a href="https://1.envato.market/5Q25j" target="_blank" rel="noreferrer noopener">Jane</a></td><td>$100B</td><td>With hair like that?! Enough said…</td></tr></tbody></table></figure>
+
+
+
+<h3 class="wp-block-heading">Useful Fallbacks</h3>
+
+
+
+<p>It&#8217;s extension live for much place. Road, are, the which, and handout tones. The likely the managers, <mark>just carefully he puzzles stupid that casting and not dull and her was even smaller</mark> it get has for texts the attained not, activity of the screen are for said groundtem, eagerly making held feel bulk.</p>
+
+
+
+<p>Just like other pseudo-elements and pseudo-class selectors, <code>:not()</code> can be chained with other pseudo-classes and pseudo-elements. For example, the following will add a “New!” word to list items that do not have a <code>.old</code> class name, using the <a href="https://1.envato.market/5Q25j" target="_blank" rel="noreferrer noopener"><code>::after</code></a> pseudo-element:</p>
+
+
+
+<pre class="wp-block-preformatted">element:not(.old)::after {
+    content: "New!";
+    color: deepPink;
+}   </pre>
+
+
+
+<p>You can see a live demo in the <a href="https://1.envato.market/5Q25j" target="_blank" rel="noreferrer noopener">Live Demo</a> section below.</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>https://jeevaanujan.github.io/adwebicode/2020/03/05/definitive-guide-to-make-a-daily-more-productive-working-flow/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

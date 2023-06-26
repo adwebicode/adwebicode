@@ -1,0 +1,47 @@
+
+---Downloaded files---
+The import files for: Demo 23 - Corporate were successfully downloaded!
+Initial max execution time = 120
+Files info:
+Site URL = http://localhost/adwebicode
+Data file = D:\xamp\htdocs\adwebicode/wp-content/uploads/2023/06/demo-content-import-file_2023-06-26__22-02-23.xml
+Widget file = D:\xamp\htdocs\adwebicode/wp-content/uploads/2023/06/demo-widgets-import-file_2023-06-26__22-02-23.json
+Customizer file = not defined!
+Redux files:
+not defined!
+
+---Importing widgets---
+Blog : 
+
+Block - No Title - Widget already exists
+Block - No Title - Widget already exists
+Block - No Title - Widget already exists
+
+Pages : 
+
+Block - No Title - Widget already exists
+Block - No Title - Widget already exists
+
+Footer column 1 : 
+
+Ohio: Logo - No Title - Imported
+Block - No Title - Imported
+
+Footer column 2 : 
+
+Block - No Title - Imported
+Block - No Title - Imported
+
+Footer column 3 : 
+
+Block - No Title - Imported
+Block - No Title - Imported
+
+Footer column 4 : 
+
+Ohio: Subscribe Form - Sign up for the newsletter - Imported
+
+
+
+---pt-ocdi/after_import---
+
