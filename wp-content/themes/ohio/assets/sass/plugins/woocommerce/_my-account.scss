@@ -1,0 +1,59 @@
+.woocommerce-account {
+
+	&.logged-in {
+
+		.woo-sidebar {
+			margin-left: 0;
+		}
+
+		.woocommerce-MyAccount-content {
+
+			a {
+				font-weight: 600;
+			}
+		}
+
+		// Orders
+
+		.woocommerce-orders-table {
+
+			.order-number,
+			.amount,
+			time {
+				font-size: $font-size-small;
+			}
+
+			tr {
+
+				td {
+
+					&:last-child {
+						text-align: right;
+					}
+				}
+			}
+		}
+
+		// Addresses
+
+		.woocommerce-Address {
+
+			.button {
+				margin: 0 0 0.5rem 0;
+			}
+		}
+	}
+
+	// Google reCAPTCHA
+
+	.g-recaptcha {
+
+		+ br {
+			display: none;
+		}
+	}
+
+	.woocommerce-privacy-policy-text {
+		font-size: $font-size-small;
+	}
+}

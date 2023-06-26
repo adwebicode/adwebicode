@@ -1,0 +1,124 @@
+#{$all-text-inputs},
+textarea,
+select,
+.select2-container--default .select2-selection--single {
+	padding: 0 1rem;
+	font-family: inherit;
+	border: none;
+	width: 100%;
+	text-align: inherit;
+	min-height: $button-height;
+	background-color: $color-neutral-8;
+	font-size: $font-size-main;
+
+	&:not(.elementor-field) {
+		
+	}
+
+	@include border-radius;
+	@include transition;
+	@include input-placeholder {
+        color: $color-grey;
+    }
+
+	&.-outlined {
+		background-color: transparent;
+		border: 2px solid $color-grey-light;
+
+		&:focus,
+		&:active {
+			outline: none;
+			border-color: $color-grey;
+		}
+	}
+
+	&.-small {
+		padding: 0 0.75rem;
+		min-height: $button-small-height;
+		font-size: $font-size-extra-small;
+	}
+
+	&.-large {
+		padding: 0 $grid-spacer;
+		min-height: $button-large-height;
+		font-size: $font-size-large;
+	}
+
+	&:not(.-outlined) {
+
+		&:focus,
+		&:active {
+			background-color: $color-neutral-15;
+			outline: none;
+		}
+	}
+
+	// Invalid
+
+	&.wpcf7-not-valid {
+
+		@include box-shadow(false, 0, 0, 0, 0.3125rem, rgba($color-red, 0.2));
+	}
+}
+
+// Invalid
+
+.woocommerce-invalid-required-field {
+
+	#{$all-text-inputs},
+	textarea,
+	select,
+	.select2-selection--single {
+
+		@include box-shadow(false, 0, 0, 0, 0.3125rem, rgba($color-red, 0.2));
+	}
+}
+
+button {
+	appearance: none;
+	color: inherit;
+}
+
+textarea {
+	resize: vertical;
+	height: 10rem;
+	
+	&,
+	&.-small,
+	&.-large {
+		padding-top: 0.75rem;
+		padding-bottom: 0.75rem;
+	}
+}
+
+// Labels
+
+label {
+	display: block;
+	font-size: $font-size-caption;
+	font-weight: 500;
+
+	+ * {
+		margin-top: 0.5rem;
+	}
+}
+
+// .minimal-scheme {
+
+// 	#{$all-text-inputs},
+// 	textarea,
+// 	select {
+
+// 		@include border-radius(0);
+
+// 		&.-outlined {
+// 			border-width: 1px;
+// 		}
+// 	}
+
+// 	.contact-form [class^='vc_col-md-'] > label,
+// 	.text-label {
+// 		text-transform: uppercase;
+// 		font-size: 0.75em;
+// 	}
+// }

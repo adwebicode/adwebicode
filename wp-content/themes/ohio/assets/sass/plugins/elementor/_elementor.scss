@@ -1,0 +1,204 @@
+.elementor {
+	margin-left: -$grid-spacer;
+	margin-right: -$grid-spacer;
+
+	// Editor
+
+	&-editor-active {
+
+		ul {
+			
+			@include unlist;
+		}
+	}
+
+	// Default wide gap override
+
+	.elementor-column-gap-wide,
+	.elementor-column-gap-wide > .elementor-row {
+
+		> .elementor-column {
+
+			> .elementor-column-wrap,
+			> .elementor-widget-wrap,
+			> .elementor-element-populated > .elementor-widget-wrap {
+				padding-top: 0;
+				padding-bottom: 0;
+			}
+		}
+	}
+
+	// Entrance animation override
+
+	.animated {
+	    animation-duration: .4s;
+	}
+
+	@keyframes fadeInUpShort {
+
+	    from {
+	        opacity: 0;
+	        transform: translate3d(0, 40px, 0);
+	    }
+
+	    to {
+	        opacity: 1;
+	        transform: none;
+	    }
+	}
+
+	@keyframes fadeInDownShort {
+
+	    from {
+	        opacity: 0;
+	        transform: translate3d(0, -40px, 0);
+	    }
+
+	    to {
+	        opacity: 1;
+	        transform: none;
+	    }
+	}
+
+	@keyframes fadeInLeftShort {
+
+	    from {
+	        opacity: 0;
+	        transform: translate3d(40px, 0, 0);
+	    }
+
+	    to {
+	        opacity: 1;
+	        transform: none;
+	    }
+	}
+
+	@keyframes fadeInRightShort {
+
+	    from {
+	        opacity: 0;
+	        transform: translate3d(-40px, 0, 0);
+	    }
+
+	    to {
+	        opacity: 1;
+	        transform: none;
+	    }
+	}
+
+	.fadeInUp {
+	    animation-name: fadeInUpShort;
+	}
+
+	.fadeInDown {
+	    animation-name: fadeInDownShort;
+	}
+
+	.fadeInLeft {
+	    animation-name: fadeInLeftShort;
+	}
+
+	.fadeInRight {
+	    animation-name: fadeInRightShort;
+	}
+}
+
+// Page container full-width override
+
+.elementor-page {
+
+	.page-container {
+
+		&.-full-w {
+
+			.elementor-section {
+
+				&.elementor-section-boxed {
+
+					> .elementor-container {
+						max-width: none;
+
+						@include note-screen {
+							
+							max-width: none;
+						}
+					}
+				}
+
+				// Default wide gap override
+
+				&.elementor-section-stretched:not(.elementor-section-full_width) {
+
+					> .elementor-container {
+						margin-left: -$grid-spacer;
+						margin-right: -$grid-spacer;
+
+						// @include sm-screen {
+							
+						// 	padding-left: $grid-spacer !important;
+						// 	padding-right: $grid-spacer !important;
+						// }
+					}
+				}
+			}
+		}
+	}
+}
+
+// Elementor form
+
+.elementor-form {
+
+	// Select
+
+	.elementor-select-wrapper {
+
+		select {
+
+			&.elementor-field-textual {
+				min-height: $button-height;
+			}
+		}
+
+		.select-caret-down-wrapper {
+			display: none;
+		}
+	}
+
+	// Checkbox
+
+	.elementor-field-type-acceptance,
+	.elementor-field-type-radio,
+	.elementor-field-type-checkbox {
+
+		.elementor-field-option {
+
+			input {
+
+				&[type="checkbox"],
+				&[type="radio"] {
+
+					@include inline-flex;
+				}
+			}
+		}
+	}
+
+	// Acceptence
+
+	.elementor-field-type-acceptance {
+
+		input {
+
+			&.elementor-acceptance-field {
+				border-width: 2px !important;;
+				border-radius: $radius !important;
+
+				&:checked {
+					background-color: $color-red !important;
+					border-color: $color-red !important;
+				}
+			}
+		}
+	}
+}

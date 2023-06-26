@@ -1,0 +1,70 @@
+.clb-popup {
+	background-color: rgba($color-black, 0.99);
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 9999999;
+	overflow: hidden;
+	opacity: 0;
+	visibility: hidden;
+	transform: translateY(-50vh);
+
+	&.hidden {
+		opacity: 0;
+		visibility: hidden;
+		display: initial;
+	}
+
+	&.visible {
+		opacity: 1;
+		visibility: visible;
+		transform: none;
+		transition: opacity .5s ease-in-out;
+	}
+
+	.close-bar {
+		position: absolute;
+		left: 0;
+		right: 0;
+		top: 0;
+
+		.btn-expand {
+			display: inline-block;
+		}
+	}
+
+	&-holder {
+		height: 100%;
+		padding: $header-height;
+		
+		@include flex;
+		@include align-items(center);
+		@include flex-just(center);
+	}
+
+	// Mobile styles
+
+	@include sm-screen {
+		
+		overflow-y: auto;
+
+		&-holder {
+			padding: $grid-spacer;
+		}
+	}
+}
+
+// Close bar
+
+.close-bar {
+    position: relative;
+    z-index: 11;
+    height: $header-height;
+
+    @include flex;
+    @include align-items(center);
+    @include spacer(padding-left);
+    @include spacer(padding-right);
+}

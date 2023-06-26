@@ -1,0 +1,14 @@
+.notification {
+
+	.alert {
+		background-color: $color-white;
+
+		&.-blur {
+			background-color: rgba($color-white, 0.9);
+		}
+
+		.button {
+			margin-left: 1rem;
+		}
+	}
+}

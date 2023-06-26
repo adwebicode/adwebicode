@@ -1,0 +1,65 @@
+form {
+
+	&.woocommerce-checkout {
+
+		// Form
+
+		&.checkout {
+
+			> .vc_row {
+				margin: 0 !important;
+			}
+
+			// Ship to a different address?
+
+			.woocommerce-shipping-fields {
+				
+				.woocommerce-form__label-for-checkbox {
+
+					> span {
+						letter-spacing: normal;
+						font-weight: normal;
+					    font-size: 1rem;
+					}
+				}
+			}
+		}
+
+		// Alert group
+
+		.woo-alert-group {
+			padding: 0 $grid-spacer;
+		}
+
+		.woocommerce-form-login {
+			
+			@include spacer(margin-bottom);
+
+			&-toggle {
+
+				background: red;
+				margin-bottom: 0.9375rem;
+			}
+		}
+	}
+}
+
+// Coupon alert
+
+.woocommerce-form-coupon-toggle {
+
+	.alert {
+		width: 100%;
+	}
+
+	+ * {
+		margin-top: 1rem;
+	}
+}
+
+.woocommerce-form-login-toggle {
+
+	@include spacer2x(margin-bottom);
+}
+
+

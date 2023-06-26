@@ -1,0 +1,61 @@
+{
+	"ohio-sidebar-blog": {
+		"search-2": {
+			"title": ""
+		},
+		"recent-posts-2": {
+			"title": "",
+			"number": 5
+		},
+		"recent-comments-2": {
+			"title": "",
+			"number": 5
+		}
+	},
+	"ohio-sidebar-page": {
+		"archives-2": {
+			"title": "",
+			"count": 0,
+			"dropdown": 0
+		},
+		"categories-2": {
+			"title": "",
+			"count": 0,
+			"hierarchical": 0,
+			"dropdown": 0
+		},
+		"meta-2": {
+			"title": ""
+		}
+	},
+	"ohio-sidebar-footer-1": {
+		"ohio_widget_logo-2": {
+			"custom_css": ""
+		},
+		"block-2": {
+			"content": "<strong><a target=\"_blank\" href=\"https://www.facebook.com/colabrio/\">Fb.</a>&nbsp;/&nbsp;&nbsp;<a target=\"_blank\" href=\"https://www.facebook.com/colabrio/\">Ig.</a>&nbsp;&nbsp;/&nbsp;&nbsp; <a target=\"_blank\" href=\"https://www.facebook.com/colabrio/\">Tw.</a>&nbsp;&nbsp;/&nbsp;&nbsp; <a target=\"_blank\" href=\"https://www.facebook.com/colabrio/\">Be.</a></strong>"
+		}
+	},
+	"ohio-sidebar-footer-2": {
+		"block-4": {
+			"content": "<h3 class=\"title widget-title\">Rotterdam</h3>\n\n<b>Ohio Digital Media LTD.</b><br class=\"vc_hidden-xs\">\nGraaf Florisstraat 22A,<br class=\"vc_hidden-xs\">\n3021 CH Rotterdam<br class=\"vc_hidden-xs\">\nNetherlands"
+		},
+		"block-5": {
+			"content": "<h3 class=\"title widget-title\">Barcelona</h3>\n\n<b>Ohio Digital LTD.</b><br class=\"vc_hidden-xs\">\n365 Gran Via de Corts<br class=\"vc_hidden-xs\">\nCatalanes, BA 08015"
+		}
+	},
+	"ohio-sidebar-footer-3": {
+		"block-6": {
+			"content": "<h3 class=\"title widget-title\">Work inquiries</h3>\n\nInterested in working with us?<br class=\"vc_hidden-xs\">\n<b><a href=\"mailto:hello@clbthemes.com\">hello@clbthemes.com</a></b>"
+		},
+		"block-7": {
+			"content": "<h3 class=\"title widget-title\">Career</h3>\n\nLooking for a job opportunity?<br class=\"vc_hidden-xs\">\n<b><a href=\"#\">See open positions</a></b>"
+		}
+	},
+	"ohio-sidebar-footer-4": {
+		"ohio_widget_subscribe-3": {
+			"title": "Sign up for the newsletter",
+			"feedburner": "17852"
+		}
+	}
+}

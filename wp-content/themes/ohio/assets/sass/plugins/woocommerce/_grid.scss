@@ -1,0 +1,151 @@
+.woo-products {
+
+	li {
+		width: 100%;
+	}
+}
+
+$columns: ( "1": 100%, "2": calc(100% / 2), "3": calc(100% / 3), "4": calc(100% / 4), "5": calc(100% / 5), "6": calc(100% / 6));
+
+// Desktop
+
+@include lg-screen {
+
+	@each $name, $value in $columns {
+
+		.columns-lg-#{$name} {
+
+			.products {
+
+				li {
+					width: $value;
+				}
+			}
+		}
+	}
+}
+
+// Standard WPBakery WooCommerce archive shortcodes
+
+@include md-screen {
+
+	@each $name, $value in $columns {
+
+		.columns-#{$name} {
+
+			.products {
+
+				li {
+					width: $value;
+				}
+			}
+		}
+	}
+}
+
+// Tablet
+
+@include tablet-screen {
+
+	@each $name, $value in $columns {
+
+		.columns-md-#{$name} {
+
+			.products {
+
+				li {
+					width: $value;
+				}
+			}
+		}
+	}
+}
+
+// Mobile
+
+@include sm-screen {
+
+	@each $name, $value in $columns {
+
+		.columns-sm-#{$name} {
+
+			.products {
+
+				li {
+					width: $value;
+				}
+			}
+		}
+	}
+
+	// Set paddings for 2 columns layout
+
+	.columns-sm-2 {
+
+		.products {
+
+			li {
+
+				&:nth-child(odd) {
+				  	padding-right: calc(#{$grid-spacer}/2);
+				}
+
+				&:nth-child(even) {
+				  	padding-left: calc(#{$grid-spacer}/2);
+				}
+			}
+	 	}
+	}
+}
+
+// Double width
+
+@include md-screen {
+
+	.columns-2, 
+	.columns-md-2 {
+
+		.double_width {
+			width: calc((100% / 2) * 2 - 1px);
+		}
+	}
+
+	.columns-3, 
+	.columns-md-3 {
+
+		.double_width {
+			width: calc((100% / 3) * 2 - 1px);
+		}
+	}
+
+	.columns-4, 
+	.columns-md-4 {
+
+		.double_width {
+			width: calc((100% / 4) * 2 - 1px);
+		}
+	}
+
+	.columns-5, 
+	.columns-md-5 {
+
+		.double_width {
+			width: calc((100% / 5) * 2 - 1px);
+		}
+	}
+
+	.columns-6, 
+	.columns-md-6 {
+
+		.double_width {
+			width: calc((100% / 6) * 2 - 1px);
+		}
+	}
+
+	.columns-12 {
+
+		.double_width {
+			width: calc((100% / 12) * 2 - 1px);
+		}
+	}
+}

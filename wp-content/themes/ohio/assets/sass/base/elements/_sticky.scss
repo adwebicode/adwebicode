@@ -1,0 +1,25 @@
+@include md-screen {
+
+	.-sticky-block,
+	.-sticky-block > .vc_column-inner > .wpb_wrapper {
+		position: sticky !important;
+		z-index: 2;
+		top: 0;
+	}
+
+	// With enabled sticky header
+
+	.with-sticky-header {
+
+		.-sticky-block {
+			top: $sticky-header-height;
+		}
+
+		&.admin-bar {
+
+			.-sticky-block {
+				top: calc(#{$sticky-header-height} + 2rem);
+			}
+		}
+	}
+}

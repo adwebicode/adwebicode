@@ -1,0 +1,30 @@
+.portfolio-filter {
+	font-size: $font-size-small;
+	padding-bottom: 2.25rem;
+
+	li {
+
+		@include inline-flex;
+	}
+	
+	a {
+		margin: 0px 0.9rem;
+		font-weight: 500;
+		position: relative;
+
+		@include inline-flex;
+
+		.num {
+		    top: -0.35rem;
+		    right: -0.9rem;
+		    text-align: left;
+		    position: absolute;
+		    font-size: 0.65em;
+		    font-weight: bold;
+		}
+
+		&.active {
+			color: $color-red;
+		}
+	}
+}

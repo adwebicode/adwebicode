@@ -1,0 +1,109 @@
+a {
+	text-decoration: none;
+	color: inherit;
+
+	&:not(.-unlink) {
+		color: inherit;
+		cursor: pointer;
+		background-repeat: no-repeat;
+		background-size: 100% 0.2em;
+		background-position: 0px 110%;
+
+		&:hover,
+		&:active,
+		&:focus,
+		&.-dashed {
+			color: $color-red;
+			animation: 0.4s cubic-bezier(0.58, 0.3, 0.005, 1) 0s 1 normal none running links;
+			background-image: linear-gradient(currentColor 0px, currentColor 100%);
+		}
+
+		&.-undash {
+			background-image: none;
+		}
+
+		&.-highlighted {
+			color: $color-red;
+		}
+	}
+
+	&.titles-typo {
+		letter-spacing: -0.02rem;
+	}
+
+	&,
+	.title {
+
+		&:hover {
+			
+			@include transition;
+		}
+	}
+}
+
+@-webkit-keyframes links {
+
+	0% {
+		background-size: 100% 0.2em;
+		background-position: 0 110%;
+	}
+
+	50% {
+		background-size: 0% 0.2em;
+		background-position: 0 110%;
+	}
+
+	50.01% {
+		background-size: 0% 0.2em;
+		background-position: right 0 top 110%;
+	}
+
+	100% {
+		background-size: 100% 0.2em;
+		background-position: right 0 top 110%;
+	}
+}
+
+@keyframes links {
+
+	0% {
+		background-size: 100% 0.2em;
+		background-position: 0 110%;
+	}
+
+	50% {
+		background-size: 0% 0.2em;
+		background-position: 0 110%;
+	}
+
+	50.01% {
+		background-size: 0% 0.2em;
+		background-position: right 0 top 110%;
+	}
+	
+	100% {
+		background-size: 100% 0.2em;
+		background-position: right 0 top 110%;
+	}
+}
+
+// Remove underline
+
+body {
+
+	&:not(.links-underline) {
+
+		a {
+			
+			&:not(.-unlink) {
+			
+				&:hover,
+				&:active,
+				&:focus,
+				&.-dashed {
+					background-image: none;
+				}
+			}
+		}
+	}
+}

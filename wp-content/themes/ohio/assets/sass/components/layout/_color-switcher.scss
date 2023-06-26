@@ -1,0 +1,229 @@
+.color-switcher {
+    font-weight: 500;
+    font-size: .85em;
+    position: relative;
+    height: 1.7rem;
+    background-color: $color-neutral-25;
+    cursor: pointer;
+    box-shadow: 0 0 0 2px $color-neutral-15 inset;
+
+    @include border-radius(0.85rem);
+    @include flex;
+    @include flex-just(center);
+
+    @include lg-screen {
+
+        min-width: 6.5rem;
+    }
+
+    @include tablet-screen {
+
+        background-color: lighten($color-neutral, 30%);
+        height: 2.5rem;
+        z-index: 100;
+        position: absolute;
+
+        @include border-radius(1.25rem);
+
+        .color-switcher-item,
+        .color-switcher-toddler-item {
+
+            &.dark {
+
+                .color-switcher-item-state {
+                    transform: rotate(180deg);
+                }
+            }
+        }
+
+        svg {
+            transform: scale(1.2);
+        }
+
+        .caption {
+            display: none;
+        }
+
+        &:not(.color-switcher-mobile) {
+            display: none;
+        }
+
+        &.color-switcher-mobile:not(.dark) {
+
+            .color-switcher-toddler {
+                transform: initial !important;
+            }
+        }
+    }
+
+    &-item-state {
+        margin: 0;
+        height: 1.5rem;
+
+        > span {
+            line-height: 1;
+        }
+
+        @include flex;
+        @include align-items(center);
+        @include flex-just(center);
+
+        svg {
+            fill: $color-black-light;
+
+            @include lg-screen {
+
+                margin-left: 0.2rem;
+                margin-right: -0.2rem;
+            }
+        }
+    }
+
+    &-item,
+    &-toddler-item {
+        width: 100%;
+        height: 100%;
+        padding: 0 0.45rem 0 0.45rem;
+
+        @include flex;
+        @include align-items(center);
+        @include flex-just(center);
+
+        @include tablet-screen {
+
+            padding: 0;
+            width: 2.5rem !important;
+            min-width: 2.5rem !important;
+
+            @include border-radius(1.25rem);
+        }
+    }
+
+    &-toddler {
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 1.7rem;
+
+        @include tablet-screen {
+
+            height: 2.5rem !important;
+            width: 2.5rem !important;
+
+            p {
+                width: 100% !important;
+            }
+
+            &-item {
+                padding: 0;
+            }
+        }
+
+        &-wrap {
+            position: relative;
+            height: 100%;
+        }
+
+        &-item {
+            position: absolute;
+            background-color: $color-white;
+            width: 100%;
+            box-shadow: -3px 0px 6px rgba($color-black, 0.05);
+            color: initial;
+
+            @include border-radius(0.85rem);
+
+            @include tablet-screen {
+
+                box-shadow: 1px 1px 6px rgba($color-black, 0.05);
+            }
+
+            .light {
+                z-index: 1;
+            }
+        }
+    }
+
+    // Light state
+
+    &:not(.dark) {
+
+        .color-switcher-item {
+
+            &.dark {
+
+                svg {
+
+                    @include lg-screen {
+
+                        display: none;
+                    } 
+                }
+            }
+        }
+    }
+
+    // Dark state
+
+    &.dark {
+
+        @include tablet-screen {
+
+            background-color: rgba($color-black-lighter, 0.95%);
+        }
+
+        .color-switcher-item {
+
+            &.light {
+
+                svg {
+                    fill: rgba($color-white, 0.75);
+
+                    @include lg-screen {
+
+                        display: none;
+                    } 
+                }
+            }
+        }
+
+        .color-switcher-toddler {
+
+            .color-switcher-toddler-item {
+                color: $color-white;
+                background-color: darken($color-grey, 10%);
+
+                svg {
+                    fill: $color-white;
+
+                    @include lg-screen {
+
+                        transform: rotate(90deg);
+                    } 
+                }
+
+                &.dark {
+                    z-index: 1;
+                }
+            }
+
+			@include tablet-screen {
+                
+				transform: translateX(-100%) !important;
+			}
+        }
+    }
+}
+
+.page-is-loaded {
+
+    .color-switcher {
+
+        &-toddler {
+
+            @include transition;
+
+            transition-property: transform;
+        }
+    }
+}

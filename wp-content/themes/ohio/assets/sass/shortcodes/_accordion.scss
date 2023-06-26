@@ -1,0 +1,194 @@
+.accordion {
+
+	&-item {
+		margin-bottom: 0.5rem;
+
+		.accordion-button {
+			position: relative;
+			cursor: pointer;
+
+			@include flex;
+			@include flex-just(space-between);
+			@include align-items(center);
+			@include transition;
+
+			.icon-button {
+				margin: 0;
+				position: relative;
+
+				&:not(.next-btn) {
+					
+					.icon {
+
+						@include transition;
+
+						&::after,
+						&::before {
+							content: "";
+							width: 0.75rem;
+							height: 0.1rem;
+							background-color: currentColor;
+
+							@include centered;
+							@include transition;
+						}
+
+						&::before {
+							transform: translate(-50%, -50%) rotate(90deg);
+						}
+					}
+				}
+			}
+		}
+
+		&.active {
+
+			.accordion-collapse {
+				opacity: 1;
+			}
+
+			.icon-button {
+
+				&:not(.next-btn) {
+
+					.icon {
+						transform: rotate(180deg);
+
+						&::before {
+							opacity: 0;
+						}
+					}
+				}
+			}
+		}
+
+		.accordion-header {
+
+			@include flex;
+			@include align-items(center);
+			@include transition;
+
+			.icon {
+				margin-right: 0.75rem;
+			}
+		}
+
+		.accordion-collapse {
+			overflow: hidden;
+			height: 0;
+
+			@include transition(height);
+
+			.accordion-body {
+
+				> p {
+					margin: 0;
+				}
+			}
+		}
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	&:not(.-outlined):not(.-text) {
+
+		.accordion-item {
+
+			.accordion-button {
+				background-color: $color-neutral-8;
+				padding: 0.75rem 0.75rem 0.75rem 1.25rem;
+
+				@include border-radius;
+			}
+
+			.accordion-collapse {
+
+				.accordion-body {
+					padding: 0.75rem 1.25rem;
+				}
+			}
+		}
+	}
+
+	&.-outlined,
+	&.-text {
+
+		.accordion-item {
+
+			.accordion-collapse {
+
+				.accordion-body {
+					padding: 0.75rem 0;
+				}
+			}
+		}
+	}
+
+	&.-outlined {
+
+		.accordion-item {
+			margin: 0;
+
+			.accordion-button {
+				border-top: 1px solid transparent;
+				border-bottom: 1px solid $color-grey-light;
+				padding: 0.75rem 0;
+			}
+
+			& {
+				&.active + .accordion-item,
+				&:first-child {
+
+					.accordion-button {
+						border-top-color: $color-grey-light;
+					}
+				}
+			}
+		}
+	}
+
+	&.-text {
+
+		.accordion-item {
+
+			.accordion-button {
+				flex-direction: row-reverse;
+
+				@include flex-just(flex-end);
+
+				.icon-button {
+					margin-left: -0.5rem;
+				}
+			}
+		}
+	}
+}
+
+// .minimal-scheme {
+
+// 	.accordion {
+
+// 		&:not(.-outlined):not(.-text) {
+
+// 			.accordion-button {
+
+// 				@include border-radius(0);
+// 			}
+// 		}
+
+// 		&-item {
+
+// 			&.active {
+
+// 				.icon-button {
+
+// 					.icon {
+// 						transform: rotate(495deg);
+// 					}
+// 				}
+// 			}
+// 		}
+// 	}
+// }

@@ -1,0 +1,43 @@
+// Page empty state
+
+.empty-state {
+
+    @include md-screen {
+
+        max-width: 50%;
+
+        .search {
+            max-width: 18rem;
+        }
+    }
+
+    .title {
+
+        + .button {
+            margin-top: 1.25rem;
+        }
+    }
+}
+
+// Shortcode / widget note
+
+.clb-blank-note {
+    background-color: lighten($color-warning, 35%);
+    z-index: 1;
+    line-height: 1.5;
+    padding: 1.25rem;
+    margin: 0.6rem 0;
+    font-size: $font-size-small;
+
+    @include flex;
+    @include align-items(center);
+    @include border-radius;
+
+    .icon {
+        margin-right: 0.8rem;
+
+        path {
+            fill: $color-warning;
+        }
+    }
+}

@@ -1,0 +1,127 @@
+select {
+	position: relative;
+	appearance: none;
+	background-repeat: no-repeat;
+	background-position: right 0.75rem center;
+	background-size: 14px 12px;
+	padding: 0 1rem;
+	padding-right: 2.25rem !important;
+	min-height: $button-height;
+	color: $color-grey;
+
+	@include chevron;
+
+	&.lang-dropdown {
+		width: auto;
+	}
+
+	&.-small {
+		padding-right: 2rem !important;
+	}
+}
+
+// Select2 style
+
+.select2-container--default {
+	width: 100% !important;
+
+	.select2-selection--single {
+		height: auto;
+
+		@include flex;
+	    @include align-items(center);
+	    @include flex-just(space-between);
+
+		.select2-selection__rendered {
+			padding-left: 0;
+		    color: inherit;
+		    line-height: initial;
+		}
+
+		// Arrow
+
+		.select2-selection__arrow {
+		    height: 100%;
+		    position: relative;
+		    top: 0px;
+		    right: 0;
+		    width: 1rem;
+
+		    @include flex;
+		    @include align-items(center);
+
+		    > b {
+		    	border: none;
+		    	margin: 0;
+		    	left: auto;
+		    	top: auto;
+		    	position: relative;
+		    	height: 1rem;
+		    	width: 1rem;
+		    	background-repeat: no-repeat;
+		    	transform: scale(0.8) rotate(0deg);
+		    	
+		    	@include inline-flex;
+		    	@include chevron;
+		    }
+		}
+	}
+
+	&.select2-container--open {
+
+		// Arrow
+
+		.select2-selection__arrow {
+
+		    > b {
+		    	transform: scale(0.8) rotate(180deg);
+		    }
+		}
+	} 
+
+	// Dropdown
+
+	.select2-dropdown {
+		border: none;
+
+		@include border-radius;
+		@include dropdown-shadow;
+	}
+
+	.select2-search--dropdown {
+
+		padding: 1rem;
+
+		.select2-search__field {
+			padding: 0 0.75rem;
+			min-height: $button-small-height;
+			font-size: $font-size-extra-small;
+		}
+	}
+
+	.select2-results__option {
+		padding-left: 1rem;
+		padding-right: 1rem;
+	}
+
+	.select2-results__option--highlighted {
+
+		&[aria-selected], 
+		&[data-selected] {
+			background-color: $color-black-light;
+		}
+	}
+}
+
+// Firefox
+
+@-moz-document url-prefix() {
+
+	select {
+		line-height: $button-height;
+
+		&.-small {
+			line-height: 2rem;
+		}
+	}
+}

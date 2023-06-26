@@ -1,0 +1,87 @@
+.popup-subscribe {
+	overflow: hidden;
+	min-width: 770px;
+	max-width: 770px;
+	height: auto;
+	background-color: $color-white;
+	animation: 0.4s slide_up_inner $transition-function;
+
+	@include flex;
+	@include align-items(stretch);
+	@include border-radius($radius-large);
+
+	> * {
+		width: 50%;
+	}
+
+	.thumbnail {
+		background-size: cover;
+		background-color: $color-white;
+		min-height: 25vh;
+		background-position: center center;
+
+		@include sm-screen {
+
+			border-bottom-left-radius: 0px;
+		}
+	}
+
+	.holder {
+
+		@include spacer(padding-left);
+		@include spacer(padding-right);
+		@include spacer4x(padding-top);
+		@include spacer4x(padding-bottom);
+	}
+
+	.contact-form {
+		margin: $grid-spacer 0;
+
+		input[type="email"] {
+
+			@include sm-screen {
+				
+				margin-bottom: 0;
+			}
+		}
+
+		.button {
+
+			&:not(:hover) {
+				background-color: $color-black-light !important;
+			}
+		}
+
+		.wpcf7-list-item-label {
+			font-weight: normal;
+			font-size: 0.96em;
+		}
+	}
+
+	// Mobile
+
+	@include sm-screen {
+
+		min-width: 100%;
+		max-width: 100%;
+
+		@include flex-direction(column);
+
+		> * {
+			width: 100%;
+		}
+	}
+}
+
+@keyframes slide_up_inner {
+
+	0% { 
+		transform: translateY(100%);
+		opacity: .5;
+	}
+
+	100% { 
+		transform: translateY(0%);
+		opacity: 1;
+	}
+}

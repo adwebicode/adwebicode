@@ -1,0 +1,53 @@
+// WPBakery/Elementor overrides
+
+.ohio-text-sc,
+.wpb_text_column,
+.elementor-widget-text-editor {
+
+	&:not(.-unspace) {
+
+		&:first-child {
+
+			p {
+				margin-top: 0;
+			}
+		}
+	}
+
+	&:last-child {
+
+		p {
+			margin-bottom: 0;
+		}
+	}
+
+	& + .ohio-text-sc,
+	& + .wpb_text_column,
+	& + .elementor-widget-text-editor {
+
+		p {
+			margin-top: 0;
+		}
+	}
+
+	& + .vc_empty_space,
+	& + .elementor-widget-spacer {
+		margin-top: -1.35rem;
+	}
+}
+
+.vc_empty_space,
+.elementor-widget-spacer {
+
+	&:first-child {
+
+		& + .ohio-text-sc,
+		& + .wpb_text_column,
+		& + .elementor-widget-text-editor {
+
+			p {
+				margin-top: 0;
+			}
+		}
+	}
+}

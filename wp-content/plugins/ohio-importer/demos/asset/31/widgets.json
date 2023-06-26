@@ -1,0 +1,60 @@
+{
+	"ohio-sidebar-blog": {
+		"block-2": {
+			"content": "<!-- wp:search /-->"
+		},
+		"block-3": {
+			"content": "<!-- wp:group --><div class=\"wp-block-group\"><!-- wp:heading --><h2>Recent Posts</h2><!-- /wp:heading --><!-- wp:latest-posts /--></div><!-- /wp:group -->"
+		},
+		"block-4": {
+			"content": "<!-- wp:group --><div class=\"wp-block-group\"><!-- wp:heading --><h2>Recent Comments</h2><!-- /wp:heading --><!-- wp:latest-comments {\"displayAvatar\":false,\"displayDate\":false,\"displayExcerpt\":false} /--></div><!-- /wp:group -->"
+		}
+	},
+	"ohio-sidebar-page": {
+		"block-5": {
+			"content": "<!-- wp:group --><div class=\"wp-block-group\"><!-- wp:heading --><h2>Archives</h2><!-- /wp:heading --><!-- wp:archives /--></div><!-- /wp:group -->"
+		},
+		"block-6": {
+			"content": "<!-- wp:group --><div class=\"wp-block-group\"><!-- wp:heading --><h2>Categories</h2><!-- /wp:heading --><!-- wp:categories /--></div><!-- /wp:group -->"
+		}
+	},
+	"ohio-sidebar-footer-1": {
+		"block-8": {
+			"content": "<p class=\"-light-t\">\nAert van Nesstraat<br>\nLote 25, 3012 CA<br>\n5320-430 Rotterdam,<br>\nNetherlands\n</p>"
+		},
+		"block-13": {
+			"content": "<p class=\"-medium-t\">\nCall<br>\n+330.563.599.230\n</p>"
+		},
+		"block-14": {
+			"content": "<p class=\"-medium-t\">\nGPS<br>\nN 50° 29' 24.16\"<br>\nW 9° 32' 8.59\"\n</p>"
+		}
+	},
+	"ohio-sidebar-footer-2": {
+		"block-9": {
+			"content": "<p class=\"-light-t\">\nWitte de Withstraat<br>\nLote 50, 3012 BR<br>\n6518-25 Amsterdam,<br>\nNetherlands\n</p>"
+		},
+		"block-10": {
+			"content": "<p class=\"-medium-t\">\nCall<br>\n+330.269.699.230\n</p>"
+		},
+		"block-15": {
+			"content": "<p class=\"-medium-t\">\nGPS<br>\nN 64° 35' 84.36\"<br>\nW 5° 45' 6.20\"\n</p>"
+		}
+	},
+	"ohio-sidebar-footer-3": {
+		"block-11": {
+			"content": "<p><span class=\"-light-t\">General questions</span><br>\n<span class=\"-medium-t\"><a target=\"_blank\" href=\"#\">hello@clbthemes.com</a></span></p>"
+		},
+		"block-12": {
+			"content": "<p><span class=\"-light-t\">New business enquiries</span><br>\n<span class=\"-medium-t\"><a target=\"_blank\" href=\"#\">work@clbthemes.com</a></span></p>"
+		},
+		"block-16": {
+			"content": "<p class=\"-medium-t\">\n<a target=\"_blank\" href=\"#\">Facebook</a><br>\n<a target=\"_blank\" href=\"#\">Twitter</a><br>\n<a target=\"_blank\" href=\"#\">Instagram</a><br>\n<a target=\"_blank\" href=\"#\">Behance</a><br>\n<a target=\"_blank\" href=\"#\">Medium</a>\n</p>"
+		}
+	},
+	"ohio-sidebar-footer-4": {
+		"ohio_widget_subscribe-1": {
+			"title": "Subscribe to our newsletter to stay in touch with the latest updates",
+			"feedburner": "152829"
+		}
+	}
+}

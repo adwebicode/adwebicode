@@ -1,0 +1,101 @@
+.circle-progress {
+
+	.circle {
+		position: relative;
+		display: inline-block;
+
+		svg {
+			vertical-align: top;
+		}
+
+		.progress {
+			transform: rotate(-90deg);
+
+			&-meter,
+			&-value {
+				fill: none;
+			}
+
+			&-meter {
+				stroke: $color-neutral-15;
+			}
+
+			&-value {
+				stroke-dasharray: 1000;
+				stroke-dashoffset: 1000;
+
+				@include transition(0.9s);
+			}
+		}
+
+		i,
+		.icon-group,
+		.range {
+			
+			@include centered;
+			@include flex;
+		}
+
+		i {
+			font-size: 2rem;
+		}
+	}
+
+	.progress-content {
+
+		> .range {
+			margin-bottom: 0.4rem;
+		}
+	}
+
+	&:not(.-floating) {
+
+		.progress-content {
+			margin-top: 1rem;
+		}
+	}
+
+	&.-thin {
+
+		.progress {
+
+			&-meter,
+			&-value {
+				stroke-width: 0.25rem;
+			}
+		}
+	}
+
+	&.-bold {
+
+		.progress {
+
+			&-meter,
+			&-value {
+				stroke-width: 0.75rem;
+			}
+		}
+	}
+
+	&.-floating {
+
+		@include flex;
+		@include align-items(center);
+
+		.progress-content {
+			margin-left: 1rem;
+			margin-right: 1rem;
+		}
+
+		&.-center {
+			text-align: left;
+			
+			@include flex-just(center);
+		}
+
+		&.-right {
+			
+			@include flex-direction(row-reverse);
+		}
+	}
+}

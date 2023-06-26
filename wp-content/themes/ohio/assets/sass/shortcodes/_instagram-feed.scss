@@ -1,0 +1,65 @@
+.instagram-feed {
+
+	#sb_instagram {
+		padding-bottom: 0px !important;
+
+		#sbi_images {
+			float: none;
+			width: auto !important;
+			min-width: 100%;
+			padding: 0 !important;
+
+			.sbi_item {
+				position: relative;
+				overflow: hidden;
+
+				@include sm-screen {
+
+					width: 50% !important;
+				}
+			}
+
+			a {
+				opacity: 1 !important;
+			}
+		}
+	}
+
+	&:not(.no-margins) {
+
+		#sb_instagram {
+
+			.sbi_photo_wrap {
+				overflow: hidden;
+
+				@include border-radius;
+			}
+
+			#sbi_images {
+
+				@include lg-screen {
+
+					margin: -$grid-spacer;
+				}
+
+				.sbi_item {
+					padding: $grid-spacer !important;
+
+					@include sm-screen {
+
+						padding-top: 0.5rem !important;
+						padding-bottom: 0.5rem !important;
+
+						&:nth-child(odd) {
+							padding-right: 0.5rem !important;
+						}
+
+						&:nth-child(even) {
+							padding-left: 0.5rem !important;
+						}
+					}
+				}
+			}
+		}
+	}
+}

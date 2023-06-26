@@ -1,0 +1,37 @@
+// General
+
+$color-red: hsla(360, 72, 51, 100%);
+$color-red-light: hsla(256, 100, 95, 100%);
+$color-black: hsla(260, 9, 7, 100%);
+$color-black-light: hsla(260, 9, 9, 100%);
+$color-black-lighter: hsla(260, 9, 16, 100%);
+$color-black-light-dm: rgba(#fff, 0.75);
+$color-grey: hsla(260, 9, 40, 100%);
+$color-grey-light: hsla(260, 9, 60, 100%);
+$color-grey-lighter: hsla(260, 9, 97, 100%);
+$color-white: #fff;
+
+// Neutral
+
+$color-neutral: $color-grey-light;
+$color-neutral-85: rgba($color-neutral, 0.85);
+$color-neutral-60: rgba($color-neutral, 0.6);
+$color-neutral-50: rgba($color-neutral, 0.5);
+$color-neutral-45: rgba($color-neutral, 0.45);
+$color-neutral-35: rgba($color-neutral, 0.35);
+$color-neutral-25: rgba($color-neutral, 0.25);
+$color-neutral-15: rgba($color-neutral, 0.15);
+$color-neutral-10: rgba($color-neutral, 0.1);
+$color-neutral-8: rgba($color-neutral, 0.08);
+$color-neutral-6: rgba($color-neutral, 0.06);
+
+$color-border: $color-neutral-15;
+
+// Alerts
+
+$color-success: hsla(150, 60, 40, 100%);
+$color-success-15: rgba($color-success, 0.15);
+$color-warning: hsla(30, 85, 50, 100%);
+$color-warning-15: rgba($color-warning, 0.15);
+$color-danger: hsla(350, 70, 55, 100%);
+$color-danger-15: rgba($color-danger, 0.15);

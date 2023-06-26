@@ -1,0 +1,33 @@
+<?php
+/**
+ * Displayed when no products are found matching the current query
+ *
+ * This template can be overridden by copying it to yourtheme/woocommerce/loop/no-products-found.php.
+ *
+ * HOWEVER, on occasion WooCommerce will need to update template files and you
+ * (the theme developer) will need to copy the new files to your theme to
+ * maintain compatibility. We try to do this as little as possible, but it does
+ * happen. When this occurs the version of the template file will be bumped and
+ * the readme will list any important changes.
+ *
+ * @see https://docs.woocommerce.com/document/template-structure/
+ * @package WooCommerce\Templates
+ * @version 2.0.0
+ */
+
+defined( 'ABSPATH' ) || exit;
+
+?>
+
+<div class="empty-state">
+	<h3 class="title">
+		<?php esc_html_e( 'Sorry, but nothing matched your search terms.', 'ohio' ); ?>
+	</h3>
+	<p>
+		<?php esc_html_e( 'Try using other search criteria', 'ohio' ); ?>
+	</p>
+	<?php get_search_form( true ); ?>
+</div>
+
+
+

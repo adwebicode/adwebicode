@@ -1,0 +1,134 @@
+
+// SlideUp Animated elements
+
+.page-headline,
+.project.-layout6,
+.project.-layout8,
+.project.-layout9,
+.main-section,
+[data-interactive-links-grid] {
+
+    .animated-holder  {
+        z-index: 1;
+
+        > * {
+            animation-name: slide_up_elements;
+        }
+    }
+}
+
+// Hidden
+
+.animated-holder,
+.hamburger-nav .menu,
+.hamburger-nav:not(.type2) .sub-menu,
+.hamburger-nav:not(.type2) .sub-sub-menu,
+.hamburger-nav-details,
+.header-5 .sub-menu,
+.header-5 .sub-sub-menu  {
+
+    > * {
+        will-change: transform;
+        opacity: 0;
+        transform: translateY(2rem);
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards;
+        animation-duration: $transition-duration;
+        transition-timing-function: $transition-function;
+    }
+}
+
+* {
+
+    &.visible:not(.open-onclick),
+    &.active,
+    &.last-active {
+        .animated-holder,
+        &.hamburger-nav .hamburger-nav-holder > .menu,
+        .hamburger-nav-details,
+        > .sub-menu, 
+        > .sub-sub-menu {
+
+            > * {
+                animation-name: slide_up_elements;
+            }
+        }
+    }
+
+    &.last-active {
+
+        .animated-holder {
+
+            * {
+                opacity: 0 !important;
+                transform: translateY(0.75rem);
+
+                @include transition;
+            }
+        }
+    }
+
+    &:hover:not(.showed-onclick) {
+
+        > .sub-sub-nav {
+
+            > .sub-sub-menu {
+
+                > * {
+                    animation-name: slide_up_elements;
+                }
+            }
+        }
+    }
+}
+
+@for $i from 1 to 20 {
+    .animated-holder > *:nth-child(#{$i}),
+    .hamburger-nav .menu > *:nth-child(#{$i}),
+    .hamburger-nav:not(.type2) .sub-menu > *:nth-child(#{$i}),
+    .hamburger-nav:not(.type2) .sub-sub-menu > *:nth-child(#{$i}),
+    .hamburger-nav-details > *:nth-child(#{$i}),
+    .header-5 .sub-menu > *:nth-child(#{$i}),
+    .header-5 .sub-sub-menu > *:nth-child(#{$i}) {
+        animation-delay: $i * 0.05s;
+        transition-delay: $i * 0.05s;
+    }
+
+    [data-interactive-links-grid] {
+
+        .portfolio-grid  {
+
+            > *:nth-child(#{$i}) {
+
+                > [data-aos-delay] {
+                    animation-delay: $i * 0.05s !important;
+                    transition-delay: $i * 0.05s !important;
+                }
+            }
+        }
+    }
+    
+    .clb-slider {
+
+        .animated-holder {
+
+            > *:nth-child(#{$i}) {
+                animation-delay: ($i * 0.05s) + .4s;
+                transition-delay: ($i * 0.05s) + .4s;
+            }
+        }
+    }
+}
+
+@keyframes slide_up_elements{
+
+    from {
+        transform: translateY(3.25rem);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}

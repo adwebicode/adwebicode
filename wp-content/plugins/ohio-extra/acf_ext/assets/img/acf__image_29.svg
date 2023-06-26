@@ -1,0 +1,39 @@
+<svg width="252" height="150" viewBox="0 0 252 150" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_1_3854)">
+<rect opacity="0.4" width="252" height="150" fill="#677A9E"/>
+<path d="M199 59H159V63H199V59Z" fill="white"/>
+<path d="M169 86H159V90H169V86Z" fill="white"/>
+<path d="M219 69H159V72H219V69Z" fill="white"/>
+<path d="M199 75H159V78H199V75Z" fill="white"/>
+<rect x="14" y="16.3636" width="18" height="3.27273" fill="white"/>
+<rect x="97" y="17" width="12" height="2" fill="white"/>
+<rect x="115" y="17" width="12" height="2" fill="white"/>
+<rect x="133" y="17" width="12" height="2" fill="white"/>
+<rect x="151" y="17" width="12" height="2" fill="white"/>
+<rect x="169" y="17" width="12" height="2" fill="white"/>
+<rect x="187" y="17" width="12" height="2" fill="white"/>
+<rect x="220" y="17.1818" width="6" height="1.63636" fill="white"/>
+<rect x="232" y="17.1818" width="6" height="1.63636" fill="white"/>
+<rect opacity="0.15" width="126" height="94" fill="#677A9E"/>
+<rect opacity="0.3" x="50" y="34" width="26" height="26" rx="6" fill="#677A9E"/>
+<mask id="mask0_1_3854" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="50" y="34" width="26" height="26">
+<rect opacity="0.3" x="50" y="34" width="26" height="26" rx="6" fill="#677A9E"/>
+</mask>
+<g mask="url(#mask0_1_3854)">
+<path d="M52 44.1667C52 42.3571 53.3478 41 55.1449 41C56.942 41 58.2899 42.3571 58.2899 44.1667C58.2899 45.9762 56.942 47.3333 55.1449 47.3333C53.3478 47.3333 52 45.9762 52 44.1667ZM71.0942 44.1667L65.9275 52.3095L61.8841 47.3333L52 60H83L71.0942 44.1667Z" fill="#677A9E"/>
+</g>
+<rect opacity="0.15" y="96" width="126" height="94" fill="#677A9E"/>
+<rect opacity="0.3" x="50" y="130" width="26" height="26" rx="6" fill="#677A9E"/>
+<mask id="mask1_1_3854" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="50" y="130" width="26" height="26">
+<rect opacity="0.3" x="50" y="130" width="26" height="26" rx="6" fill="#677A9E"/>
+</mask>
+<g mask="url(#mask1_1_3854)">
+<path d="M52 140.167C52 138.357 53.3478 137 55.1449 137C56.942 137 58.2899 138.357 58.2899 140.167C58.2899 141.976 56.942 143.333 55.1449 143.333C53.3478 143.333 52 141.976 52 140.167ZM71.0942 140.167L65.9275 148.31L61.8841 143.333L52 156H83L71.0942 140.167Z" fill="#677A9E"/>
+</g>
+</g>
+<defs>
+<clipPath id="clip0_1_3854">
+<rect width="252" height="150" fill="white"/>
+</clipPath>
+</defs>
+</svg>

@@ -1,0 +1,83 @@
+.icon {
+	font-size: $icon-size;
+
+	@include inline-flex;
+	@include flex-just;
+
+	svg {
+
+		path {
+			fill: currentColor;
+		}
+
+		&.minimal {
+			display: none;
+		}
+	}
+
+	&.-left {
+		margin-right: 6px;
+	}
+
+	&.-right {
+		margin-left: 6px;
+	}
+}
+
+// WPBakery styles overrides
+
+body {
+
+	i {
+
+		&.icon {
+			width: initial;
+		    height: initial;
+		    line-height: 1;
+		    margin: 0;
+
+		    @include inline-flex;
+		}
+	}
+}
+
+.-small,
+.-extra-small {
+
+	.icon {
+		font-size: $icon-size-small;
+	}
+
+	svg:not(.icon-bootstrap) {
+		transform: scale(0.8);
+	}
+}
+
+.-large {
+
+	.icon {
+		font-size: $icon-size-large;
+	}
+
+	svg {
+		transform: scale(1.2);
+	}
+}
+
+// .minimal-scheme {
+
+// 	.icon {
+
+// 		svg {
+
+// 			&.default {
+// 				display: none;
+// 			}
+
+// 			&.minimal {
+
+// 				@include inline-flex;
+// 			}
+// 		}
+// 	}
+// }

@@ -1,0 +1,132 @@
+.scroll-top {
+    opacity: 0;
+    visibility: hidden;
+
+    &-bar {
+        width: 3.75rem;
+        height: 0.125rem;
+        margin-right: 1rem;
+        position: relative;
+
+        &::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 100%;
+            background-color: currentColor;
+            opacity: .25;
+        }
+
+        .scroll-track {
+            position: absolute;
+            top: 0;
+            right: 0;
+            height: 100%;
+            background-color: currentColor;
+        }
+    }
+
+    &.clb-slider-scroll-top {
+        visibility: visible;
+        opacity: 1;
+
+        .scroll-top-bar {
+
+            .scroll-track {
+                width: 0;
+
+                @include transition;
+            }
+        }
+    }
+
+    @include sm-screen {
+
+        display: none;
+        // transform-origin: left top;
+        // transform: rotate(-90deg) translate(-50%, 0.5rem);
+    }
+}
+
+.social-bar,
+.scroll-top {
+    margin-right: 1.5rem;
+    font-weight: 600;
+
+    @include flex;
+    @include align-items(center);
+    @include transition;
+}
+
+// Projects scroll label
+
+.scroll-bar-container {
+    position: fixed;
+    top: 50%;
+    z-index: 1;
+    min-height: 56px;
+    transform-origin: left top;
+    transform: rotate(-90deg) translate(-50%, 0);
+    
+    @include flex;
+    @include align-items(center);
+    @include spacer(left);
+
+    // Custom position for Layout Type 9
+
+    &.grid_9 {
+        width: 100%;
+        left: 0;
+        bottom: 0;
+        position: absolute;
+        transform: none;
+        top: auto;
+
+        .page-container {
+            width: 100%;
+
+            > [class*="vc_col-md-"] {
+                position: relative;
+            }
+        }
+
+        .scroll-top {
+            position: absolute;
+            left: $grid-spacer;
+
+            @include spacer2x(bottom);
+
+            @include note-screen {
+                
+                bottom: 1rem;
+            }
+        }
+    } 
+}
+
+// Custom position for some projects
+
+.with-switcher {
+
+    .grid_3,
+    .grid_4,
+    .grid_5,
+    .grid_6,
+    .grid_7,
+    .grid_10 {
+
+        & + .scroll-top,
+        & .scroll-top {
+            padding-right: 3.25rem;
+        }
+
+        & + .scroll-bar-container {
+
+            .scroll-top {
+                padding-right: 3.25rem;
+            }
+        }
+    }
+}

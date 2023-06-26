@@ -1,0 +1,98 @@
+.sticky-nav {
+	max-width: 17.8rem;
+	position: fixed;
+	z-index: 102;
+	
+	@include spacer(right);
+	@include spacer(bottom);
+	@include transition;
+
+	@include tablet-screen {
+
+		max-width: 15.2rem;
+	}
+
+	&-holder {
+		height: 100%;
+		background: $color-white;
+		padding-top: 1rem;
+
+		@include spacer2x(padding-left);
+		@include spacer2x(padding-right);
+		@include spacer2x(padding-bottom);
+
+		@include md-screen {
+
+			@include border-radius;
+		}
+	}
+
+	&-thumbnail {
+		height: 120px;
+		background-size: cover;
+		background-position: center;
+		width: 100%;
+		position: absolute;
+		top: -100px;
+		z-index: -1;
+
+		@include border-top-radius;
+	}
+
+	// Navigation
+
+	.nav-group {
+		margin-right: -1rem;
+		margin-left: 0.5rem;
+
+		@include flex;
+		@include align-items(center);
+
+		.prev {
+
+			.icon {
+				transform: rotate(180deg);
+			}
+		}
+	}
+
+	&-headline {
+
+		@include flex;
+		@include align-items(center);
+		@include flex-just(space-between);
+
+		+ a {
+
+			@include headings-typo(h5);
+		}
+	}
+
+	@include sm-screen {
+
+		position: static;
+		max-width: 100%;
+
+		.sticky-nav-holder {
+			padding-top: 2rem;
+			padding-bottom: 2rem;
+		}
+
+		.nav-group {
+			margin-right: 0;
+		}
+	}
+
+	&:hover {
+
+		.sticky-nav-thumbnail {
+			
+			@include faded;
+		}
+	}
+
+	&-products {
+
+		@include transition;
+	}
+}

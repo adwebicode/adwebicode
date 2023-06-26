@@ -1,0 +1,188 @@
+.comments {
+
+	&-list {
+		padding: 0;
+
+		@include spacer2x(margin-bottom);
+
+		ol {
+
+			@include unlist;
+		}
+	}
+
+	// Avatar
+        
+    .comment-author {
+
+    	> img {
+
+			@include border-radius(50%);
+    	}
+    }
+
+	// Comments
+
+	.comment-body {
+		position: relative;
+
+		@include spacer(padding-bottom);
+
+		@include md-screen {
+
+			padding-left: 5rem;
+
+			// Avatar
+        
+	        .comment-author {
+
+	        	> img {
+	        		position: absolute;
+					top: 0;
+					left: 0;
+	        	}
+			}
+	    }
+
+		.says {
+			display: none;
+		}
+
+		.comment-metadata,
+		time {
+			font-size: $font-size-small;
+			margin-bottom: 0.2rem;
+		}
+
+		// Author
+
+		.meta {
+
+			em {
+				font-style: normal;
+				padding: 0.25rem 0.5rem;
+				font-size: $font-size-caption;
+				background-color: rgba($color-warning, .15);
+
+				@include border-radius;
+			}
+
+			h4 {
+
+				@include headings-typo(h6);
+			}
+		}
+
+		.comment-author {
+
+			a {
+				font-family: $font-headlines;
+				letter-spacing: -0.02rem;
+			}
+
+			@include sm-screen {
+
+				margin-bottom: 1rem;
+
+				@include flex;
+				@include align-items(center);
+
+				img {
+					margin-right: 0.5rem;
+				}
+		    }
+		}
+
+		time {
+			color: $color-grey;
+
+			&::after {
+
+				@include divider;
+				margin-left: 0.3rem;
+			}
+		}
+
+		.reply {
+			margin-top: 0.5rem;
+		}
+
+		p {
+			margin: 0;
+		}
+
+		.reply,
+		.edit-link {
+			font-weight: 600;
+		}
+	}
+
+	.children {
+	    padding-left: 5rem;
+
+	    @include sm-screen {
+
+			padding-left: 1.25rem;
+	    }
+	}
+
+	// Comments Form
+
+	.comment-respond {
+
+		.logged-in-as {
+			margin: 0;
+			font-size: $font-size-small;
+
+			a:last-child {
+				font-weight: 600;
+			}
+		}
+
+		.comment-form {
+
+			&-rating {
+
+				label {
+					display: inline-block;
+					vertical-align: middle;
+				}
+			}
+
+			@include md-screen {
+
+				flex-wrap: wrap;
+
+				@include flex;
+				@include flex-just(space-between);
+
+				> p {
+					margin: 0.5rem 0;
+
+					&.comment-notes {
+						margin-top: 0;
+					}
+
+					&:not(.comment-form-comment) {
+						width: calc((100% / 3) - 1rem);
+					}
+				}
+			}
+	
+			&-comment {
+				margin-top: 0.5rem;
+			}
+
+			#{$all-text-inputs},
+			textarea {
+				width: 100%;
+			}
+
+			.comment-form-comment,
+			.comment-form-cookies-consent,
+			.comment-notes {
+				min-width: 100%;
+			}
+		}
+	}
+}

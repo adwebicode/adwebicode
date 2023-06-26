@@ -1,0 +1,57 @@
+/*
+Theme Name: Ohio
+
+WooCommerce styles override
+*/
+
+/* Import variables and mixins
+--------------------------------------------- */
+@import "abstracts/abstracts";
+
+/* Components
+--------------------------------------------- */
+@import "plugins/woocommerce/components/components";
+
+/* Layout
+--------------------------------------------- */
+@import "plugins/woocommerce/layout";
+
+/* Grid
+--------------------------------------------- */
+@import "plugins/woocommerce/grid";
+
+/* Products
+--------------------------------------------- */
+@import "plugins/woocommerce/products";
+
+/* Single Product
+--------------------------------------------- */
+@import "plugins/woocommerce/single-product";
+
+/* Signin / Signup
+--------------------------------------------- */
+@import "plugins/woocommerce/signin";
+
+/* My Account
+--------------------------------------------- */
+@import "plugins/woocommerce/my-account";
+
+/* Cart
+--------------------------------------------- */
+@import "plugins/woocommerce/cart";
+
+/* Checkout
+--------------------------------------------- */
+@import "plugins/woocommerce/checkout";
+
+/* Thank You
+--------------------------------------------- */
+@import "plugins/woocommerce/thankyou";
+
+/* Widgets
+--------------------------------------------- */
+@import "plugins/woocommerce/widgets";
+
+/* YITH WooCommerce Wishlist
+--------------------------------------------- */
+@import "plugins/wishlist/wishlist";

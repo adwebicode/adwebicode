@@ -1,0 +1,104 @@
+.icon-button {
+	position: relative;
+	background-color: transparent;
+	padding: 0;
+	border: none;
+	cursor: pointer;
+	text-align: center;
+	outline: none;
+	min-width: $circle;
+	width: $circle;
+	height: $circle;
+
+	@include inline-flex;
+	@include flex-just;
+	@include border-radius(50%);
+	@include transition;
+
+	> .icon {
+		margin-left: 0;
+
+		@include inline-flex;
+	}
+
+	&.-small {
+		min-width: $circle-small;
+		width: $circle-small;
+		height: $circle-small;
+	}
+
+	&.-extra-small {
+		min-width: $circle-smaller;
+		width: $circle-smaller;
+		height: $circle-smaller;
+	}
+
+	@include md-screen {
+
+		&.-large {
+			min-width: $circle-large;
+			width: $circle-large;
+			height: $circle-large;
+		}
+	}
+
+	&:hover,
+	&.hamburger,
+	&.cart,
+	&.search-global.fixed {
+		background-color: $color-neutral-8;
+	}
+
+	&:hover {
+		transform: $scale;
+	}
+
+	&:focus,
+	&:active {
+		background-color: $color-neutral-8;
+
+		@include box-shadow(inset);
+	}
+}
+
+// Animation effect
+
+.icon-buttons-animation {
+
+	.icon-button {
+
+		&::before {
+		    content: "";
+		    position: absolute;
+		    top: 0;
+		    height: 100%;
+		    width: 100%;
+		    background: $color-red;
+		    transform: scale(0);
+
+		    @include transition;
+		    @include border-radius(50%);
+		}
+
+		&:focus {
+			outline: none;
+			
+			&::before {
+				animation: $transition-duration click_animation $transition-function 1;
+			}
+		}
+	}
+}
+
+@keyframes click_animation {
+
+	from {
+		transform: scale(1);
+		opacity: .15;
+	}
+
+	to {
+		transform: scale(4);
+		opacity: 0;
+	}
+}

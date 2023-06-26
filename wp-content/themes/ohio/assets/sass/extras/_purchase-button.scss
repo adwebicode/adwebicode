@@ -1,0 +1,81 @@
+.purchase-button {
+	position: fixed;
+	z-index: 3;
+	color: $color-white;
+	text-transform: uppercase;
+	font-size: 0.82em;
+	font-weight: 600;
+	padding: 0 1rem;
+	background-color: rgba($color-black, .95);
+	height: 2.5rem;
+	box-shadow: 0 4px 6px rgba($color-black, 0.2);
+
+	@include spacer(bottom);
+	@include spacer(left);
+	@include border-radius(1.25rem);
+	@include flex;
+	@include align-items(center);
+
+	> img {
+		margin-left: 0.4rem;
+	}
+
+	&:hover {
+		transform: scale(1.02);
+		background-color: lighten($color-black-light, 10%);
+	}
+
+	@include tablet-screen {
+
+		display: none;
+	}
+}
+
+// Custom position
+
+.with-header-5 {
+
+	.purchase-button {
+		margin-left: $header-height-5;
+	}
+}
+
+.with-header-6,
+.with-header-7 {
+
+	.purchase-button {
+		margin-left: $header-height-6;
+
+		@include spacer2x(left);
+		@include spacer2x(bottom);
+	}
+}
+
+.with-fixed-search {
+
+	&:not(.with-header-6),
+	&:not(.with-header-7) {
+
+		.purchase-button {
+			margin-left: 4rem;
+			margin-bottom: calc((#{$circle} - 2.5rem) / 2);
+		}
+	}
+
+	&.with-header-5 {
+
+		.purchase-button {
+			margin-left: calc(#{$header-height-5} + 4rem);
+		}
+	}
+
+	&.with-header-6,
+	&.with-header-7 {
+
+		.purchase-button {
+			margin-left: calc(#{$header-height-6} + 4.5rem);
+
+			@include spacer2x(bottom);
+		}
+	}
+}

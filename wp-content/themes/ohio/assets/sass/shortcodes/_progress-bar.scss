@@ -1,0 +1,38 @@
+.progress {
+
+	.progress-heading {
+		margin-bottom: 0.625rem;
+
+		@include flex;
+		@include flex-just(space-between);
+		@include align-items(flex-end);
+
+		.progress-percent {
+
+			&:not(.tooltip) {
+				font-size: $font-size-small;
+				font-weight: 600;
+			}
+		}
+	}
+
+	&.-tooltip {
+
+		.progress-holder {
+			overflow: visible;
+
+			.progress-bar {
+				position: relative;
+			}
+
+			.progress-percent {
+				position: absolute;
+				font-size: 0.8em;
+				top: 0;
+				right: 0;
+				padding: 0.15rem 0.45rem;
+				transform: translateY(calc(-100% - 7px)) translateX(50%);
+			}
+		}
+	}
+}

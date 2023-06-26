@@ -1,0 +1,63 @@
+.icon-box {
+
+	.icon-box-content {
+
+		.icon-box-heading {
+
+			+ * {
+				margin-top: 0.5rem;
+			}
+		}
+
+		p {
+			margin: 0;
+		}
+
+		.button {
+			margin-top: 1rem;
+		}
+	}
+
+	&:not(.-left-icon):not(.-floating-icon) {
+		
+		.icon-box-content {
+
+			.icon-box-heading {
+				margin-top: 1rem;
+			}
+		}
+	}
+
+	&.-left-icon {
+
+		@include flex;
+		@include align-items(flex-start);
+
+		.icon-group {
+			margin-right: 1rem;
+		}
+
+		.icon-box-content {
+			flex-grow: 2;
+
+			.icon-box-heading {
+				margin-bottom: 0.25rem;
+				margin-top: 0.25rem;
+			}
+		}
+	}
+
+	&.-floating-icon {
+
+		.icon-box-header {
+			margin-bottom: 0.5rem;
+
+			@include flex;
+			@include align-items(center);
+		}
+
+		.icon-group {
+			margin-right: 0.75rem;
+		}
+	}
+}

@@ -1,0 +1,268 @@
+.btn, // old version fallback
+.button,
+a.button,
+button[type="submit"],
+input[type="submit"] {
+	background-color: $color-black;
+	font-family: $font-action;
+	font-size: $font-size-action;
+	min-height: $button-height;
+	border: 2px solid transparent;
+	padding: 0 1.15rem;
+	font-weight: bold;
+	cursor: pointer;
+	line-height: 1.5rem;
+	letter-spacing: -0.01em;
+	white-space: nowrap;
+	background-image: none !important;
+
+	@include inline-flex;
+	@include border-radius;
+	@include transition;
+	@include flex-just(center);
+
+	svg {
+		fill: currentColor;
+	}
+
+	> img {
+
+		&.icon {
+			max-height: 1.25em;
+		}
+	}
+
+	// Block
+
+	&.-block {
+
+		@include flex;
+		@include align-items(center);
+	}
+
+	&:not(.-outlined):not(.-flat):not(.-text):not(.-pagination) {
+		color: $color-white;
+	}
+
+	&:not(.-outlined):not(.-flat):not(.-text):not(.-primary):not(.-pagination):not(.elementor-button[type=submit]) {
+
+		&:hover,
+		&:active,
+		&:focus {
+			background-color: $color-red;
+			color: $color-white;
+		}
+	}
+
+	// With shadow
+
+	&.-with-shadow {
+
+		&:not(.-flat),
+		&.-flat:hover {
+
+			@include drop-shadow;
+		}
+	}
+
+	// Outlined
+
+	&.-outlined {
+		background-color: transparent;
+		color: $color-black;
+		border-color: currentColor;
+
+		&:not(.-pagination) {
+
+			&:hover,
+			&:active,
+			&:focus {
+				border-color: currentColor;
+				color: $color-red;
+			}
+		}
+	}
+
+	// Text
+
+	&.-text {
+		background-color: transparent;
+		border: none;
+		padding: 0;
+		min-height: initial;
+		transition-delay: 0s !important;
+		font-size: 1em;
+
+		@include border-radius(1px);
+		@include box-shadow(false, 0, 0, 0, 0.6rem, transparent);
+
+		&:hover,
+		&:active,
+		&:focus {
+			background-color: $color-neutral-6;
+
+			@include box-shadow(false, 0, 0, 0, 0.6rem, $color-neutral-6);
+		}
+	}
+
+	// Flat
+
+	&.-flat {
+		background-color: transparent;
+		border: none;
+
+		&:hover,
+		&:active,
+		&:focus {
+			background-color: $color-neutral-6;
+		}
+	}
+
+	// Primary color
+
+	&.btn-brand, // old version fallback
+	&.-primary {
+
+		&:not(.-outlined):not(.-flat):not(.-text) {
+
+			&:hover,
+			&:active,
+			&:focus {
+				background-color: $color-black-light;
+			}
+		}
+
+		&.-outlined {
+			border-color: $color-red;
+			color: $color-red;
+
+			&:hover,
+			&:active,
+			&:focus {
+				border-color: $color-black-light;
+				color: $color-black-light;
+			}
+		}
+
+		&.-flat,
+		&.-text {
+			color: $color-red;
+		}
+
+		&:not(.-outlined):not(.-flat):not(.-text) {
+			background-color: $color-red;
+		}
+	}
+
+	// Small
+
+	&.btn-small, // old version fallback
+	&.-small {
+		font-size: $font-size-action-small;
+		min-height: $button-small-height;
+
+		&:not(.-text) {
+			padding: 0 0.75rem;
+		}
+	}
+
+	// Large
+
+	&.-large {
+		min-height: $button-large-height;
+		font-size: $font-size-action-large;
+		line-height: 1.75rem;
+		padding: 0 1.4rem;
+
+		@include border-radius(0.5rem);
+	}
+
+	&:focus,
+	&:active {
+
+		@include box-shadow;
+	}
+
+	&:hover {
+
+		.icon {
+			animation: iconMove ease-out $transition-duration;
+		}
+
+		.icon {
+
+			&.-left-animation {
+				animation: iconMove ease-out $transition-duration reverse;
+			}
+		}
+	}
+
+	.-left {
+		margin-right: 0.5rem;
+	}
+
+	.-right {
+		margin-left: 0.5rem;
+	}
+
+	> .spinner {
+		color: currentColor;
+		margin-right: 0.5rem;
+	}
+}
+
+a {
+
+	&.btn, // old version fallback
+	&.button {
+		background-image: none;
+	}
+}
+
+@keyframes iconMove {
+
+	0% {
+		transform: translateX(0);
+	}
+
+	30% {
+		opacity: 0;
+	}
+
+	31% {
+		transform: translateX(1.25rem);
+	}
+
+	32% {
+
+		transform: translateX(-1.25rem);
+	}
+
+	84% {
+		opacity: 1;
+	}
+
+	100% {
+		transform: translateX(0);
+	}
+}
+
+// .minimal-scheme {
+
+// 	.button {
+// 		text-transform: uppercase;
+// 		font-size: $font-size-action-minimal;
+// 		letter-spacing: 0.01rem;
+// 		border-width: 1px;
+
+// 		@include border-radius($radius-button-minimal);
+
+// 		&.-small {
+// 			font-size: $font-size-action-small-minimal;
+// 		}
+
+// 		&.-large {
+// 			font-size: $font-size-action-large-minimal;
+// 		}
+// 	}
+// }

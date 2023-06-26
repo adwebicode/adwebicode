@@ -1,0 +1,55 @@
+.page-sidebar {
+	float: right;
+	position: relative;
+	z-index: 1;
+	width: calc(25% - 50px);
+	margin-bottom: 50px;
+
+	@include sm-screen {
+
+		width: 100%;
+		order: 10;
+		margin: 40px 0px 0px 0px;
+	}
+
+	// Position
+
+	&.-left {
+		float: left;
+	}
+
+	&.-right {
+		float: right;
+	}
+
+	// Layout
+
+	&.-boxed {
+		background-color: $color-neutral-6;
+
+		@include border-radius;
+		@include spacer2x;
+	}
+
+	// Widgets
+
+	.widget {
+
+		padding-top: 0;
+	}
+}
+
+@include sm-screen {
+
+	.page-container {
+
+		&:not(.top-part),
+		.content-area {
+			width: 100%;
+
+			@include flex;
+			@include flex-direction(column);
+
+		}
+	}
+}

@@ -1,0 +1,294 @@
+$social-colors: (
+	"artstation": #26bbff,
+	"behance": #0056ff,
+	"deviantart": #05CC47,
+	"digg": #1c5891,
+	"discord": #7289da,
+	"dribbble": #fd629e,
+	"facebook": #217cef,
+	"flickr": #0063db,
+	"github": #24292E,
+	"houzz": #007562,
+	"instagram": #383838,
+	"kaggle": #32C0FD,
+	"linkedin": #4477ab,
+	"medium": #1a8917,
+	"mixer": #0270d9,
+	"pinterest": #e4252d,
+	"producthunt": #ff4f00,
+	"quora": #a82401,
+	"reddit": #ff4501,
+	"snapchat": #e0e410,
+	"soundcloud": #FD561F,
+	"spotify": #1ED760,
+	"teamspeak": #1c82cc,
+	"telegram": #0088cc,
+	"tiktok": #323131,
+	"tripadvisor": #34e1a2,
+	"tumblr": #2a445f,
+	"twitch": #9147ff,
+	"twitter": #2aa3ef,
+	"vimeo": #1ab8ea,
+	"vine": #00be8e,
+	"whatsapp": #0ec143,
+	"xing": #0C6567,
+	"youtube": #e4252d,
+	"500px": #000000
+);
+
+.social-networks {
+
+	.network {
+		color: $color-black-light;
+		text-decoration: none;
+		margin-right: 0.35rem;
+		margin-bottom: 0.6rem;
+
+		@include inline-flex;
+		@include flex-just;
+		@include transition;
+	}
+
+	&:not(.-text):not(.-contained):not(.-outlined) {
+
+		.network {
+
+			&:hover {
+				background-color: $color-neutral-8;
+			}
+		}
+	}
+
+	&:not(.-text) {
+
+		.network {
+			width: 3rem;
+			height: 3rem;
+
+			@include border-radius(100%);
+
+			&:hover {
+				transform: $scale;
+			}
+		}
+	}
+
+	&.-contained {
+
+		.network {
+			color: $color-white;
+			background-color: $color-black;
+
+			&:hover {
+				color: $color-white;
+				background-color: $color-red;
+			}
+		}
+	}
+
+	&.-outlined {
+
+		.network {
+			border: 2px solid currentColor;
+
+			&:hover {
+				color: $color-red;
+				border-color: currentColor;
+			}
+		}
+	}
+
+	&.-text {
+
+		.icon {
+			margin-right: 0.15rem;
+			transform: scale(0.8);
+		}
+
+		.network {
+			font-weight: bold;
+
+			&:not(.network:last-child) {
+				margin-right: 0.75rem;
+			}
+
+			&:hover {
+				color: $color-black;
+				background-image: linear-gradient(currentColor 0px, currentColor 100%);
+			}
+		}
+	}
+
+	&.-small {
+
+		&:not(.-text) {
+
+			.network {
+				width: 2.2rem;
+				height: 2.2rem;
+			}
+		}
+
+		&.-text {
+
+			.network {
+				font-size: $font-size-small;
+			}
+		}
+	}
+
+	&.-large {
+
+		&:not(.-text) {
+
+			.network {
+				width: $circle;
+				height: $circle;
+			}
+		}
+
+		&.-text {
+
+			.network {
+				font-size: $font-size-large;
+			}
+		}
+	}
+
+	// Default colors
+
+	&.-default-colors {
+
+		&:not(.-contained) {
+
+			@each $name, $color in $social-colors {
+
+				.#{$name} {
+					color: $color;
+				}
+			}
+		}
+
+		&.-contained {
+
+			@each $name, $color in $social-colors {
+
+				.#{$name} {
+					color: $color-white;
+					background-color: $color;
+				}
+			}
+		}
+	}
+
+	// Default colors on hover
+
+	&.-hover-default-colors {
+
+		&:not(.-contained) {
+
+			@each $name, $color in $social-colors {
+
+				.#{$name}:hover {
+					color: $color;
+				}
+			}
+		}
+
+		&.-contained {
+
+			@each $name, $color in $social-colors {
+
+				.#{$name}:hover {
+					background-color: $color;
+				}
+			}
+		}
+	}
+
+	&.-boxed {
+		margin: 0;
+		overflow: hidden;
+
+		@include flex;
+	
+		.network {
+			background-color: transparent;
+			height: 6.25em;
+			margin: 0 !important;
+			border: none;
+			line-height: 6.25em;
+			position: relative;
+			overflow: hidden;
+			flex-grow: 1;
+			flex-basis: 0;
+
+			@include border-radius(0);
+	
+			.icon {
+				width: 100%;
+				text-align: center;
+				position: absolute;
+				opacity: 0;
+				top: 60%;
+				left: 0;
+
+				@include transition;
+			}
+	
+			span {
+				font-size: 0.95em;
+				position: relative;
+				top: 0;
+				opacity: 1;
+
+				@include transition;
+			}
+	
+			&:hover {
+				background-color: $color-neutral-6;
+	
+				.icon {
+					opacity: 1;
+					top: 40%;
+				}
+	
+				span {
+					opacity: 0;
+					top: -1.875em;
+				}
+			}
+		}
+	
+		@include sm-screen {
+	
+			.network {
+				height: 3.75em;
+				line-height: 3.75em;
+				font-size: 1.2em;
+	
+				span {
+					display: none;
+				}
+	
+				.icon {
+					opacity: 1;
+					position: static;
+				}
+			}
+		}
+	}
+}
+
+// .minimal-scheme {
+
+// 	.social-networks {
+
+// 		&.-outlined {
+
+// 			.network {
+// 				border-width: 1px;
+// 			}
+// 		}
+// 	}
+// }

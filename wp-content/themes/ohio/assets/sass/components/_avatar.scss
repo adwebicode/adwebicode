@@ -1,0 +1,47 @@
+.avatar {
+	background-color: $color-neutral-35;
+	width: $circle;
+	height: $circle;
+	position: relative;
+	overflow: hidden;
+	background-size: cover;
+	background-position: center;
+
+	> img { // Image with .avatar class override
+
+		&.avatar {
+    		max-width: 100%;
+    		width: 100%;
+			height: auto;
+		}
+	}
+
+	&.jetpack-lazy-image {
+		display: none;
+	}
+
+	@include border-radius(100%);
+
+	&::after {
+		content: "";
+		height: 100%;
+		width: 100%;
+		z-index: 1;
+		top: 0;
+		left: 0;
+
+		@include pseudo;
+		@include border-radius(100%);
+		@include box-shadow(inset);
+	}
+
+	&.-small {
+		width: $circle-small;
+		height: $circle-small;
+	}
+
+	&.-large {
+		width: $circle-large;
+		height: $circle-large;
+	}
+}

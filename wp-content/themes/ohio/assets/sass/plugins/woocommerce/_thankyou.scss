@@ -1,0 +1,61 @@
+.woocommerce-order-received {
+
+	.clb-blank {
+
+		@include flex;
+		@include align-items(center);
+
+		.icon-button {
+			margin-right: $grid-spacer;
+			background-color: rgba($color-success, .15);
+			color: $color-success;
+
+			@include border-radius(100%);
+
+			svg {
+				transform: scale(1.75);
+			}
+
+			// With error
+
+			&.-error {
+				background-color: rgba($color-danger, .15);
+				color: $color-danger;
+			}
+		}
+
+		.heading-md {
+			margin: 0;
+		}
+	}
+
+	// Overview
+
+	.woocommerce-order {
+
+		&-overview {
+			flex-wrap: wrap;
+			margin: 2.5rem 0px;
+			font-size: $font-size-small;
+
+			@include flex;
+
+			li {
+				padding-right: 1.25rem;
+				padding-bottom: 1.25rem;
+
+				strong {
+					display: block;
+				}
+			}
+
+			@include sm-screen {
+
+				li {
+					width: 50%;
+					word-wrap: break-word;
+				}
+			}
+		}	
+	}
+}

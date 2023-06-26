@@ -1,0 +1,38 @@
+.logo {
+	padding: 0.5rem 0;
+	position: relative;
+
+	img {
+
+		@include transition;
+	}
+
+	&-details {
+		background-color: $color-white;
+		z-index: 1;
+		font-size: $font-size-small;
+		visibility: hidden;
+		opacity: 0;
+		width: calc(100% + 2rem);
+		position: absolute;
+		left: -1rem;
+		top: 55%;
+		transform: translate(0, -50%);
+		padding: 1rem;
+
+		@include transition;
+	}
+
+	&:hover {
+
+		img {
+			transform: $scale;
+		}
+
+		.logo-details {
+			opacity: 1;
+			visibility: visible;
+			top: 50%;
+		}
+	}
+}

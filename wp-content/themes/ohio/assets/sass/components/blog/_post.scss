@@ -1,0 +1,381 @@
+.single-post,
+.page-id-124 { // Docs website support
+
+	// Base styles
+
+	.entry-content {
+
+		@include spacer3x(margin-bottom);
+
+		.ohio-text-sc:last-child p,
+		.alert,
+		p:not(.-unspace),
+		ul,
+		ol {
+			margin-bottom: 1.35em;
+
+			&:first-child {
+				margin-top: 0;
+			}
+		}
+
+		// Typography overrides
+
+		a {
+
+			&:not(.wp-block-button__link) {
+				color: $color-red;
+			}
+		}
+
+		@include lg-screen {
+
+			h2, 
+			h3 {
+
+				&:not(:first-child) {
+					margin-top: 3rem;
+				}
+			}
+
+			h4, 
+			h5,
+			h6 {
+				
+				&:not(:first-child) {
+					margin-top: 2.5rem;
+				}
+			}
+		}
+	}
+
+	// Single post layout type1
+
+	.-layout1 {
+
+		.post-share {
+
+			.share-bar {
+				z-index: 10;
+
+				@include md-screen {
+
+					left: -2rem;
+					margin-top: 2rem;
+					transform: translateX(-100%);
+				}
+
+				@include tablet-screen {
+
+					left: 0;
+					position: relative;
+				}
+
+				@include sm-screen {
+
+					.social-networks {
+
+						@include inline-flex;
+						@include flex-direction(row);
+					}
+				}
+			}
+
+			// Breadcrumbs paddings
+
+			+ .page-container {
+				padding-left: 0 !important;
+				padding-right: 0 !important;
+			}
+		}
+	}
+
+	// Single post layout type2
+
+	.-layout2 {
+
+		@include spacer4x(padding-bottom);
+
+		> .vc_row {
+			margin: 0;
+		}
+
+		.post-share {
+
+			@include sm-screen {
+
+				margin-top: $grid-spacer;
+				margin-left: $grid-spacer;
+			}
+
+			.share-bar {
+				position: relative;
+
+				.social-networks {
+
+					@include inline-flex;
+					@include flex-direction(row);
+				}
+			}
+		}
+
+		@include md-screen {
+
+			// With featured image
+
+			&.-with-featured-image {
+
+				.post-share {
+
+					.share-bar {
+						position: absolute;
+						z-index: 10;
+						bottom: $spacer;
+						left: calc(100% - #{$spacer});
+						transform: translateX(-100%);
+
+						.social-networks {
+							background-color: $color-white;
+
+							@include flex-direction(column);
+						}
+					}
+				}
+			}
+
+			.page-headline {
+
+				.title,
+				.post-meta-holder {
+				    max-width: 80% !important;
+				}
+
+				.holder {
+					padding-top: $header-height;
+
+					.page-container {
+						padding: 0px;
+					}
+				}
+			}
+
+			.post-meta,
+			.post-content {
+				float: left;
+				width: 50%;
+			}
+
+			.post-content {
+				padding-top: $header-height;
+
+				.page-container {
+					padding-left: 0px !important;
+					padding-right: 0px !important;
+				}
+
+				@include spacer(padding-left);
+			}
+
+			&.-with-left-sidebar,
+			&.-with-right-sidebar {
+
+				.post-meta {
+					width: 40%;
+
+					.holder,
+					.post-share {
+
+						@include spacer-side(padding-left);
+					}
+				}
+
+				.post-content {
+					width: 60%;
+
+					@include spacer-side(padding-right);
+
+					.page-content {
+					    width: 65%;
+					}
+
+					.page-sidebar {
+					    width: calc(35% - 2rem);
+					}
+				}
+			}
+		}
+
+		&:not(.-with-left-sidebar):not(.-with-right-sidebar) {
+
+			.post-meta {
+
+				.holder,
+				.post-share {
+
+					@include md-screen {
+
+						@include spacer-side(padding-left);
+					}
+
+					@include xl-screen {
+
+						padding-left: 12vw;
+					}
+				}
+			}
+
+			.post-content {
+
+				@include md-screen {
+
+					@include spacer-side(padding-right);
+				}
+
+				@include xl-screen {
+
+					padding-right: 12vw;
+				}
+			}
+		}
+
+		@include sm-screen {
+
+			.post-content {
+
+				.page-content,
+				.page-sidebar {
+					padding-left: $grid-spacer;
+					padding-right: $grid-spacer;
+				}
+			}
+		}
+	}
+
+	&.with-sticky-header {
+
+		.-layout2 {
+			
+			.-sticky-block {
+				top: 0;
+			}
+		}
+	}
+
+	&:not(.with-spacer) {
+
+		@include md-screen {
+
+			.-layout2 {
+
+				.post-content {
+					margin-top: $header-height;
+				}
+			}
+		}
+	}
+
+	// Tags block
+
+	.entry-footer {
+
+		@include flex;
+		@include align-items(center);
+		@include flex-just(space-between);
+		@include spacer3x(margin-bottom);
+
+		&-tags {
+			font-size: $font-size-small;
+
+			.tags-caption {
+				margin-right: 0.5rem;
+			}
+
+			.tagcloud {
+
+				a {
+					margin: 0.35rem 0.35rem 0.35rem 0;
+				}
+			}
+		}
+	}
+
+	// Author widget
+
+	.author-container {
+
+		.widget_ohio_widget_about_author {
+			background-color: $color-neutral-6;
+
+			@include spacer2x;
+			@include border-radius;
+			@include spacer3x(margin-bottom);
+
+			@include lg-screen {
+
+				@include flex-direction(row);
+				@include flex-just(space-between);
+
+				.avatar {
+					margin-bottom: 0;
+					margin-right: 1.5rem;
+					min-width: $circle-large;
+				}
+
+				.social-networks {
+					margin: 0 0 0 1.5rem;
+
+					@include flex;
+					@include flex-direction(column);
+
+					.network {
+						margin: 0 0 0.4rem 0;
+					}
+				}
+			}
+		}
+	}
+
+	// Page headline meta
+
+	.page-headline {
+
+		.category-holder {
+
+			&::after {
+				margin-left: 0.3rem;
+			}
+		}
+	}
+
+	// Related
+
+	.related-posts {
+
+		@include spacer(padding-bottom);
+	}
+
+	// Comments
+
+	.comments {
+		
+		@include spacer4x(padding-top);
+		@include spacer4x(padding-bottom);
+
+		&-container {
+			background-color: $color-neutral-6;
+		}
+	}
+
+	// Share bar
+
+	.post-share {
+		position: relative;
+		
+		.share-bar {
+
+			.social-networks {
+				background-color: $color-neutral-6;
+			}
+		}
+	}
+}

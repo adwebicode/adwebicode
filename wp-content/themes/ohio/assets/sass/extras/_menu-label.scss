@@ -1,0 +1,56 @@
+.menu {
+
+	li {
+
+		&.new,
+		&.version {
+
+			span {
+
+				&:after {
+					margin: -1px 0 0 4px;
+					padding: 0 4px;
+					height: 1.05rem;;
+					font-size: 9px;
+					font-weight: bold;
+					vertical-align: middle;
+					color: $color-white;
+
+					@include inline-flex;
+					@include align-items(center);
+					@include border-radius;
+
+					@include note-screen {
+
+						padding: 0 4px;
+						height: 1.15rem;
+						font-size: 10px;
+					}
+				}
+			}
+		}
+
+		&.new {
+
+			span {
+
+				&:after {
+					content:"NEW";
+					background-color: $color-red;
+				}
+			}
+		}
+
+		&.version {
+
+			span {
+				white-space: nowrap !important;
+
+				&:after {
+					content:"V3.0";
+					background-color: $color-black-light;
+				}
+			}
+		}
+	}
+}

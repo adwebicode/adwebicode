@@ -1,0 +1,341 @@
+.woo-products {
+	margin-top: -$grid-spacer;
+
+	.product {
+		padding: $grid-spacer;
+		float: left;
+
+		@include sm-screen {
+
+			padding-bottom: 0;
+		}
+	}
+
+	.woo-price {
+
+		@include inline-flex;
+		@include align-items(center);
+		@include flex-just(flex-end);
+		@include flex-direction(row-reverse);
+
+		.star-rating {
+			transform: scale(0.9);
+			margin-top: -2px;
+		}
+
+		&:not(.-with-rating) {
+
+			.star-rating {
+				display: none;
+			}
+		}
+	}
+
+	.woo-product-name, 
+	.woo-category {
+		margin-bottom: 0.2rem;
+	}
+
+	// Labels
+
+	.tag {
+
+		@include faded;
+		@include transition;
+		@include spacer2x(left);
+		@include spacer2x(top);
+
+		+ .tag {
+			margin-top: 2rem;
+		}
+	}
+
+	// Quickview button
+
+	.button-quickview {
+
+		@include spacer2x(left);
+		@include spacer2x(top);
+	}
+
+	.tag,
+	.button-quickview,
+	.button-favorites,
+	.product-item-buttons {
+		position: absolute;
+		z-index: 3;
+	}
+
+	.product-item {
+
+		// Product image
+
+		&-thumbnail {
+			overflow: hidden;
+			position: relative;
+
+			.image-holder {
+
+				> a {
+					position: absolute;
+					z-index: 2;
+					top: 0;
+					left: 0;
+					width: 100%;
+					display: block;
+					height: 100%;
+				}
+
+				img {
+					min-width: 100%;
+
+					&.active:not(.cloned) {
+						z-index: 1;
+					}
+				}
+
+				&::after {
+					z-index: 1;
+				}
+			}
+		}
+
+		// Buttons group
+
+		&-buttons {
+			padding: 1.5rem;
+			width: 100%;
+			bottom: 0;
+
+			@include spacer2x(padding-bottom);
+			@include flex;
+
+			.button-group {
+				width: 100%;
+				padding: 0 0.5rem;
+
+				// Small button styles
+
+				.button {
+					width: 100%;
+				    padding: 0 0.75rem;
+					font-size: $font-size-small;
+				    min-height: $button-small-height;
+				}
+			}
+		}
+
+		.clb-slider {
+
+			&-nav-btn {				
+
+				@include fadeDown-hidden;
+				@include spacer2x(padding);
+
+				@include sm-screen {
+
+					display: none;
+				}
+			}
+
+			.clb-slider-item {
+
+				&.active {
+
+					img {
+						z-index: 1;
+					}
+				}
+			}
+		}
+
+		&:hover {
+
+			.tag {
+
+				@include fadeUp-hidden;
+			}
+
+			@include sm-screen {
+
+				.product-item-buttons {
+					display: none;
+				}
+			}
+		}
+
+		// Layout Type1
+
+		&.-type1 {
+
+			.clb-slider {
+
+				&-nav-btn {
+					top: 0;
+					bottom: auto;
+					right: 0;
+					min-width: initial;
+
+					@include flex-direction(column);
+					
+					.prev-btn,
+					.next-btn {
+						transform: rotate(90deg);
+					}
+				}
+			}
+
+			&:hover {
+
+				@include md-screen {
+
+					.clb-slider-nav-btn {
+
+						@include faded;
+					}
+				}
+			}
+		}
+
+		// Layout Type2
+
+		&.-type2 {
+
+			.card-details {
+
+				.holder {
+					position: relative;
+					overflow: hidden;
+				}
+			}
+
+			.clb-slider {
+
+				&-nav-btn {
+					padding: unset;
+					width: 100%;
+					bottom: 50%;
+					opacity: 0;
+					transform: translateY(50%);
+
+					@include transition;
+
+					.icon-button {
+						position: absolute;
+						transform: translateY(-50%);
+
+						&.prev-btn {
+
+							@include spacer2x(left);
+						}
+
+						&.next-btn {
+							
+							@include spacer2x(right);
+						}
+					}
+				}
+			}
+
+			.button-group,
+			.woo-price {
+
+				@include transition;
+			}
+
+			.button-group {
+				opacity: 0;
+				width: 100%;
+				position: absolute;
+
+				.button {
+
+					&,
+					&:hover,
+					&:active,
+					&:focus {
+						background-color: unset;
+						box-shadow: unset;
+					}
+				}
+			}
+
+			.button-quickview {
+
+				+ .button-favorites {
+					margin-top: $circle;
+				}
+			}
+
+			// Add to favorites
+
+			.button-favorites {
+
+				@include spacer2x(top);
+				@include spacer2x(left);
+				@include border-radius(50%);
+
+				.icon-button {
+
+					&:not(.added) {
+						
+						.icon {
+
+						}
+					}
+
+					&.active {
+						cursor: default;
+
+						svg {
+
+							&:not(.-hidden) {
+								display: none;
+							}
+
+							&.-hidden {
+								display: block;
+							}
+						}
+					}
+				}
+
+				// Remove standard red color overlay
+
+				.blockUI {
+
+					&.blockOverlay {
+						background: transparent !important;
+					}
+				}
+
+				> div {
+					display: none;
+				}
+			}
+
+			&:hover {
+
+				.button-favorites {
+
+					@include faded;
+				}
+
+				.button-group {
+					opacity: 1;
+					transform: translate(0, -100%);
+				}
+
+				.clb-slider-nav-btn {
+					opacity: 1;
+					transform: translateY(50%);
+				}
+
+				.woo-price {
+					opacity: 0;
+					transform: translate(0, -100%);
+				}
+			}
+		}
+	}
+}

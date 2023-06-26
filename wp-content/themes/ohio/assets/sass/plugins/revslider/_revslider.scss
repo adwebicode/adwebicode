@@ -1,0 +1,48 @@
+rs-slide {
+
+    .font-paragraphs {
+        font-family: $font-main;
+    }
+
+    @include sm-screen {
+
+        .srev_headline {
+            font-size: 46px !important;
+            line-height: .9 !important;
+        }
+    }
+
+    // Page container overrides
+
+    .rev_row_zone_top,
+    .rev_row_zone_bottom {
+
+        > .rs-parallax-wrap {
+
+            @media screen and (min-width: 1025px) and (max-width: 1600px) {
+
+                width: 100% !important;
+                left: 0 !important;
+                margin: 0 auto;
+            }
+
+            @media screen and (min-width: 1441px) and (max-width: 1600px) {
+
+                max-width: $container;
+            }
+
+            @media screen and (min-width: 1025px) and (max-width: 1440px) {
+
+                max-width: $container-laptop;
+            }
+
+            @include xxl-screen {
+                
+                width: 100% !important;
+                left: 0 !important;
+                margin: 0 auto;
+                max-width: $container-xxl;
+            }
+        }
+    }
+}

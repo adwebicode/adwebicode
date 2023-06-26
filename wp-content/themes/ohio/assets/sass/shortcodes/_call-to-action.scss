@@ -1,0 +1,20 @@
+.call-to-action {
+	width: 100%;
+	position: relative;
+	background-color: rgba($color-red, 0.1);
+
+	@include spacer3x;
+	@include flex;
+	@include flex-just(space-between);
+	@include align-items(flex-start);
+
+	&.-with-shadow {
+
+		@include drop-shadow;
+	}
+
+	@include sm-screen {
+		
+		@include flex-direction(column);
+	}
+}

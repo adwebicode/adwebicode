@@ -1,0 +1,37 @@
+<svg width="252" height="150" viewBox="0 0 252 150" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_1_3838)">
+<rect opacity="0.4" width="252" height="150" fill="#677A9E"/>
+<rect opacity="0.15" x="30" y="36" width="14" height="14" fill="#677A9E"/>
+<rect opacity="0.15" x="30" y="54" width="14" height="14" fill="#677A9E"/>
+<rect opacity="0.15" x="30" y="72" width="14" height="14" fill="#677A9E"/>
+<rect opacity="0.15" x="30" y="90" width="14" height="14" fill="#677A9E"/>
+<rect opacity="0.15" x="30" y="108" width="14" height="14" fill="#677A9E"/>
+<rect opacity="0.15" x="48" y="36" width="86" height="86" fill="#677A9E"/>
+<rect opacity="0.3" x="78" y="66" width="26" height="26" rx="6" fill="#677A9E"/>
+<mask id="mask0_1_3838" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="78" y="66" width="26" height="26">
+<rect opacity="0.3" x="78" y="66" width="26" height="26" rx="6" fill="#677A9E"/>
+</mask>
+<g mask="url(#mask0_1_3838)">
+<path d="M80 76.1667C80 74.3571 81.3478 73 83.1449 73C84.942 73 86.2899 74.3571 86.2899 76.1667C86.2899 77.9762 84.942 79.3333 83.1449 79.3333C81.3478 79.3333 80 77.9762 80 76.1667ZM99.0942 76.1667L93.9275 84.3095L89.8841 79.3333L80 92H111L99.0942 76.1667Z" fill="#677A9E"/>
+</g>
+<rect opacity="0.15" x="48" y="126" width="86" height="86" fill="#677A9E"/>
+<path d="M202 66H162V70H202V66Z" fill="white"/>
+<path d="M172 93H162V97H172V93Z" fill="white"/>
+<path d="M222 76H162V79H222V76Z" fill="white"/>
+<path d="M202 82H162V85H202V82Z" fill="white"/>
+<rect x="14" y="16.3636" width="18" height="3.27273" fill="white"/>
+<rect x="97" y="17" width="12" height="2" fill="white"/>
+<rect x="115" y="17" width="12" height="2" fill="white"/>
+<rect x="133" y="17" width="12" height="2" fill="white"/>
+<rect x="151" y="17" width="12" height="2" fill="white"/>
+<rect x="169" y="17" width="12" height="2" fill="white"/>
+<rect x="187" y="17" width="12" height="2" fill="white"/>
+<rect x="220" y="17.1818" width="6" height="1.63636" fill="white"/>
+<rect x="232" y="17.1818" width="6" height="1.63636" fill="white"/>
+</g>
+<defs>
+<clipPath id="clip0_1_3838">
+<rect width="252" height="150" fill="white"/>
+</clipPath>
+</defs>
+</svg>

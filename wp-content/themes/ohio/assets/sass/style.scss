@@ -1,0 +1,168 @@
+/*!
+Theme Name: Ohio
+Theme URI: http://ohio.clbthemes.com/
+Author: Colabrio
+Author URI: http://clbthemes.com/
+Description: Ohio is a WordPress theme bundled with premium plugins to build a modern and functional website.
+Version: 3.2.4
+Tested up to: 8.0
+Requires PHP: 7.0
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain: ohio
+Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+# Base
+	## Grid
+	## Elements
+		- Body
+		- Cards
+		- Hr
+		- Links
+		- Lists
+		- Media
+		- Tables
+	## Typography
+		- Copy
+		- Headings
+
+# Utilities
+	## Tailwindcss
+	## Utilities
+
+# Layouts
+
+# Components
+	## Alerts
+	## Author
+	## Avatar
+	## Badge
+	## Breadcrumb
+	## Button
+	## Checkbox
+	## Cursor
+	## Icon Button
+	## Icon Group
+	## Icon
+	## Pagination
+	## Progress
+	## Select
+	## Spinner
+	## Switcher
+	## Text Field
+	## Tooltips
+	## Navigation
+		- Menu
+	## Patterns
+		- Comments
+		- Cookies Notification
+		- Elements Bar
+		- Social Bar
+	## Widgets
+	- Widgets
+
+# Shortcodes
+	## Accordion Horizontal
+	## Accordion
+	## Banner
+	## Circle Progress
+	## Compare
+	## Contact Form
+	## Countdown
+	## Counter
+	## Dynamic Text
+	## Gallery
+	## Google Maps
+	## Heading
+	## Icon Box
+	## Logo
+	## Pricing Table
+	## Progress Bar
+	## Service Table
+	## Slider
+	## Social Networks
+	## Subscribe Form
+	## Tabs
+	## Team Member
+	## Testimonial
+	## Text
+	## Video Button
+
+# Extras
+	## Dark Mode
+
+# Plugins
+	## Elementor
+	## Jetpack
+	## Slider Revolution
+	## WPbakery
+
+--------------------------------------------------------------*/
+
+/* Import variables and mixins.
+--------------------------------------------- */
+@import "abstracts/abstracts";
+
+/*--------------------------------------------------------------
+# Base
+--------------------------------------------------------------*/
+@import "base/base";
+
+/*--------------------------------------------------------------
+# Utilities
+--------------------------------------------------------------*/
+
+/* ## Tailwindcss
+--------------------------------------------- */
+@import "utilities/tailwindcss";
+
+/* ## Utilities
+--------------------------------------------- */
+@import "utilities/utilities";
+
+/*--------------------------------------------------------------
+# Layouts
+--------------------------------------------------------------*/
+@import "layouts/layouts";
+
+/*--------------------------------------------------------------
+# Components
+--------------------------------------------------------------*/
+@import "components/components";
+
+/*--------------------------------------------------------------
+# Shortcodes
+--------------------------------------------------------------*/
+@import "shortcodes/shortcodes";
+
+/*--------------------------------------------------------------
+# Extras
+--------------------------------------------------------------*/
+@import "extras/extras";
+
+/*--------------------------------------------------------------
+# Plugins
+--------------------------------------------------------------*/
+
+/* ## Elementor
+--------------------------------------------- */
+@import "plugins/elementor/elementor";
+
+/* ## Jetpack
+--------------------------------------------- */
+@import "plugins/jetpack/jetpack";
+
+/* ## Slider Revolution
+--------------------------------------------- */
+@import "plugins/revslider/revslider";
+
+/* ## WPbakery
+--------------------------------------------- */
+@import "plugins/wpbakery/wpbakery";

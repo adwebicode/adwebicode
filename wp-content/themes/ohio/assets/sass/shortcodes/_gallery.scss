@@ -1,0 +1,30 @@
+.gallery-item {
+	cursor: pointer;
+
+	.caption {
+		display: none;
+	}
+
+	.overlay-details {
+
+		@include gradient(0deg, 0.65);
+
+		.heading {
+			width: 100%;
+		}
+
+		h5 {
+			color: $color-white;
+		}
+	}
+
+	&.-with-overlay {
+
+		.image-holder {
+
+			+ .card-details {
+				display: none;
+			}
+		}
+	}
+}

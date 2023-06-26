@@ -1,0 +1,13 @@
+// Disable Safari
+
+// Safari 11+
+@media not all and (min-resolution:.001dpcm) { 
+
+	@supports (-webkit-appearance:none) and (stroke-color:transparent) {
+
+	    [data-tilt="true"] {
+			will-change: auto !important;
+			transform: none !important;
+		}
+	}
+}

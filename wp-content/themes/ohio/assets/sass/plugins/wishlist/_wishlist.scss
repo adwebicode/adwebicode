@@ -1,0 +1,88 @@
+.yith-wcwl-form {
+
+    .woo-wishlist {
+        margin: 0;
+        font-size: 100%;
+
+        tr {
+
+            td {
+                text-align: left;
+                border-color: $color-border;
+
+                &.product-remove {
+                    width: 4rem;
+                }
+
+                &.product-thumbnail {
+                    padding-left: 0;
+                    width: 4.25rem;
+
+                    img {
+                        max-width: 4.25rem;
+                        
+                        @include metro-img(4.25rem, 4.25rem);
+                    }
+                }
+
+                &.product-add-to-cart {
+                    padding-right: 0;
+                    text-align: right;
+
+                    a {
+                        display: inline-block !important;
+                        font-weight: 600;
+                    }
+                }
+            }
+        }  
+    }
+
+    // Mobile view styles
+
+    .wishlist_view {
+
+        &.mobile {
+
+            @include unlist;
+        }
+    }
+
+    // Share bar
+
+    .yith_wcwl_wishlist_footer {
+        margin-top: 2rem;
+
+        .yith-wcwl-share {
+
+            .socialbar {
+
+                @include unlist;
+
+                li {
+
+                    a {
+
+                        &.facebook,
+                        &.twitter,
+                        &.pinterest,
+                        &.email,
+                        &.whatsapp {
+                            background: $color-black;
+
+                            @include border-radius(50%);
+                        }
+
+                        &:hover {
+                            opacity: .65;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    .wishlist-title {
+        display: none;
+    }
+}

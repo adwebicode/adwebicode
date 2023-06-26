@@ -1,0 +1,585 @@
+<wpml-config>
+    <elementor-widgets>
+        <!-- ohio_accordion -->
+        <widget name="ohio_accordion">
+            <fields-in-item items_of="tabs">
+                <field type="Title" editor_type="LINE">list_title</field>
+                <field type="Content text" editor_type="VISUAL">list_content_editor</field>
+            </fields-in-item>
+        </widget>
+        <!-- ohio_accordion_horizontal -->
+        <widget name="ohio_accordion_horizontal">
+            <fields-in-item items_of="tabs">
+                <field type="Content text" editor_type="VISUAL">list_content_editor</field>
+            </fields-in-item>
+        </widget>
+        <!-- ohio_banner -->
+        <widget name="ohio_banner">
+            <fields>
+                <field type="Headline" editor_type="LINE">title</field>
+                <field type="Subtitle text" editor_type="VISUAL">subtitle</field>
+                <field type="Description (HTML allowed)" editor_type="VISUAL">description</field>
+                <field type="Link URL" editor_type="LINK" key_of="link">url</field>
+            </fields>
+        </widget>
+        <!-- ohio_button -->
+        <widget name="ohio_button">
+            <fields>
+                <field type="Title" editor_type="LINE">title</field>
+                <field type="Link URL" editor_type="LINK" key_of="link">url</field>
+            </fields>
+        </widget>
+        <!-- ohio_carousel -->
+        <widget name="ohio_carousel">
+            <fields-in-item items_of="tabs">
+                <field type="Content text" editor_type="VISUAL">list_content_editor</field>
+            </fields-in-item>
+        </widget>
+        <!-- ohio_circle_progress_bar -->
+        <widget name="ohio_circle_progress_bar">
+            <fields>
+                <field type="Label" editor_type="LINE">label</field>
+            </fields>
+        </widget>
+        <!-- ohio_clients_logo -->
+        <widget name="ohio_clients_logo">
+            <fields>
+                <field type="Details" editor_type="LINE">description</field>
+                <field type="Link URL" editor_type="LINK" key_of="link">url</field>
+            </fields>
+        </widget>
+        <!-- ohio_compare -->
+        <widget name="ohio_compare">
+            <fields>
+                <field type="Image before label" editor_type="LINE">before_label</field>
+                <field type="Image after label" editor_type="LINE">after_label</field>
+            </fields>
+        </widget>
+        <!-- ohio_counter -->
+        <widget name="ohio_counter">
+            <fields>
+                <field type="Text before" editor_type="LINE">count_text_before</field>
+                <field type="Text after" editor_type="LINE">count_text_after</field>
+                <field type="Title" editor_type="LINE">title</field>
+            </fields>
+        </widget>
+        <!-- ohio_call_to_action -->
+        <widget name="ohio_call_to_action">
+            <fields>
+                <field type="Heading" editor_type="LINE">title</field>
+                <field type="Subtitle" editor_type="AREA">subtitle</field>
+                <field type="Link title" editor_type="LINE">button_title</field>
+                <field type="Link URL" editor_type="LINK" key_of="button_link">url</field>
+            </fields>
+        </widget>
+        <!-- ohio_dynamic_text -->
+        <widget name="ohio_dynamic_text">
+            <fields>
+                <field type="Text before" editor_type="LINE">before_text</field>
+                <field type="Text after" editor_type="LINE">after_text</field>
+            </fields>
+            <fields-in-item items_of="dynamic_text">
+                <field type="Text variant" editor_type="LINE">list_text</field>
+            </fields-in-item>
+        </widget>
+        <!-- ohio_heading -->
+        <widget name="ohio_heading">
+            <fields>
+                <field type="Heading" editor_type="AREA">title</field>
+                <field type="Subtitle" editor_type="AREA">subtitle</field>
+            </fields>
+        </widget>
+        <!-- ohio_icon_box -->
+        <widget name="ohio_icon_box">
+            <fields>
+                <field type="Heading" editor_type="LINE">title</field>
+                <field type="Description" editor_type="AREA">description</field>
+                <field type="Link title" editor_type="LINE">button_title</field>
+                <field type="Link URL" editor_type="LINK" key_of="button_link">url</field>
+            </fields>
+        </widget>
+        <!-- ohio_message -->
+        <widget name="ohio_message">
+            <fields>
+                <field type="Message text" editor_type="AREA">text</field>
+                <field type="Link title" editor_text="LINE">button_title</field>
+                <field type="Link URL" editor_type="LINK" key_of="button_link">url</field>
+            </fields>
+        </widget>
+        <!-- ohio_pricing_list -->
+        <widget name="ohio_pricing_list">
+            <fields>
+                <field type="Headline" editor_type="LINE">name</field>
+                <field type="Details" editor_type="LINE">ingredients</field>
+                <field type="Regular Price" editor_type="LINE">regular_price</field>
+                <field type="Sale Price" editor_type="LINE">sale_price</field>
+            </fields>
+        </widget>
+        <!-- ohio_pricing_table -->
+        <widget name="ohio_pricing_table">
+            <fields>
+                <field type="Headline" editor_type="LINE">headline</field>
+                <field type="Subtitle" editor_type="LINE">subtitle</field>
+                <field type="Description" editor_type="AREA">description</field>
+                <field type="Price" editor_type="LINE">price</field>
+                <field type="Price tag" editor_type="AREA">caption</field>
+                <field type="Currency" editor_type="LINE">currency</field>
+                <field type="Button title" editor_type="LINE">button_title</field>
+                <field type="Button URL" editor_type="LINK" key_of="button_link">url</field>
+            </fields>
+            <fields-in-item items_of="features_list">
+                <field type="Healine" editor_type="LINE">list_title</field>
+            </fields-in-item>
+        </widget>
+        <!-- ohio_process -->
+        <widget name="ohio_process">
+            <fields>
+                <field type="Number" editor_type="LINE">number</field>
+                <field type="Headline" editor_type="LINE">headline</field>
+                <field type="Description" editor_type="LINE">description</field>
+            </fields>
+        </widget>
+        <!-- ohio_progress_bar -->
+        <widget name="ohio_progress_bar">
+            <fields>
+                <field type="Progress bar label" editor_type="AREA">label</field>
+            </fields>
+        </widget>
+        <!-- ohio_service_table -->
+        <widget name="ohio_service_table">
+            <fields>
+                <field type="Headline" editor_type="LINE">headline</field>
+                <field type="Subtitle" editor_type="LINE">subtitle</field>
+                <field type="Description" editor_type="AREA">description</field>
+            </fields>
+            <fields-in-item items_of="features_list">
+                <field type="Headline" editor_type="LINE">list_title</field>
+            </fields-in-item>
+        </widget>
+        <!-- ohio_social_networks -->
+        <widget name="ohio_social_networks">
+            <fields-in-item items_of="social_networks">
+                <field type="Link URL" editor_type="LINE">list_link</field>
+            </fields-in-item>
+        </widget>
+        <!-- ohio_tabs -->
+        <widget name="ohio_tabs">
+            <fields-in-item items_of="tabs">
+                <field type="Title" editor_type="LINE">list_title</field>
+                <field type="Content" editor_type="VISUAL">list_content_editor</field>
+            </fields-in-item>
+        </widget>
+        <!-- ohio_team_member -->
+        <widget name="ohio_team_member">
+            <fields>
+                <field type="Member name" editor_type="LINE">member_name</field>
+                <field type="Member position" editor_type="LINE">member_position</field>
+                <field type="Member about" editor_type="AREA">member_description</field>
+                <field type="Link URL" editor_type="LINK" key_of="team_member_link">url</field>
+            </fields>
+            <fields-in-item items_of="social_networks">
+                <field type="Link URL" editor_type="LINE">list_link</field>
+            </fields-in-item>
+        </widget>
+        <!-- ohio_team_members -->
+        <widget name="ohio_team_members">
+            <fields-in-item items_of="members">
+                <field type="Member name" editor_type="LINE">member_name</field>
+                <field type="Member position" editor_type="LINE">member_position</field>
+                <field type="Member about" editor_type="AREA">member_description</field>
+                <field type="Link URL" editor_type="LINK" key_of="team_member_link">url</field>
+            </fields-in-item>
+            <fields-in-item items_of="social_networks">
+                <field type="Link URL" editor_type="LINE">list_link</field>
+                <field type="ArtStation link" editor_type="LINE">social_artstation</field>
+                <field type="Behance link" editor_type="LINE">social_behance</field>
+                <field type="DeviantArt link" editor_type="LINE">social_deviantart</field>
+                <field type="Digg link" editor_type="LINE">social_digg</field>
+                <field type="Discord link" editor_type="LINE">social_discord</field>
+                <field type="Dribbble link" editor_type="LINE">social_dribbble</field>
+                <field type="Facebook link" editor_type="LINE">social_facebook</field>
+                <field type="Flickr link" editor_type="LINE">social_flickr</field>
+                <field type="GitHub link" editor_type="LINE">social_github</field>
+                <field type="Instagram link" editor_type="LINE">social_instagram</field>
+                <field type="Kaggle link" editor_type="LINE">social_kaggle</field>
+                <field type="LinkedIn link" editor_type="LINE">social_linkedin</field>
+                <field type="Medium link" editor_type="LINE">social_medium</field>
+                <field type="Mixer link" editor_type="LINE">social_mixer</field>
+                <field type="Pinterest link" editor_type="LINE">social_pinterest</field>
+                <field type="Quora link" editor_type="LINE">social_quora</field>
+                <field type="Reddit link" editor_type="LINE">social_reddit</field>
+                <field type="Snapchat link" editor_type="LINE">social_snapchat</field>
+                <field type="SoundCloud link" editor_type="LINE">social_soundcloud</field>
+                <field type="Spotify link" editor_type="LINE">social_spotify</field>
+                <field type="TeamSpeak link" editor_type="LINE">social_teamspeak</field>
+                <field type="Telegram link" editor_type="LINE">social_telegram</field>
+                <field type="TikTok link" editor_type="LINE">social_tiktok</field>
+                <field type="Tripadvisor link" editor_type="LINE">social_tripadvisor</field>
+                <field type="Tumblr link" editor_type="LINE">social_tumblr</field>
+                <field type="Twitch link" editor_type="LINE">social_twitch</field>
+                <field type="Twitter link" editor_type="LINE">social_twitter</field>
+                <field type="Vimeo link" editor_type="LINE">social_vimeo</field>
+                <field type="Vine link" editor_type="LINE">social_vine</field>
+                <field type="WhatsApp link" editor_type="LINE">social_whatsapp</field>
+                <field type="Xing link" editor_type="LINE">social_xing</field>
+                <field type="YouTube link" editor_type="LINE">social_youtube</field>
+                <field type="500px link" editor_type="LINE">social_fivehundred</field>
+            </fields-in-item>
+        </widget>
+        <!-- ohio_testimonial -->
+        <widget name="ohio_testimonial">
+            <fields>
+                <field type="Headline" editor_type="LINE">title</field>
+                <field type="Testimonial text" editor_type="AREA">testimonial_text</field>
+                <field type="Author name" editor_type="LINE">author_name</field>
+                <field type="Author position" editor_type="LINE">author_position</field>
+            </fields>
+        </widget>
+        <!-- ohio_vertical_slider -->
+        <widget name="ohio_vertical_slider">
+            <fields-in-item items_of="tabs">
+                <field type="Content text" editor_type="VISUAL">list_content_editor</field>
+            </fields-in-item>
+        </widget>
+        <!-- ohio_video -->
+        <widget name="ohio_video">
+            <fields>
+                <field type="Video title" editor_type="AREA">title</field>
+                <field type="Video URL" editor_type="LINE">link</field>
+            </fields>
+        </widget>
+        <!-- ohio_woo_categories -->
+        <widget name="ohio_woo_categories">
+            <fields>
+                <field type="Link title" editor_type="LINE">button_title</field>
+                <field type="Link URL" editor_type="LINK" key_of="button_link">url</field>
+            </fields>
+        </widget>
+    </elementor-widgets>
+    <shortcodes>
+        <!-- ohio_accordion_inner -->
+        <shortcode>
+            <tag>ohio_accordion_inner</tag>
+            <attributes>
+                <attribute>heading</attribute>
+            </attributes>
+        </shortcode>
+        <!-- ohio_banner -->
+        <shortcode>
+            <tag>ohio_banner</tag>
+            <attributes>
+                <attribute>title</attribute>
+                <attribute>subtitle</attribute>
+                <attribute encoding="base64">description</attribute>
+                <attribute type="link" encoding="vc_link">link_url</attribute>
+            </attributes>
+        </shortcode>
+        <!-- ohio_button -->
+        <shortcode>
+            <tag>ohio_button</tag>
+            <attributes>
+                <attribute type="link" encoding="vc_link">link</attribute>
+            </attributes>
+        </shortcode>
+        <!-- ohio_call_to_action -->
+        <shortcode>
+            <tag>ohio_call_to_action</tag>
+            <attributes>
+                <attribute encoding="base64">title</attribute>
+                <attribute encoding="base64">subtitle</attribute>
+                <attribute type="link" encoding="vc_link">link</attribute>
+            </attributes>
+        </shortcode>
+        <!-- ohio_carousel_inner -->
+        <shortcode>
+            <tag>ohio_carousel_inner</tag>
+            <attributes>
+                <attribute>title</attribute>
+            </attributes>
+        </shortcode>
+        <!-- ohio_pie_chart -->
+        <shortcode>
+            <tag>ohio_pie_chart</tag>
+            <attributes>
+                <attribute>title</attribute>
+            </attributes>
+        </shortcode>
+        <!-- ohio_clients_logo -->
+        <shortcode>
+            <tag>ohio_clients_logo</tag>
+            <attributes>
+                <attribute encoding="base64">description</attribute>
+                <attribute type="link" encoding="vc_link">link_url</attribute>
+            </attributes>
+        </shortcode>
+        <!-- ohio_compare -->
+        <shortcode>
+            <tag>ohio_compare</tag>
+            <attributes>
+                <attribute>before_label_text</attribute>
+                <attribute>after_label_text</attribute>
+            </attributes>
+        </shortcode>
+        <!-- ohio_counter -->
+        <shortcode>
+            <tag>ohio_counter</tag>
+            <attributes>
+                <attribute>count_text_before</attribute>
+                <attribute>count_text_after</attribute>
+                <attribute>title</attribute>
+            </attributes>
+        </shortcode>
+        <!-- ohio_dynamic_text -->
+        <shortcode>
+            <tag>ohio_dynamic_text</tag>
+            <attributes>
+                <attribute>pre_title</attribute>
+                <attribute>post_title</attribute>
+                <attribute type="area" encoding="urlencoded_json">dynamic_title</attribute>
+            </attributes>
+        </shortcode>
+        <!-- ohio_gallery -->
+        <shortcode>
+            <tag type="media-url">ohio_gallery</tag>
+            <attributes>
+                <attribute type="media-ids">content_images</attribute>
+            </attributes>
+        </shortcode>
+        <!-- ohio_heading -->
+        <shortcode>
+            <tag>ohio_heading</tag>
+            <attributes>
+                <attribute encoding="base64">title</attribute>
+                <attribute encoding="base64">subtitle</attribute>
+            </attributes>
+        </shortcode>
+        <!-- ohio_icon_box -->
+        <shortcode>
+            <tag>ohio_icon_box</tag>
+            <attributes>
+                <attribute>title</attribute>
+                <attribute>description</attribute>
+                <attribute type="link" encoding="vc_link">link_url</attribute>
+            </attributes>
+        </shortcode>
+        <!-- ohio_message_module -->
+        <shortcode>
+            <tag>ohio_message_module</tag>
+            <attributes>
+                <attribute encoding="base64">text</attribute>
+                <attribute type="link" encoding="vc_link">link</attribute>
+            </attributes>
+        </shortcode>
+        <!-- ohio_pricing_list -->
+        <shortcode>
+            <tag>ohio_pricing_list</tag>
+            <attributes>
+                <attribute>name</attribute>
+                <attribute>indigriends</attribute>
+                <attribute>regular_price</attribute>
+                <attribute>sale_price</attribute>
+            </attributes>
+        </shortcode>
+        <!-- ohio_pricing_table -->
+        <shortcode>
+            <tag>ohio_pricing_table</tag>
+            <attributes>
+                <attribute>title</attribute>
+                <attribute>subtitle</attribute>
+                <attribute>description</attribute>
+                <attribute>price</attribute>
+                <attribute>price_caption</attribute>
+                <attribute>price_currency</attribute>
+                <attribute type="area" encoding="urlencoded_json">features_value</attribute>
+                <attribute type="link" encoding="vc_link">button_link</attribute>
+            </attributes>
+        </shortcode>
+        <!-- ohio_process -->
+        <shortcode>
+            <tag>ohio_process</tag>
+            <attributes>
+                <attribute>number</attribute>
+                <attribute>title</attribute>
+                <attribute>description</attribute>
+            </attributes>
+        </shortcode>
+        <!-- ohio_progress_bar -->
+        <shortcode>
+            <tag>ohio_progress_bar</tag>
+            <attributes>
+                <attribute>name</attribute>
+            </attributes>
+        </shortcode>
+        <!-- ohio_service_table -->
+        <shortcode>
+            <tag>ohio_service_table</tag>
+            <attributes>
+                <attribute>title</attribute>
+                <attribute>subtitle</attribute>
+                <attribute>description</attribute>
+                <attribute type="area" encoding="urlencoded_json">features_value</attribute>
+            </attributes>
+        </shortcode>
+        <!-- ohio_social_networks -->
+        <shortcode>
+            <tag>ohio_social_networks</tag>
+            <attributes>
+                <attribute>facebook</attribute>
+                <attribute>twitter</attribute>
+                <attribute>linkedin</attribute>
+                <attribute>pinterest</attribute>
+                <attribute>artstation_link_custom</attribute>
+                <attribute>behance_link_custom</attribute>
+                <attribute>deviantart_link_custom</attribute>
+                <attribute>digg_link_custom</attribute>
+                <attribute>discord_link_custom</attribute>
+                <attribute>dribbble_link_custom</attribute>
+                <attribute>facebook_link_custom</attribute>
+                <attribute>flickr_link_custom</attribute>
+                <attribute>github_link_custom</attribute>
+                <attribute>instagram_link_custom</attribute>
+                <attribute>kaggle_link_custom</attribute>
+                <attribute>linkedin_link_custom</attribute>
+                <attribute>medium_link_custom</attribute>
+                <attribute>mixer_link_custom</attribute>
+                <attribute>pinterest_link_custom</attribute>
+                <attribute>quora_link_custom</attribute>
+                <attribute>reddit_link_custom</attribute>
+                <attribute>snapchat_link_custom</attribute>
+                <attribute>soundcloud_link_custom</attribute>
+                <attribute>spotify_link_custom</attribute>
+                <attribute>teamspeak_link_custom</attribute>
+                <attribute>telegram_link_custom</attribute>
+                <attribute>tiktok_link_custom</attribute>
+                <attribute>tripadvisor_link_custom</attribute>
+                <attribute>tumblr_link_custom</attribute>
+                <attribute>twitch_link_custom</attribute>
+                <attribute>twitter_link_custom</attribute>
+                <attribute>vimeo_link_custom</attribute>
+                <attribute>vine_link_custom</attribute>
+                <attribute>whatsapp_link_custom</attribute>
+                <attribute>xing_link_custom</attribute>
+                <attribute>youtube_link_custom</attribute>
+                <attribute>fivehundred_link_custom</attribute>
+            </attributes>
+        </shortcode>
+        <!-- ohio_tabs_inner -->
+        <shortcode>
+            <tag>ohio_tabs_inner</tag>
+            <attributes>
+                <attribute>title</attribute>
+            </attributes>
+        </shortcode>
+        <!-- ohio_team_member -->
+        <shortcode>
+            <tag>ohio_team_member</tag>
+            <attributes>
+                <attribute>name</attribute>
+                <attribute>position</attribute>
+                <attribute>description</attribute>
+                <attribute type="link" encoding="vc_link">member_link</attribute>
+                <attribute>artstation_link</attribute>
+                <attribute>behance_link</attribute>
+                <attribute>deviantart_link</attribute>
+                <attribute>digg_link</attribute>
+                <attribute>discord_link</attribute>
+                <attribute>dribbble_link</attribute>
+                <attribute>facebook_link</attribute>
+                <attribute>flickr_link</attribute>
+                <attribute>github_link</attribute>
+                <attribute>instagram_link</attribute>
+                <attribute>kaggle_link</attribute>
+                <attribute>linkedin_link</attribute>
+                <attribute>medium_link</attribute>
+                <attribute>mixer_link</attribute>
+                <attribute>pinterest_link</attribute>
+                <attribute>quora_link</attribute>
+                <attribute>reddit_link</attribute>
+                <attribute>snapchat_link</attribute>
+                <attribute>soundcloud_link</attribute>
+                <attribute>spotify_link</attribute>
+                <attribute>teamspeak_link</attribute>
+                <attribute>telegram_link</attribute>
+                <attribute>tiktok_link</attribute>
+                <attribute>tripadvisor_link</attribute>
+                <attribute>tumblr_link</attribute>
+                <attribute>twitch_link</attribute>
+                <attribute>twitter_link</attribute>
+                <attribute>vimeo_link</attribute>
+                <attribute>vine_link</attribute>
+                <attribute>whatsapp_link</attribute>
+                <attribute>xing_link</attribute>
+                <attribute>youtube_link</attribute>
+                <attribute>fivehundred_link</attribute>
+            </attributes>
+        </shortcode>
+        <!-- ohio_team_member_inner -->
+        <shortcode>
+            <tag>ohio_team_member_inner</tag>
+            <attributes>
+                <attribute>name</attribute>
+                <attribute>position</attribute>
+                <attribute>description</attribute>
+                <attribute type="link" encoding="vc_link">member_link</attribute>
+                <attribute>artstation_link</attribute>
+                <attribute>behance_link</attribute>
+                <attribute>deviantart_link</attribute>
+                <attribute>digg_link</attribute>
+                <attribute>discord_link</attribute>
+                <attribute>dribbble_link</attribute>
+                <attribute>facebook_link</attribute>
+                <attribute>flickr_link</attribute>
+                <attribute>github_link</attribute>
+                <attribute>instagram_link</attribute>
+                <attribute>kaggle_link</attribute>
+                <attribute>linkedin_link</attribute>
+                <attribute>medium_link</attribute>
+                <attribute>mixer_link</attribute>
+                <attribute>pinterest_link</attribute>
+                <attribute>quora_link</attribute>
+                <attribute>reddit_link</attribute>
+                <attribute>snapchat_link</attribute>
+                <attribute>soundcloud_link</attribute>
+                <attribute>spotify_link</attribute>
+                <attribute>teamspeak_link</attribute>
+                <attribute>telegram_link</attribute>
+                <attribute>tiktok_link</attribute>
+                <attribute>tripadvisor_link</attribute>
+                <attribute>tumblr_link</attribute>
+                <attribute>twitch_link</attribute>
+                <attribute>twitter_link</attribute>
+                <attribute>vimeo_link</attribute>
+                <attribute>vine_link</attribute>
+                <attribute>whatsapp_link</attribute>
+                <attribute>xing_link</attribute>
+                <attribute>youtube_link</attribute>
+                <attribute>fivehundred_link</attribute>
+            </attributes>
+        </shortcode>
+        <!-- ohio_testimonial -->
+        <shortcode>
+            <tag>ohio_testimonial</tag>
+            <attributes>
+                <attribute>headline</attribute>
+                <attribute>quote</attribute>
+                <attribute>author</attribute>
+                <attribute>position</attribute>
+            </attributes>
+        </shortcode>
+        <!-- ohio_text -->
+        <shortcode>
+            <tag>ohio_text</tag>
+            <attributes>
+                <attribute>content</attribute>
+            </attributes>
+        </shortcode>
+        <!-- ohio_video -->
+        <shortcode>
+            <tag>ohio_video</tag>
+            <attributes>
+                <attribute encoding="base64">title</attribute>
+                <attribute>link</attribute>
+            </attributes>
+        </shortcode>
+    </shortcodes>
+</wpml-config>

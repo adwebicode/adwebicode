@@ -1,0 +1,43 @@
+// Coupon section
+
+.woo-actions {
+
+	@include spacer(margin-top);
+	@include flex;
+	@include align-items(flex-end);
+	@include flex-just(space-between);
+
+	@include sm-screen {
+
+		@include flex-direction(column);
+		@include align-items(flex-start);
+
+		> .button {
+			margin-top: $grid-spacer;
+			width: 100%;
+		}
+	}
+
+	// Coupon
+
+	.coupon {
+		position: relative;
+		flex-grow: 1;
+		margin-right: 1.25rem;
+
+		.button {
+			position: absolute;
+			right: 0;
+			bottom: 0;
+		}
+
+		@include sm-screen {
+
+			width: 100%;
+		}
+	}
+}
+
+.cart-empty.woocommerce-info {
+	display: none;
+}

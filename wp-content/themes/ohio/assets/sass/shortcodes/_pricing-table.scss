@@ -1,0 +1,84 @@
+.pricing-table {
+
+	&-headline {
+
+		p {
+			font-size: $font-size-caption;
+			color: $color-grey;
+		}
+	}
+
+	&-price {
+
+		.price-number {
+			line-height: 100%;
+			display: block;
+			letter-spacing: -.05em;
+			margin-bottom: 0.5rem;
+
+			@include headings-typo(h1);
+		}
+	}
+
+	.button {
+		margin: 0;
+		transform: none;
+	}
+
+	// Contained
+
+	&.-contained {
+		background-color: $color-neutral-8;
+
+		@include spacer2x;
+		@include border-radius;
+	}
+}
+
+.pricing-table,
+.service-table {
+
+	> * {
+		margin-bottom: 1.5rem;
+	}
+
+	.heading {
+		margin-bottom: 1.25rem;
+	}
+
+	> div:last-child,
+	.button {
+		margin: 0;
+	}
+
+	&-features {
+
+		ul {
+
+			li {
+				font-size: $font-size-small;
+				margin-bottom: 0.5rem;
+
+				&:last-child {
+					margin: 0;
+				}
+			}
+		}
+
+		.icon {
+			margin: 0 0.5rem 0.25rem 0;
+			line-height: 16px;
+		}
+
+		.exist {
+
+			.icon {
+				color: $color-red;
+			}
+		}
+
+		.missing {
+			opacity: 0.65;
+		}
+	}
+}

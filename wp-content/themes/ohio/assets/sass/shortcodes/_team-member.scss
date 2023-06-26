@@ -1,0 +1,86 @@
+.team-member {
+
+	.overlay-details {
+
+		@include flex-direction(column);
+
+		.social-networks {
+			margin-top: 1rem;
+		}
+	}
+
+	&.-with-overlay {
+
+		.overlay-details {
+
+			@include gradient(0deg, 0.65);
+			@include transition;
+		}
+
+		.extra-details {
+			max-height: 0px;
+			opacity: 0;
+
+			@include transition;
+		}
+	}
+
+	&:hover {
+
+		.extra-details {
+			padding-top: 1.5rem;
+			max-height: calc(166px + 1.5rem);
+			opacity: 1;
+		}
+	}
+}
+
+// Team Group
+
+.team-group {
+	
+	@include flex;
+
+	&-item {
+	    overflow: hidden;
+
+		@include transition;
+
+		img {
+			width: 100%;
+		}
+
+		&.active {
+
+			.-fade-up {
+				transition-delay: .2s;
+
+				@include faded;
+			}
+		}
+	}
+
+	.item-holder {
+		background-color: $color-neutral-8;
+		height: 100%;
+
+		@include flex;
+		@include flex-direction(column);
+		@include flex-just(flex-end);
+		@include spacer2x;
+	}
+
+	@include sm-screen {
+
+		@include flex-direction(column);
+
+		&-item {
+	    	flex: auto;
+
+	    	.-fade-up {
+
+				@include faded;
+			}
+		}
+	}
+}

@@ -1,0 +1,35 @@
+.coming-soon {
+	background: linear-gradient(90deg, #E7F6F8, #FBF6F1);
+	height: 100vh;
+	position: relative;
+
+	@include flex;
+	@include align-items(center);
+	@include flex-just(center);
+
+	.holder {
+		text-align: center;
+
+		@include flex;
+		@include align-items(center);
+		@include flex-just(center);
+		@include flex-direction(column);
+
+		p {
+			font-size: 1.15em;
+			margin-top: 0;
+		}
+
+		> * {
+			margin-bottom: $grid-spacer;
+		}
+	}
+
+	.social-networks {
+		position: absolute;
+		left: 50%;
+		transform: translate(-50%, 50%);
+		
+		@include spacer6x(bottom);
+	}
+}

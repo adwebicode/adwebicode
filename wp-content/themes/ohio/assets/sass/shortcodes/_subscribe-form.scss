@@ -1,0 +1,31 @@
+.subscribe-form {
+	position: relative;
+
+	.wpcf7-form-control-wrap {
+		display: block;
+
+		&:last-of-type {
+			margin-top: 1rem;
+		}
+	}
+
+	br {
+		display: none;
+	}
+
+	.button,
+	input[type="submit"],
+	button[type="submit"] {
+		white-space: nowrap;
+	    position: absolute;
+	    left: 100%;
+	    top: 0;
+	    transform: translate(-100%, 0);
+	    padding-left: 0.85rem;
+	    padding-right: 0.85rem;
+	}
+
+	input:not([type="submit"]):not([type="checkbox"]):not([type="radio"]) {
+		padding-right: 30%;
+	}
+}

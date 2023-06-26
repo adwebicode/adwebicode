@@ -1,0 +1,88 @@
+.counter {
+
+	&-number {
+		margin-bottom: 0.5rem;
+
+		@include inline-flex;
+
+		.icon-group {
+			margin-right: 0.5rem;
+		}
+
+		.holder {
+			line-height: 100%;
+			letter-spacing: -.045em;
+
+			@include inline-flex;
+			@include fluid-typo($font-size-h2-mobile, 2.75rem);
+		}
+
+		&.-with-increaser {
+
+			.holder {
+
+				&::after {
+					content: "+";
+					font-size: 0.65em;
+					margin-left: 0.4rem;
+				}
+			}
+		}
+	}
+
+	> p {
+		font-weight: 600;
+		line-height: 1.4;
+	}
+
+	&.-right-icon {
+
+		.counter-number {
+
+			@include flex-direction(row-reverse);
+
+			.icon-group {
+				margin-left: 0.5rem;
+				margin-right: 0;
+			}
+		}
+	}
+
+	&.-top-icon {
+
+		.counter-number {
+
+			@include align-items(center);
+			@include flex-direction(column);
+
+			.icon-group {
+				margin-bottom: 0.5rem;
+				margin-right: 0;
+			}
+		}
+
+		&.-center {
+
+			.counter-number {
+
+				@include align-items(center);
+			}
+		}
+
+		&.-left {
+
+			.counter-number {
+
+				@include align-items(flex-start);
+			}
+		}
+
+		&.-right {
+
+			.counter-number {
+
+				@include align-items(flex-end);
+			}
+		}
+	}
+}

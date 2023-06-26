@@ -1,0 +1,69 @@
+// Border radius
+$radius: .35rem;
+$radius-small: .25rem;
+$radius-large: .65rem;
+$radius-xl: 1rem;
+$radius-button-minimal: 0;
+
+// Buttons
+
+$button-height: 3rem;
+$button-small-height: 2.125rem;
+$button-large-height: 3.5rem;
+
+// Sizing
+$circle: 3.5rem;
+$circle-small: 3rem;
+$circle-smaller: $button-small-height;
+$circle-large: 4.5rem;
+
+// Layout
+$container: 1300px;
+$container-laptop: 1280px;
+$container-laptop-sm: 1220px;
+$container-laptop-xs: 1140px;
+$container-xxl: 1360px;
+
+$header-height: 12vh;
+$header-height-2: 20vh;
+$header-height-5: 32vh;
+$header-height-6: 10.5vh;
+$sticky-header-height: 9vh;
+$subheader-height: 2.375rem;
+
+// Admin bar
+
+$admin-bar: 32px;
+$admin-bar-mobile: 46px;
+
+// Spacers
+$spacer: 4vh;
+$grid-spacer: 1.25rem;
+$bullets-spacer: 2.75rem;
+
+$spacer2x: 2rem;
+$spacer3x: 3rem;
+$spacer4x: 4rem;
+$spacer5x: 5rem;
+$spacer6x: 6rem;
+
+// Misc
+$elements-bar: 3.5rem;
+
+/*
+	Transitions
+*/
+
+$transition-function: cubic-bezier(.645, .045, .355, 1);
+$transition-duration: .35s;
+
+$scale: scale3d(1.06, 1.06, 1);
+
+$inputs-list: 'input[type="email"]',
+              'input[type="number"]',
+              'input[type="password"]',
+              'input[type="search"]',
+              'input[type="tel"]',
+              'input[type="text"]',
+			  'input[type="date"]',
+              'input[type="url"]';

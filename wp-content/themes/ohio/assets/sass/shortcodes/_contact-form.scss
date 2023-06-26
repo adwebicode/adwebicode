@@ -1,0 +1,174 @@
+.contact-form {
+
+	input:not([type="submit"]):not([type="checkbox"]):not([type="radio"]),
+	textarea,
+	select {
+		width: 100%;
+		vertical-align: top;
+	}
+
+	[class^='vc_col'] {
+
+		> label {
+			margin: 0;
+
+			input,
+			textarea,
+			select {
+				margin-top: 0.5rem;
+			}
+		}
+
+		&.form-check {
+			margin-bottom: 1.5rem;
+		}
+	}
+
+	form {
+
+		// CF7 fix
+		p {
+			margin: 0;
+		}
+
+		@include clearfix;
+	}
+
+	.wpcf7-list-item {
+	    margin: 0;
+
+	    &-label {
+	    	vertical-align: middle;
+	    }
+	}
+}
+
+.contact-form,
+.subscribe-form {
+
+	&.-outlined {
+
+		#{$all-text-inputs},
+		textarea,
+		select {
+			background-color: transparent;
+			border: 2px solid $color-grey-light;
+
+			&:focus,
+			&:active {
+				outline: none;
+				border-color: $color-grey;
+			}
+		}
+	}
+
+	.wpcf7 {
+
+		&-spinner {
+			display: none;
+		}
+
+		&-form {
+
+			&-control {
+
+				&-wrap {
+					display: block;
+
+					// Checkbox fields
+
+					&[data-name^="checkbox"] {
+						margin-top: -0.75rem;
+					}
+
+					&:not([data-name^="checkbox"]) {
+						margin-top: 0.5rem;
+					}
+				}
+			}
+
+			.wpcf7-not-valid-tip {
+				display: none;
+			}
+
+			.wpcf7-response-output {
+				background-color: rgba($color-success, .1);
+				color: $color-success;
+				margin: 1rem 0;
+				border: none;
+				font-size: $font-size-small;
+				padding: 0.65rem 1rem;
+
+				@include border-radius($radius-small);
+			}
+
+			// Success
+
+			&.sent {
+
+				.subscribe-form {
+					display: none;
+				}
+
+				.wpcf7-response-output {
+					background-color: rgba($color-success, .1);
+					color: $color-success;
+				}
+			}
+
+			&.invalid {
+
+				.wpcf7-response-output {
+					background-color: rgba($color-danger, .1);
+					color: $color-danger;
+				}
+			}
+
+			// Checkbox ivalid
+
+			.wpcf7-not-valid {
+		
+				input {
+
+					&[type="checkbox"] {
+						border-color: $color-red;
+
+						@include box-shadow(false, 0, 0, 0, 0.3125rem, rgba($color-red, 0.25));
+					}
+				}
+			}
+		}
+	}
+}
+
+// Password protected form
+
+.post-password-form {
+	text-align: left;
+	padding: 2em 0px;
+
+	@include lg-screen {
+
+		width: 50%;
+	}
+
+	input[type="password"] {
+		margin: 0.5rem 0px 1rem;
+	}
+}
+
+// .minimal-scheme {
+
+// 	.contact-form,
+// 	.subscribe-form {
+
+// 		&.-outlined {
+
+// 			#{$all-text-inputs},
+// 			textarea,
+// 			select {
+// 				border-width: 1px;
+// 			}
+// 		}
+// 	}
+// }

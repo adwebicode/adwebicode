@@ -1,0 +1,26 @@
+.category-holder {
+
+	&.-with-tag {
+		flex-wrap: wrap;
+
+		@include flex;
+
+		> .tag {
+			margin: 0.35rem 0.35rem 0 0;
+		}
+	}
+
+	&:not(.-with-tag) {
+
+		.category,
+		a {
+
+			&:not(:last-child) {
+
+				&::after {
+					content: ",";
+				}
+			}
+		}
+	}
+}

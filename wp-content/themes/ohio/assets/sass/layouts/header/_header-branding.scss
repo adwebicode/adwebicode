@@ -1,0 +1,49 @@
+.branding {
+    position: relative;
+
+    @include flex;
+    @include align-items(center);
+
+    &-title {
+        font-weight: bold;
+        font-size: 1.4em;
+
+        .light {
+            color: $color-white;
+        }
+    }
+
+    &:hover {
+        opacity: .65;
+
+        @include transition;
+    }
+
+    .logo,
+    .logo-mobile,
+    .logo-dynamic {
+
+        &:hover {
+
+            img {
+                transform: none;
+            }
+        }
+
+        img {
+            min-height: 42px;
+            max-height: 66px;
+
+            @include flex;
+
+            @include sm-screen {
+
+                max-height: 46px;
+            }
+        }
+    }
+
+    .logo-sticky {
+        display: none;
+    }
+}

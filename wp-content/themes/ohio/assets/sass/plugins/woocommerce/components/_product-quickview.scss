@@ -1,0 +1,57 @@
+.clb-popup-product {
+	overflow-y: auto;
+
+	.woo-product {
+		background-color: $color-white;
+		overflow-y: auto;
+		overflow-x: hidden;
+		height: 100%;
+		padding: 0;
+
+		@include border-radius($radius-large);
+
+		.image-wrap {
+
+			> img {
+				min-width: 100%;
+			}
+		}
+
+		.product-thumbs {
+			position: sticky;
+			top: $grid-spacer;
+			margin-top: $grid-spacer;
+			margin-left: $grid-spacer;
+			margin-right: $grid-spacer;
+
+		}
+
+		&-details {
+
+			&-inner {
+
+				@include spacer;
+
+				padding-left: 0;
+			}
+
+			@include sm-screen {
+
+				margin-left: 0;
+				margin-right: 0;
+			}
+
+			@include md-screen {
+				
+				position: sticky;
+				top: 0 !important;
+			}
+		}
+
+		// Hide subscribe popup when video iframe is visible
+		
+		+ .popup-subscribe {
+			display: none;
+		}
+	}
+}

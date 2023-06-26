@@ -1,0 +1,37 @@
+.service-table {
+
+	@include spacer2x;
+	@include border-radius;
+	@include transition;
+
+	transition-property: background-color, box-shadow;
+
+	&:hover {
+		background-color: $color-neutral-8;
+	}
+
+	// With shadow
+
+	&.-with-shadow {
+
+		&:hover {
+
+			@include drop-shadow;
+
+			@include drop-shadow;
+		}
+	}
+
+	@include sm-screen {
+		
+		background-color: $color-neutral-8;
+	}
+}
+
+// .minimal-scheme {
+
+// 	.service-table {
+
+// 		@include border-radius(0);
+// 	}
+// }

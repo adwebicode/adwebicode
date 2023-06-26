@@ -1,0 +1,113 @@
+.countdown {
+	text-align: center;
+
+	@include flex;
+
+	&-item {
+		margin: 0 0.5rem;
+
+		.number {
+			line-height: 1;
+			position: relative;
+
+			@include inline-flex;
+			@include flex-just;
+		}
+	}
+
+	&:not(.-text) {
+
+		.countdown-item {
+			
+			.number {
+				width: 4rem;
+				height: 4rem;
+
+				@include border-radius;
+				@include fluid-typo(1.25rem, 2.25rem);
+			}
+
+			.number-label {
+				font-size: $font-size-caption;
+			}
+		}
+	}
+
+	&.-with-divider {
+
+		.countdown-item {
+			margin: 0 0.75rem;
+
+			&:not(:last-child) {
+				
+				.number {
+
+					&::after {
+						content: ":";
+					    font-size: 1.25rem;
+					    position: absolute;
+					    width: 1rem;
+					    text-align: center;
+					    transform: translate(0.5rem, -50%);
+					    right: -0.75rem;
+					    top: 50%;
+					}
+				}
+			}	
+		}
+	}
+
+	&.-contained {
+
+		.countdown-item {
+
+			.number {
+				background: $color-neutral-8;
+				background: linear-gradient(360deg, rgba($color-neutral-8, 0.15) 0%, rgba($color-neutral-8, 0.15) 49%, rgba($color-neutral-8, 0.25) 50%, rgba($color-neutral-8, 0.15) 100%);
+				margin-bottom: 0.5rem;
+
+				@include fluid-typo(1.25rem, 2rem);
+			}
+		}
+	}
+
+	&.-text {
+
+		.countdown-item {
+
+			&:first-child {
+				margin-left: 0;
+			}
+
+			&:last-child {
+				margin-right: 0;
+			}
+
+			.number {
+
+				@include fluid-typo(1.5rem, 2rem);
+			}
+		}
+	}
+
+	@include sm-screen {
+
+		&:not(.-text) { 
+			transform: scale(0.8);
+		}
+	}
+}
+
+// .minimal-scheme {
+
+// 	.countdown {
+
+// 		.countdown-item {
+			
+// 			.number {
+				
+// 				@include border-radius(0);
+// 			}
+// 		}
+// 	}
+// }

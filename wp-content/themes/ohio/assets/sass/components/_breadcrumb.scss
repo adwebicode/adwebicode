@@ -1,0 +1,60 @@
+.breadcrumb {
+	width: 100%;
+	flex-wrap: wrap;
+	padding-top: 2.25rem;
+	padding-bottom: 2.25rem;
+
+	@include flex;
+	@include flex-just(flex-start);
+
+	&-holder {
+		flex-grow: 2;
+		font-size: $font-size-small;
+
+		@include flex;
+		@include align-items(center);
+		@include flex-just(space-between);
+	}
+
+	&-item {
+		font-size: $font-size-small;
+		font-weight: 600;
+
+		span {
+
+			&.active {
+				font-weight: 400;
+			}
+		}
+
+		svg {
+			margin: 0 0.4rem;
+			fill: currentColor;
+		}
+	}
+}
+
+@include tablet-screen {
+
+	.breadcrumb-holder {
+		
+		@include spacer2x(padding-top);
+		@include spacer2x(padding-bottom);
+
+		.breadcrumb {
+			padding-top: 0;
+			padding-bottom: 0;
+		}
+	}
+}
+
+.post-type-archive-product {
+
+	.breadcrumbs-container {
+
+		&.vc_col-lg-push-2 {
+			left: auto;
+			width: 100%;
+		}
+	}
+}

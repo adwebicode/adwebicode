@@ -1,0 +1,52 @@
+.banner {
+
+	&:not(.-with-overlay):not(.-image-only) {
+
+		.overlay-details {
+
+			@include gradient(0deg, 0.65);
+		}
+	}
+
+	// With Overlay
+
+	&.-with-overlay:not(.team-member),
+	&.-image-only {
+
+		.overlay-details {
+			height: 100%;
+			background-color: rgba($color-black, 0.5);
+
+			@include flex-direction(column);
+			@include flex-just(space-between);
+
+			.title {
+				color: $color-white;
+			}
+		}
+	}
+
+	// With Image Only
+
+	&.-image-only {
+
+		.overlay-details {
+			opacity: 0;
+			
+			@include transition(opacity);
+		}
+
+		&:hover {
+
+			.overlay-details {
+				opacity: 1;
+			}
+
+			.card-details,
+			p {
+				
+				@include faded;
+			}
+		}
+	}
+}

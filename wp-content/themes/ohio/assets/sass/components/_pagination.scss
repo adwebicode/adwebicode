@@ -1,0 +1,167 @@
+.pagination {
+
+	> .page-item {
+
+		> .page-link {
+			min-width: $button-height;
+
+			@include flex;
+			@include flex-just;
+
+			&:focus,
+			&:active {
+
+				@include box-shadow;
+			}
+		}
+
+		> span {
+
+			&.page-link {
+				pointer-events: none;
+			}
+		}
+
+		&:first-child {
+
+			svg {
+				transform: scaleX(-1);
+			}
+
+			&:hover {
+
+				.icon {
+					animation: iconMove ease-out $transition-duration reverse;
+				}
+			}
+		}
+	}
+}
+
+.lazy-load {
+	margin: auto;
+	font-weight: 600;
+
+	@include transition;
+
+	&.load-more {
+
+		.loading-text {
+			display: none;
+		}
+
+		&.active {
+
+			.loadmore-text {
+				display: none;
+			}
+			
+			.loading-text {
+				display: inline;
+			}
+		}
+	}
+
+	&:not(.active) {
+
+		.button {
+			box-shadow: none;
+		}
+	}
+}
+
+.lazy-load,
+.pagination:not(.text-center) {
+	min-width: 100%;
+	padding: $grid-spacer 0;
+
+	@include flex;
+
+	// Small
+
+	&.-small {
+
+		.button {
+			min-width: $button-small-height;
+			min-height: $button-small-height;
+			padding: 0 0.75rem;
+		}
+	}
+
+	// Large
+
+	&.-large {
+
+		.button {
+			min-height: $button-large-height;
+			min-width: $button-large-height;
+			font-size: $font-size-action-large;
+			line-height: 1.75rem;
+			padding: 0 1.4rem;
+		}
+	}
+
+	// Text
+
+	&.-flat {
+
+		.button {
+
+			&:not(.-flat) {
+				color: inherit;
+				background-color: $color-neutral-6;
+			}
+		}
+	}
+
+	// Outlined
+
+	&.-outlined {
+
+		.button {
+
+			&:not(.-flat) {
+
+				@extend .-outlined;
+			}
+		}
+	}
+
+	&.-flat,
+	&.-outlined {
+
+		.button {
+
+			&:hover,
+			&:focus,
+			&:active {
+				background: transparent !important;
+			}
+		}
+	}
+
+	&:not(.-flat):not(.-outlined):not(.text-center) {
+
+		.button {
+
+			&:not(.-flat) {
+				color: $color-white;
+			}
+		}
+	}
+}
+
+.pagination-standard {
+	min-width: 100%;
+}
+
+@keyframes mymove {
+
+	0% {
+		transform: rotate(0deg);
+	}
+	
+	100% {
+		transform: rotate(360deg);
+	}
+}

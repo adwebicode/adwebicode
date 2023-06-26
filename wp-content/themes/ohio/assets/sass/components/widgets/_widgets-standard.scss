@@ -1,0 +1,200 @@
+// Widget: Recent Comments
+
+.widget_recent_comments {
+
+	.comment-author-link,
+	.wp-block-latest-comments__comment-author {
+
+		font-weight: 600;
+	}
+
+	.wp-block-latest-comments {
+
+		&__comment-date {
+			font-size: $font-size-small;
+	    	color: $color-grey;
+		}
+
+		&__comment-excerpt {
+
+			p {
+			    font-size: inherit;
+			    line-height: inherit;
+			    margin: 0.35rem 0 $grid-spacer;
+			}
+			
+		}
+	}
+
+	li {
+
+		&:not(:last-child) {
+			margin-bottom: 0.5rem;
+		}
+	}
+}
+
+// Widget: Calendar
+
+.widget_calendar {
+
+	a {
+		text-decoration: none;
+	}
+
+	table {
+		text-align: center;
+
+		td, 
+		th {
+			border-top: none;
+			font-size: 0.9em;
+			padding: 0.75rem 0.5rem;
+			font-weight: 500;
+			background: transparent;
+			border: none;
+		}
+
+		caption,
+		tbody {
+			color: inherit;
+		}
+	}
+
+	caption {
+		padding: 0.6rem 1rem;
+		font-weight: bold;
+		font-family: $font-headlines;
+		font-size: $font-size-h6;
+		background-color: $color-neutral-6;
+
+		@include border-radius;
+	}
+
+	tbody {
+
+		tr {
+
+			td {
+				border: none;
+				position: relative;
+
+				&#today,
+				a {
+					display: block;
+					font-weight: bold;
+					line-height: 1;
+
+					@include border-radius;
+				}
+
+				&#today {
+					background-color: $color-neutral-15;
+					width: 100%;
+					height: 100%;
+
+				}
+
+				a {
+					background-color: rgba($color-warning, 0.15);
+					min-height: 1.75rem;
+					min-width: 1.75rem;
+					position: absolute;
+
+					@include flex;
+					@include flex-just(center);
+					@include align-items(center);
+					
+					@include centered;
+				}
+			}
+		}
+	}
+
+	.wp-calendar-nav {
+
+		@include flex;
+		@include flex-just(space-between);
+		@include align-items(center);
+	}
+}
+
+// Widget: Navigation
+
+.widget_nav_menu,
+.widget_pages {
+
+	.current_page_item,
+	.current-menu-item {
+		font-weight: 600;
+	}
+
+	.sub-menu {
+		margin-left: 1.5rem;
+	}
+}
+
+// Widget: RSS
+
+.widget_rss {
+
+	a {
+		color: $color-red;
+	}
+
+	.rss-date {
+		font-size: $font-size-small;
+	}
+
+	cite,
+	.rssSummary {
+		margin-top: $grid-spacer;
+	}
+
+	cite {
+		margin-top: $grid-spacer;
+	}
+}
+
+// Widget: Search
+
+.widget_search,
+.wc-block-product-search {
+
+	.wp-block-search__inside-wrapper,
+	.wc-block-product-search__fields {
+		position: relative;
+
+		button {
+
+			&[type="submit"] {
+
+				&.wp-block-search__button,
+				&.wc-block-product-search__button {
+					position: absolute;
+					right: 0;
+					top: 0;
+					background-color: transparent;
+					border: none;
+					padding: 0 1.15rem;
+
+					&:not(:hover) {
+						color: $color-black-light;
+					}
+				}
+			}
+		}
+	}
+
+	input[type="search"] {
+	    border: none;
+	}
+
+	.wp-block-search__input {
+	    padding: 0 6rem 0 1rem;
+	}
+
+	.wc-block-product-search__field {
+	    padding: 0 4rem 0 1rem;
+	}
+}

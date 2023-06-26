@@ -1,0 +1,111 @@
+.alert,
+#yith-wcwl-popup-message {
+	background-color: $color-neutral-6;
+	padding: 1rem $grid-spacer;
+
+	@include inline-flex;
+	@include flex-just(space-between);
+	@include border-radius;
+	@include transition;
+
+	.icon-button {
+		color: inherit;
+		margin: -2% -2% -2% 2%;
+	}
+
+	a {
+		
+		&:hover {
+			background-image: linear-gradient(currentColor 0px, currentColor 100%);
+		}
+	}
+
+	&.-block {
+
+		@include flex;
+	}
+
+	&.-success {
+		background-color: rgba($color-success, 0.15);
+		color: $color-success;
+	}
+
+	&.-warning {
+		background-color: rgba($color-warning, 0.15);
+		color: $color-warning;
+	}
+
+	&.-danger {
+		background-color: rgba($color-danger, 0.15);
+		color: $color-danger;
+	}
+
+	&.-small {
+		padding: 0.5rem 1rem;
+		font-size: $font-size-small;
+	}
+
+	&.-large {
+		padding: 1.25rem 1.5rem;
+		font-size: $font-size-large;
+	}
+
+	&.-fixed {
+		position: fixed;
+		transform: translateX(-50%);
+		left: 50%;
+		z-index: 50;
+
+		@include spacer(bottom);
+		@include box-shadow(false, 0px, 5px, 10px, 0px, $color-neutral-10);
+
+		@include sm-screen {
+
+			transform: none;
+
+			@include spacer(left);
+			@include spacer(right);
+		}
+
+		a {
+			font-weight: 600;
+		}
+
+		&.-success {
+			background-color: lighten($color-success, 50%);
+		}
+
+		&.-danger {
+			background-color: lighten($color-danger, 40%);
+		}
+	}
+
+	// With shadow
+
+	&.-with-shadow {
+
+		@include drop-shadow;
+	}
+
+	// With icon
+
+	&-message {
+
+		.icon {
+			vertical-align: middle;
+			margin-top: -2px;
+		}
+
+		img {
+			max-height: 1.5rem;
+		}
+	}
+}
+
+// .minimal-scheme {
+
+// 	.alert {
+		
+// 		@include border-radius(0);
+// 	}
+// }

@@ -1,0 +1,194 @@
+// Fixed Search
+
+.search-global {
+    
+    &.fixed {
+        position: fixed;
+        @include spacer(left);
+        @include spacer(bottom);
+        z-index: 50;
+
+        .ion {
+
+            &.light-typo {
+                color: $color-white;
+            }
+
+            &.dark-typo {
+                color: $color-black;
+            }
+        }
+    }
+}
+
+// Search Form
+
+.search {
+    position: relative;
+    
+
+    &-field {
+        width: 100%;
+    }
+
+    &-submit {
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 100%;
+        margin: 0;
+        min-width: $button-height;
+
+        .icon {
+            margin: 0;
+        }
+
+        &.-text {
+
+            &:hover {
+                box-shadow: none;
+            }
+        }
+    }
+
+    select[name="search_term"] {
+        right: $button-large-height;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        max-width: 9rem;
+        margin: 0;
+
+        &,
+        &:active,
+        &:focus {
+            background-color: transparent;
+        }
+    }
+}
+
+// Search Popup
+
+.search-popup {
+
+	.holder {
+        max-width: 65vh;
+        margin: 0 auto;
+        padding-left: $grid-spacer;
+        padding-right: $grid-spacer;
+        padding-top: $header-height;
+
+        @include sm-screen {
+
+            max-width: 100%;
+        }
+
+        // Remove search input standard appearance
+        
+        input[type="search"]::-webkit-search-decoration,
+        input[type="search"]::-webkit-search-cancel-button,
+        input[type="search"]::-webkit-search-results-button,
+        input[type="search"]::-webkit-search-results-decoration {
+            -webkit-appearance:none;
+        }
+
+        .search {
+
+            &-field {
+                min-height: 3.5rem;
+
+                @include input-placeholder {
+
+                    color: $color-grey-light;
+                }
+            }
+
+            select {
+
+                @include chevron(light);
+            }
+
+            select,
+            &-submit,
+            &-field {
+                color: $color-white;
+            }
+
+            &-results {
+                max-height: 27rem;
+                padding-bottom: 0.5rem;
+                overflow-x: visible;
+                overflow-y: auto;
+
+                .search-suggestions,
+                .no-search-results {
+                    margin: 1rem 0;
+                    color: $color-grey;
+                }
+
+                // Product row
+
+                .product-item {
+                    position: relative;
+                    padding: 1.25rem 0;
+                    border-top: 1px solid $color-border;
+
+                    @include flex;
+                    @include align-items(center);
+                    @include flex-just(space-between);
+
+                    > * {
+                        color: $color-white;
+                    }
+
+                    img {
+                        max-width: 4rem;
+                        min-width: 4rem;
+                        height: auto;
+                    }
+
+                    &-name {
+                        font-weight: 600;
+                    }
+
+                    &-details {
+                        margin-left: 1rem;
+                        flex-grow: 2;
+
+                        @include flex;
+                        @include flex-direction(column);
+                        @include align-items(flex-start);
+
+                        .title {
+                            color: $color-white;
+                        }
+
+                        span {
+
+                            > a {
+                                color: $color-grey-light;
+                                font-size: $font-size-small;
+                            } 
+                        }
+                    }
+
+                    &-price {
+                        font-weight: 600;
+                    }
+
+                    &:first-child {
+                        border: none;
+                    }
+                }
+
+                .search-results_btn {
+                    margin-top: 1rem;
+                }
+
+                .button {
+                    color: $color-white;
+                }
+            }
+        }
+	}
+}

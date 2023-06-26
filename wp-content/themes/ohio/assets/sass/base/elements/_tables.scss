@@ -1,0 +1,58 @@
+table, 
+.wp-block-table {
+	width: 100%;
+	border-collapse: collapse;
+    border-spacing: 0;
+
+    &:not(.-unstyle) {
+
+    	td, 
+		th {
+			border: none;
+			border-top: 1px solid $color-border;
+			border-bottom: 1px solid $color-border;
+			text-align: inherit;
+			padding: 0.7rem 0.7rem 0.7rem 0;
+			vertical-align: top;
+
+			&:last-child {
+				padding-right: 0;
+			}
+		}
+    }
+
+	thead {
+
+		th {
+			border: none;
+		}
+	}
+
+	th {
+		font-weight: 600;
+		font-size: $font-size-caption;
+	}
+	
+	&.is-style-stripes {
+
+		tbody {
+
+			tr:nth-child(odd) {
+				background-color: $color-neutral-8;
+			}
+		}
+
+		td {
+			border-color: $color-border;
+		}
+	}
+
+	&.-unstyle {
+		line-height: 1.4;
+
+		td, 
+		th {
+			vertical-align: top;
+		}
+	}
+}

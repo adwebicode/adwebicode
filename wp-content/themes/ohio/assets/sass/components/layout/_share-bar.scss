@@ -1,0 +1,34 @@
+.share-bar {
+    position: absolute;
+    z-index: 1;
+
+    .social-networks {
+        background-color: $color-white;
+        padding: 0.15rem;
+
+        @include border-radius;
+            
+
+        &,
+        &:not(.-text) {
+            .network {
+                margin: 0;
+            }
+        }
+    }
+
+    .social-text {
+        display: none;
+    }
+
+    // Layouts
+
+    &.-vertical {
+
+        .social-networks {
+
+            @include flex;
+            @include flex-direction(column);
+        }
+    }
+}

@@ -1,0 +1,242 @@
+// Display
+
+.-block,
+.sticky {
+	display: block;
+	width: 100%;
+}
+
+.byline,
+.-inline {
+	display: inline;
+}
+
+.-inline-block {
+	display: inline-block;
+}
+
+.-flex {
+
+	@include flex;
+}
+
+// Disabled element
+
+.disabled,
+:disabled {
+    pointer-events: none;
+    filter: none;
+    opacity: .5;
+}
+
+// Unlisted element
+
+.-unlist {
+	
+	@include unlist;
+}
+
+// Unspace element
+
+.-unspace {
+
+	&,
+	&.elementor-widget-text-editor p {
+		margin: 0;
+	}
+}
+
+// Typography
+
+.-small-t {
+	font-size: $font-size-small;
+}
+
+.-medium-t {
+	font-weight: 500;
+}
+
+.-light-t {
+	color: $color-grey;
+}
+
+.-nowrap-t {
+	white-space: nowrap;
+}
+
+// Alignments
+
+.-left,
+.text-left {
+	text-align: left;
+}
+
+.-left-flex {
+
+	@include flex-just(flex-start);
+}
+
+.-center,
+.text-center,
+.aligncenter {
+	text-align: center;
+}
+
+.-center-flex {
+
+	@include flex-just(center);
+}
+
+.-right,
+.text-right {
+	text-align: right;
+}
+
+.-right-flex {
+
+	@include flex-just(flex-end);
+}
+
+.-alignfull {
+	max-width: none;
+	position: relative;
+}
+
+.-float-left {
+	float: left;
+}
+
+.-float-right {
+	float: right;
+}
+
+// Size
+
+.-full-h,
+.full-height {
+	height: 100%;
+	max-height: 100%;
+}
+
+.-full-w,
+.full-width {
+	width: 100%;
+	max-width: 100%;
+}
+
+.-full-vh,
+.full-vh {
+
+	&,
+	&.clb-slider-item {
+		height: 100vh;
+	}
+}
+
+.-full-vw {
+	width: 100vw;
+}
+
+// Animations
+
+.-fade-up {
+
+	@include fadeUp-hidden;
+}
+
+.-fade-down {
+
+	@include fadeDown-hidden;
+}
+
+// Transition
+
+.no-transition {
+	transition: none !important; 
+}
+
+// Transform
+
+.-up {
+
+	@include transition;
+
+	&:hover {
+		transform: translate3d(0px, -4px, 0px);
+	}
+}
+
+// Effects
+
+.-blur {
+    backdrop-filter: saturate(180%) blur(5px);
+
+    background-color: rgba(255,255,255,.85);
+}
+
+// Visibility
+
+.-visible,
+.visible {
+	opacity: 1 !important;
+	visibility: visible !important;
+}
+
+.-invisible,
+.invisible {
+	opacity: 0 !important;
+	visibility: hidden !important;
+}
+
+.-hidden,
+.hidden,
+.hide {
+	display: none;
+}
+
+.show,
+.unhidden {
+	display: block;
+}
+
+.-overflow-hidden {
+
+	&,
+	> .elementor-widget-wrap { // parallax border radius issue
+		overflow: hidden;
+	}
+}
+
+// Block element
+
+.-light {
+
+	&, .icon {
+		color: $color-white;
+	}
+}
+
+// Sticky section
+
+[data-ohio-content-scroll] {
+	width: 100%;
+}
+
+[data-isotope-grid] {
+    transition: height .3s ease-in-out;
+}
+
+// Custom row width for widgets demo
+
+.clb__narrow {
+
+	h4 {
+		font-size: 1.5rem;
+	}
+
+	@include lg-screen {
+
+	    padding-right: 4.1vw;
+		padding-left: 4.1vw;
+	}
+}

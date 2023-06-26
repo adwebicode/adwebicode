@@ -1,0 +1,173 @@
+&.header-5 {
+
+    // Desktop
+
+    &:not(.-mobile) {
+        width: $header-height-5;
+        min-height: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        padding: 0;
+
+        .header-wrap {
+            height: 100vh;
+
+            @include spacer(padding-bottom);
+
+            .top-part {
+                min-height: $header-height;
+                
+                @include flex-just(flex-start);
+            }
+
+            .bottom-part {
+                @include flex-just(flex-start);
+            }
+        }
+
+        .middle-part,
+        .mobile-overlay {
+            width: 100%;
+        }
+
+        // Menu
+
+        .menu {
+            width: 100%;
+            
+            @include flex-direction(column);
+
+            // All menu items
+
+            li {
+                font-size: $font-size-large;
+                font-weight: 600;
+                width: 100%;
+
+                a {
+                    width: 100%;
+                    padding-top: 0.3rem;
+                    padding-bottom: 0.3rem;
+                }
+
+                .sub-menu {
+
+                    @include spacer(margin-left);
+
+                    &,
+                    .sub-sub-menu {
+                        box-shadow: none;
+                        background: transparent;
+                    }
+                }
+
+                // Sub menu items
+
+                > ul {
+                    box-shadow: none;
+                    min-width: $header-height-5;
+                    position: absolute;
+                    top: 0;
+                    left: 100%;
+                    color: $color-white;
+                    background-color: transparent;
+                    padding: 0;
+                    transform: none;
+
+                    li {
+                        transition-duration: $transition-duration;
+                    }
+                }
+
+                &:hover {
+                    
+                    > ul,
+                    > ul > *,
+                    &::after {
+                        transform: translateX(0);
+                        visibility: visible;
+                        opacity: 1;
+                    }
+                }
+            }
+
+            // 1st level menu items
+
+            > .nav-item {
+
+                > a {
+                    padding-left: 0;
+                    padding-right: 0;
+                }
+
+                &.has-submenu {
+
+                    .menu-plus {
+
+                        @include inline-flex;
+                    }
+
+                    .menu-chevron {
+                        display: none;
+                    }
+                }
+
+                &::after {
+                    content: "";
+                    height: 100vh;
+                    background: rgba($color-black, .99);
+                    position: fixed;
+                    left: $header-height-5;
+                    right: 0;
+                    top: 0;
+                    z-index: -1;
+                    pointer-events: none;
+                    visibility: hidden;
+                    opacity: 0;
+
+                    @include transition;
+                }
+            }
+        }
+
+        // Menu optional
+
+        .menu-optional {
+            position: relative;
+            
+            @include flex-direction(column);
+            @include flex-just(flex-end);
+
+            .cart-button {
+
+                @include flex-direction(row-reverse);
+                @include flex-just(flex-end);
+            }
+
+            > li {
+                margin-top: 0.5rem;
+                padding-right: 0;
+                width: 100%;
+
+                &,
+                &:first-child {
+                    padding-left: 0;
+                }
+
+                // Cart position
+
+                .cart-mini {
+                    top: auto;
+                    right: auto;
+                    left: 0;
+                    margin-bottom: calc(56px + 30px);
+                    position: fixed;
+
+                    @include spacer(bottom);
+                    @include spacer(margin-left);
+                }
+            }
+        }
+    }
+}

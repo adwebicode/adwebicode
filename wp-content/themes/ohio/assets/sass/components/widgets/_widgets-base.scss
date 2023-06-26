@@ -1,0 +1,117 @@
+.widgets {
+	font-size: 0.98em;
+
+	ul,
+	ol {
+
+		@include unlist;
+	}
+}
+
+.widget {
+	
+	@include spacer2x(padding-top);
+
+	select {
+		max-width: 100%;
+	}
+
+	&:not(:first-child) {
+
+		@include spacer(margin-top);
+	}
+
+	&-title,
+	h2,
+	.wp-block-search__label,
+	.wc-block-product-search__label {
+		margin-bottom: 1rem;
+		letter-spacing: -.01em;
+		line-height: inherit;
+		font-weight: bold;
+		font-family: $font-headlines;
+		font-size: $font-size-h6;
+	}
+
+	> ul {
+
+		li {
+
+			&:not(:last-child) {
+				margin-bottom: 0.25rem;
+			}
+		}
+	}
+
+
+	// Tags Cloud
+
+	.tagcloud,
+	.wp-block-tag-cloud {
+		flex-wrap: wrap;
+
+		@include flex;
+
+		a {
+			margin: 0.35rem 0.35rem 0 0;
+			display: inline-block;
+			font-size: $font-size-caption !important;
+		}
+	}
+
+	// Menu
+
+	.has-submenu-icon {
+		display: none;
+	}
+
+	// List with Image
+
+	&.widget_ohio_widget_recent_posts,
+	&.widget_products,
+	&.widget_top_rated_products,
+	&.widget_recently_viewed_products,
+	&.widget_recent_reviews {
+
+		ul {
+
+			li {
+				padding-bottom: 1.25rem;
+
+				@include flex;
+
+				&:last-child {
+					margin-bottom: 0;
+				}
+			}
+		}
+
+		img {
+			margin-right: 1rem;
+
+			@include metro-img(4.25rem, 4.25rem);
+		}
+
+		.content-holder {
+
+			h6 {
+				font-weight: 600;
+				margin-bottom: 0.2rem;
+			}
+
+			.details {
+				line-height: 1.45;
+				font-size: $font-size-small;
+			}
+
+			.price {
+				display: block;
+			}
+			
+			.author,
+			.price {
+				font-weight: 600;
+			}
+		}
+	}
+}

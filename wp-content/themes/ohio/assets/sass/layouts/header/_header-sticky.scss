@@ -1,0 +1,43 @@
+&.-sticky {
+    background: $color-white;
+    position: fixed;
+    top: 0;
+
+    &:not(.-fixed) {
+        transform: translate3d(0, -100%, 0);
+        opacity: 0;
+        visibility: hidden;
+
+        .header-wrap {
+            height: $sticky-header-height;
+        }
+    }
+
+    &.showed {
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+        z-index: 1000;
+        transition-delay: 0.2s;
+
+        @include transition(.5s);
+    }
+    
+    &.with-header-cap {
+        margin: 0;
+    }
+
+    .branding {
+
+        img {
+            min-height: 38px;
+            max-height: 4.5vh;
+        }
+    }
+}
+
+// Fixed
+
+&.-fixed {
+    position: fixed;
+}

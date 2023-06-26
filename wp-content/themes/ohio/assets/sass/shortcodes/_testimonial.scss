@@ -1,0 +1,54 @@
+.testimonial {
+
+	@include flex;
+	@include flex-direction(column);
+
+	.author {
+		margin-top: 1.2rem;
+	}
+
+	#{headings(1,6)} {
+		margin-bottom: 0.25rem;
+	}
+
+	> p {
+		margin: 0;
+
+		> b {
+			margin-bottom: 0.5rem;
+		}
+	}
+
+	&:not(.-middle-avatar) {
+
+		.avatar {
+			margin-bottom: 1.2rem;
+		}
+	}
+
+	&.-middle-avatar {
+
+		.testimonial-text {
+			order: 1;
+		}
+
+		.avatar {
+			order: 2;
+			margin-top: 1.2rem;
+		}
+
+		.author {
+			order: 3;
+		}
+	}
+
+	&.-center {
+
+		@include align-items(center);
+	}
+
+	&.-right {
+
+		@include align-items(flex-end);
+	}
+}

@@ -1,0 +1,339 @@
+.wpb-js-composer {
+
+    // Remove fill row paddings
+
+    .vc_col-has-fill > .vc_column-inner,
+    .vc_row-has-fill + .vc_row-full-width + .vc_row > .vc_column_container > .vc_column-inner,
+    .vc_row-has-fill + .vc_row > .vc_column_container > .vc_column-inner,
+    .vc_row-has-fill > .vc_column_container > .vc_column-inner {
+        padding-top: 0;
+    }
+
+    // Custom border radius
+
+    .wpb_single_image {
+
+        .vc_single_image-wrapper {
+
+            &.vc_box_rounded {
+
+                &,
+                img {
+                    @include border-radius(0.5rem);
+                }
+            }
+        }
+    }
+
+    // Border
+
+    .vc_separator {
+        margin-top: 1.5rem;
+        margin-bottom: 1.5rem;
+
+        // margin-top: 0.5rem;
+        // margin-bottom: 0.5rem;
+    }
+}
+
+.wpb_wrapper,
+.elementor-widget-container {
+    
+    @include clearfix;
+}
+
+.clb__overflow_visible {
+    overflow: visible !important;
+}
+
+// Widget
+
+.ohio-widget {
+
+    &-holder {
+
+        @include clearfix;
+    }
+}
+
+// Images
+
+.clb__image_shadow {
+
+    img {
+
+        @include border-radius(0.5rem);
+        @include box-shadow(false, 0, 5px, 15px, 0, rgba($color-black, 0.06));
+    }
+}
+
+.clb__border_radius {
+
+    &,
+    &.elementor-widget-ohio_compare {
+
+        img {
+
+            @include border-radius(0.5rem);
+        }
+    }
+}
+
+.clb__retina50, // old version fallback
+.clb__image_retina {
+
+    .vc_single_image-wrapper {
+        width: 50% !important;
+    }
+}
+
+.clb__flex {
+
+    .elementor-widget-wrap,
+    .wpb_wrapper:not(.vc_figure) {
+        flex-wrap: nowrap;
+
+        @include flex;
+        @include align-items(center);
+    }
+}
+
+.clb__vertical_stretch {
+
+    @include align-items(stretch);
+}
+
+.clb__stretch_content {
+
+    .wpb_wrapper,
+    .elementor-widget-wrap {
+        height: 100%;
+
+        @include flex;
+        @include flex-direction(column);
+
+        .vc_row-fluid,
+        .elementor-section-boxed {
+            flex-grow: 2;
+            min-height: 30vh;
+        }
+
+        @include sm-screen {
+
+            .vc_row-fluid {
+                margin-left: -$grid-spacer !important;
+                margin-right: -$grid-spacer !important;
+            }
+        }
+    }
+}
+
+@include tablet-screen {
+
+    // Unstretch
+
+    .clb__remove_stretch_md {
+
+        .stretch-content {
+            left: auto !important;
+            width: auto !important;
+        }
+    }
+
+    .clb__padding_set.vc_section, // add a standard 20px side paddings
+    .clb__padding_set.vc_row,
+    .clb__padding_set > .vc_column-inner,
+    #page .clb__padding_set.ohio-widget,
+    #page .clb__padding_set > .content_box_container,
+    .vc_row.clb__padding_set > .wpb_column > .vc_column-inner { // old version fallback
+        padding-left: $grid-spacer !important;
+        padding-right: $grid-spacer !important;
+    }
+
+    .clb__padding_reset.vc_section, // remove custom side paddings
+    .clb__padding_reset.vc_row,
+    .clb__padding_reset > .vc_column-inner,
+    #page .clb__padding_reset.ohio-widget,
+    #page .clb__padding_reset > .content_box_container,
+    .vc_row.vc__padding_remove > .wpb_column > .vc_column-inner { // old version fallback
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+}
+
+@include sm-screen {
+
+    // Unstretch
+
+    .clb__remove_stretch_sm {
+
+        .stretch-content {
+            left: auto !important;
+            width: auto !important;
+        }
+    }
+
+    // Spacers
+
+    .clb__section_spacer {
+        height: 6vh !important;
+    }
+
+    .clb__spacer {
+        height: 5vh !important;
+    }
+
+    // Overflow
+
+    .clb__overflow_hidden {
+        overflow: hidden;
+    }
+
+    // Resets
+
+    .clb__fullvh_reset {
+        min-height: initial !important;
+    }
+
+    .clb__alignment_reset { // used for buttons
+
+        .ohio-widget-holder {
+            text-align: left;
+
+            @include clearfix;
+        }
+
+        &.button {
+            float: left;
+        }
+    }
+
+    .clb__border_reset {
+
+        .vc_column-inner {
+            border: none !important;
+        }
+    }
+
+    .clb__margin_set.vc_section, // add a standard 20px side margins
+    .clb__margin_set.vc_row,
+    .clb__margin_set > .vc_column-inner,
+    #page .clb__margin_set.ohio-widget,
+    .clb__margin_set.wpb_single_image,
+    .vc_row.clb__margin_set { // old version fallback
+        margin-left: $grid-spacer !important;
+        margin-right: $grid-spacer !important;
+    }
+
+    .clb__margin_standard.vc_section, // add standard row side margins
+    .clb__margin_standard.vc_row,
+    .clb__margin_standard > .vc_column-inner,
+    #page .clb__margin_standard.ohio-widget,
+    .clb__margin_standard.wpb_single_image {
+        margin-left: -$grid-spacer !important;
+        margin-right: -$grid-spacer !important;
+    }
+
+    .clb__margin_reset.vc_section, // remove custom row side margins
+    .clb__margin_reset.vc_row,
+    .clb__margin_reset > .vc_column-inner,
+    .clb__margin_reset.wpb_single_image,
+    .clb__margin_reset .vc_column-inner { // old version fallback
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+
+    .clb__margin_vertical_reset > .vc_column-inner { // remove custom row top and bottom margins
+        margin-top: 0 !important;
+        margin-bottom: 0 !important;
+    }
+}
+
+// Front-End editor
+
+.vc_editor {
+
+    &.compose-mode {
+
+        .vc_ohio_tabs,
+        .vc_ohio_split_screens {
+            position: relative;
+            margin: 10px 0;
+            border-radius: 4px;
+
+            &::before {
+                content: "";
+                position: absolute;
+                display: block;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                z-index: 10000;
+                background: rgba(#FFD569, 0.85);
+            }
+
+            &::after {
+                content: 'Sorry, but this shortcode can be properly edited in the Backend Editor only.';
+                position: absolute;
+                font-family: $font-main;
+                display: block;
+                padding: 0px 20%;
+                font-weight: 500;
+                color: rgba(#000, .8);
+                top: 50%;
+                transform: translateY(-50%);
+                width: 100%;
+                left: 0;
+                text-align: center;
+                z-index: 10001;
+            }
+        }
+    }
+}
+
+// old version fallback
+
+.vc_row {
+
+    &.stc-row {
+        margin-bottom: 5vh;
+
+        .heading {
+
+            &:not(.heading-reset) {
+                
+                h2 {
+                    margin-bottom: 40px;
+                    font-size: 26px;
+                }
+            }
+        }
+    }
+
+    @include lg-screen {
+
+        &.stc-row {
+            margin-right: 2vw;
+            margin-left: 2vw;
+            margin-bottom: $header-height;
+        }
+
+        &.stc-row-wide {
+            margin-right: auto;
+            margin-left: auto;
+        }
+
+        &.stc-row-narrow {
+            margin-right: 10vw;
+            margin-left: 10vw;
+        }
+    }
+
+    @include sm-screen {
+
+        &.stc-row {
+            margin-top: 2vh;
+        }
+    }
+}

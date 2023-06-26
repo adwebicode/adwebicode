@@ -1,0 +1,32 @@
+ul,
+ol {
+	margin-bottom: 1.35em;
+	padding-left: 2rem;
+
+	&:not(.-unlist) {
+
+		> li {
+			margin: 5px 0;
+		}
+	}
+}
+
+ol {
+
+	&:not(.-unlist) {
+
+	}
+}
+
+li > ul,
+li > ol {
+	margin-bottom: 0;
+}
+
+dt {
+	font-weight: bold;
+}
+
+dd {
+	margin: 0 1.5em 1.5em;
+}

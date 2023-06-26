@@ -1,0 +1,85 @@
+#{headings(1,6)},
+.titles-typo,
+.font-titles {
+	font-family: $font-headlines;
+	color: $color-black;
+	font-weight: bold;
+	margin: 0;
+
+	&:not(.title) {
+
+		+ * {
+			margin-block-start: 1em;
+		}
+	}
+
+	&.heading-md,
+	&.wc-prl-title {
+		font-size: 1.55rem;
+
+		@include spacer2x(margin-bottom);
+
+		@include sm-screen {
+
+			font-size: 1.35rem; ;
+		}
+	}
+}
+
+h1 {
+
+	@include headings-typo;
+}
+
+h2 {
+
+	@include headings-typo(h2);
+}
+
+h3 {
+
+	@include headings-typo(h3);
+
+	&:not(.title) {
+
+		+ * {
+			margin-top: 1rem;
+		}
+	}
+}
+
+h4,
+h5,
+h6 {
+
+	&:not(.title) {
+
+		+ * {
+			margin-top: 0.75rem;
+		}
+	}
+}
+
+h4 {
+
+	@include headings-typo(h4);
+}
+
+h5 {
+
+	@include headings-typo(h5);
+}
+
+h6 {
+
+	@include headings-typo(h6);
+}
+
+// Mobile line height
+
+@include sm-screen {
+
+	#{headings(4,6)} {
+		line-height: 1.3;
+	}
+}

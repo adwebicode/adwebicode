@@ -1,0 +1,156 @@
+.cart-button {
+    position: relative;
+
+    &:not(.-hidden) {
+
+        @include flex;
+        @include align-items(center);
+    }
+
+    a {
+        color: inherit;
+    }
+
+    .icon-button {
+        color: inherit;
+    }
+
+    svg {
+        height: 1.25rem;
+    }
+
+    &-total {
+        margin: 0px 0.6rem;
+        font-weight: 500;
+        font-size: 0.85em;
+    }
+
+    .holder {
+        position: relative;
+    }
+
+    .badge {
+        position: absolute;
+        height: 1.125rem;
+        min-width: 1.125rem;
+        padding: 0px 0.25rem;
+        top: 0;
+        right: 0;
+        font-size: .55em;
+        font-weight: 600;
+
+        @include flex;
+        @include align-items(center);
+        @include flex-just(center);
+        @include border-radius(0.6rem);
+    }
+}
+
+// Dropdown
+
+.cart-mini {
+    position: absolute;
+    text-align: left;
+    line-height: 1.4;
+    z-index: 101;
+    width: 26.5rem;
+    background-color: $color-white;
+    right: -0.75rem;
+    top: calc(#{$circle} + 1rem);
+
+    @include dropdown-shadow;
+    @include flip-up;
+    @include border-radius;
+
+    // Mobile
+
+    @include sm-screen {
+
+        width: calc(100% - #{$grid-spacer} * 2);
+        position: fixed;
+        top: calc(#{$header-height} - 1rem);
+        left: $grid-spacer;
+        right: $grid-spacer;
+    }
+
+    .headline {
+        height: 70px;
+
+        @include spacer2x(padding-left);
+
+        @include flex;
+        @include align-items(center);
+        @include flex-just(space-between);
+
+        .icon-button {
+            margin-right: 1rem;
+        }
+    }
+
+    .widget_shopping_cart_content {
+
+        @include spacer2x(padding-left);
+        @include spacer2x(padding-right);
+        @include spacer2x(padding-bottom);
+    }
+
+    &.visible {
+
+        @include flip-up-active;
+    }
+}
+
+// Styles for Mini Cart + Cart Widget
+
+.widget_shopping_cart_content {
+    width: 100%;
+
+    .woocommerce-mini-cart {
+        max-height: 17.25rem;
+        overflow-x: hidden;
+        overflow-y: auto;
+    }
+
+    .total {
+        border-top: 1px solid $color-border;
+        padding: 1rem 0;
+        margin: 1rem 0 0 0;
+        font-size: $font-size-small;
+
+        @include flex;
+        @include flex-just(space-between);
+
+        strong {
+            font-weight: 500;
+        }
+    }
+
+    .buttons {
+        margin: 0;
+        text-transform: capitalize;
+
+        + .buttons {
+            margin-top: 0.5rem;
+        }
+
+        a {
+
+            &.button {
+                width: 100%;
+
+                // View Cart button
+
+                &:first-child {
+                    margin-bottom: 0.5rem;
+                    background-color: $color-neutral-8;
+                }
+            }
+        }
+    }
+}
+
+.blockOverlay {
+    background: rgba($color-danger, .2) !important;
+    
+    @include border-radius;
+}

@@ -1,0 +1,54 @@
+body {
+	background-color: $color-white; // Fallback for when there is no custom background color defined.
+	color: $color-black-light;
+	font-family: $font-main;
+	height: 100%;
+	overflow-x: hidden;
+	line-height: 1.6;
+	padding: 0;
+	margin: 0;
+	text-rendering: optimizeLegibility;
+
+	@include fluid-typo($font-size-main-mobile, $font-size-main);
+	@include antialias;
+
+	@include note-screen {
+
+		font-size: $font-size-main-mobile;
+	}
+
+	* {
+		overflow-wrap: break-word;
+	}
+
+	&.archive {
+		width: 100%;
+	}
+
+	&.no-scroll {
+		overflow-y: hidden;
+	}
+
+	// Scroll
+
+	*::-webkit-scrollbar {
+		background: rgba($color-black, .1);
+		width: 0.5rem;
+
+		@include border-radius;
+	}
+
+	*::-webkit-scrollbar-thumb {
+		background: rgba($color-black, .2);
+
+		@include border-radius;
+
+		&:hover {
+			background: rgba($color-black,.3);
+		}
+	}
+}
+
+@include selection {
+	background-color: rgba($color-red, .1);
+}

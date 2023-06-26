@@ -1,0 +1,330 @@
+<wpml-config>
+    <custom-fields>
+        <!-- Portfolio Project Fields -->
+        <custom-field action="translate" style="visual">project_description</custom-field>
+        <custom-field action="copy">project_content</custom-field>
+        <custom-field action="copy">project_add_featured_on_page</custom-field>
+        <custom-field action="copy">project_add_featured_to_gallery</custom-field>
+        <custom-field action="copy">project_video_type</custom-field>
+        <custom-field action="copy-once" style="line">project_video</custom-field>
+        <custom-field action="copy">project_video_cover</custom-field>
+        <custom-field action="copy">project_video_cover_fit</custom-field>
+        <custom-field action="copy-once" style="line">project_video_playback</custom-field>
+        <custom-field action="copy">project_video_autoplay</custom-field>
+        <custom-field action="copy">project_video_muted</custom-field>
+        <custom-field action="copy">project_video_controls</custom-field>
+        <custom-field action="copy-once">project_date</custom-field>
+        <custom-field action="translate" style="line">project_task</custom-field>
+        <custom-field action="translate" style="line">project_strategy</custom-field>
+        <custom-field action="translate" style="line">project_design</custom-field>
+        <custom-field action="translate" style="line">project_client</custom-field>
+        <custom-field action="copy">project_custom_fields</custom-field>
+        <custom-field action="translate" style="line">project_custom_fields_0_project_custom_field_title</custom-field>
+        <custom-field action="translate" style="line">project_custom_fields_0_project_custom_field_value</custom-field>
+        <custom-field action="translate" style="line">project_custom_fields_1_project_custom_field_title</custom-field>
+        <custom-field action="translate" style="line">project_custom_fields_1_project_custom_field_value</custom-field>
+        <custom-field action="translate" style="line">project_custom_fields_2_project_custom_field_title</custom-field>
+        <custom-field action="translate" style="line">project_custom_fields_2_project_custom_field_value</custom-field>
+        <custom-field action="translate" style="line">project_custom_fields_3_project_custom_field_title</custom-field>
+        <custom-field action="translate" style="line">project_custom_fields_3_project_custom_field_value</custom-field>
+        <custom-field action="translate" style="line">project_custom_fields_4_project_custom_field_title</custom-field>
+        <custom-field action="translate" style="line">project_custom_fields_4_project_custom_field_value</custom-field>
+        <custom-field action="translate" style="line">project_custom_fields_5_project_custom_field_title</custom-field>
+        <custom-field action="translate" style="line">project_custom_fields_5_project_custom_field_value</custom-field>
+        <custom-field action="copy">project_open_type</custom-field>
+        <custom-field action="copy-once">project_link</custom-field>
+        <!-- System Fields -->
+        <custom-field action="copy">_project_description</custom-field>
+        <custom-field action="copy">_project_content</custom-field>
+        <custom-field action="copy">_project_add_featured_on_page</custom-field>
+        <custom-field action="copy">_project_add_featured_to_gallery</custom-field>
+        <custom-field action="copy">_project_video_type</custom-field>
+        <custom-field action="copy">_project_video</custom-field>
+        <custom-field action="copy">_project_video_cover</custom-field>
+        <custom-field action="copy">_project_video_cover_fit</custom-field>
+        <custom-field action="copy">_project_video_playback</custom-field>
+        <custom-field action="copy">_project_video_autoplay</custom-field>
+        <custom-field action="copy">_project_video_muted</custom-field>
+        <custom-field action="copy">_project_video_controls</custom-field>
+        <custom-field action="copy">_project_date</custom-field>
+        <custom-field action="copy">_project_task</custom-field>
+        <custom-field action="copy">_project_strategy</custom-field>
+        <custom-field action="copy">_project_design</custom-field>
+        <custom-field action="copy">_project_client</custom-field>
+        <custom-field action="copy">_project_custom_fields</custom-field>
+        <custom-field action="copy">_project_custom_fields_0_project_custom_field_title</custom-field>
+        <custom-field action="copy">_project_custom_fields_0_project_custom_field_value</custom-field>
+        <custom-field action="copy">_project_custom_fields_1_project_custom_field_title</custom-field>
+        <custom-field action="copy">_project_custom_fields_1_project_custom_field_value</custom-field>
+        <custom-field action="copy">_project_custom_fields_2_project_custom_field_title</custom-field>
+        <custom-field action="copy">_project_custom_fields_2_project_custom_field_value</custom-field>
+        <custom-field action="copy">_project_custom_fields_3_project_custom_field_title</custom-field>
+        <custom-field action="copy">_project_custom_fields_3_project_custom_field_value</custom-field>
+        <custom-field action="copy">_project_custom_fields_4_project_custom_field_title</custom-field>
+        <custom-field action="copy">_project_custom_fields_4_project_custom_field_value</custom-field>
+        <custom-field action="copy">_project_custom_fields_5_project_custom_field_title</custom-field>
+        <custom-field action="copy">_project_custom_fields_5_project_custom_field_value</custom-field>
+        <custom-field action="copy">_project_open_type</custom-field>
+        <custom-field action="copy">_project_link</custom-field>
+
+
+        <!-- Portfolio Page Settings Fields -->
+        <custom-field action="copy-once">project_layout_type</custom-field>
+        <custom-field action="copy-once">project_custom_content_position</custom-field>
+        <custom-field action="copy-once">project_show_navigation</custom-field>
+        <custom-field action="copy-once">project_style_in_grid</custom-field>
+        <custom-field action="copy-once">project_gallery_scrolling_effect</custom-field>
+        <custom-field action="copy-once">project_nav_visibility</custom-field>
+        <custom-field action="copy-once">project_nav_color</custom-field>
+        <custom-field action="copy-once">project_bullets_visibility</custom-field>
+        <custom-field action="copy-once">project_bullets_color</custom-field>
+        <custom-field action="copy-once">project_bullets_type</custom-field>
+        <custom-field action="copy-once">project_loop_mode</custom-field>
+        <custom-field action="copy-once">project_autoplay_mode</custom-field>
+        <custom-field action="copy-once">project_autoplay_interval</custom-field>
+        <custom-field action="copy-once">project_mousewheel_mode</custom-field>
+        <custom-field action="copy-once">project_color_overlay</custom-field>
+        <custom-field action="copy-once">project_show_headline</custom-field>
+        <custom-field action="copy-once">project_title_typography</custom-field>
+        <custom-field action="copy-once">project_show_categories</custom-field>
+        <custom-field action="copy-once">project_category_typography</custom-field>
+        <custom-field action="copy-once">project_show_date</custom-field>
+        <custom-field action="copy-once">project_date_typography</custom-field>
+        <custom-field action="copy-once">project_show_description</custom-field>
+        <custom-field action="copy-once">project_description_typography</custom-field>
+        <custom-field action="copy-once">project_show_task</custom-field>
+        <custom-field action="copy-once">project_task_typography</custom-field>
+        <custom-field action="copy-once">project_show_details</custom-field>
+        <custom-field action="copy-once">project_details_typography</custom-field>
+        <custom-field action="copy-once">project_show_link</custom-field>
+        <custom-field action="copy-once">project_link_typography</custom-field>
+        <custom-field action="copy-once">project_video_button_style</custom-field>
+        <custom-field action="copy-once">project_video_button_size</custom-field>
+        <custom-field action="copy-once">project_grid_video_btn_bg</custom-field>
+        <!-- System Fields -->
+        <custom-field action="copy">_project_layout_type</custom-field>
+        <custom-field action="copy">_project_custom_content_position</custom-field>
+        <custom-field action="copy">_project_show_navigation</custom-field>
+        <custom-field action="copy">_project_style_in_grid</custom-field>
+        <custom-field action="copy">_project_gallery_scrolling_effect</custom-field>
+        <custom-field action="copy">_project_nav_visibility</custom-field>
+        <custom-field action="copy">_project_nav_color</custom-field>
+        <custom-field action="copy">_project_bullets_visibility</custom-field>
+        <custom-field action="copy">_project_bullets_color</custom-field>
+        <custom-field action="copy">_project_bullets_type</custom-field>
+        <custom-field action="copy">_project_loop_mode</custom-field>
+        <custom-field action="copy">_project_autoplay_mode</custom-field>
+        <custom-field action="copy">_project_autoplay_interval</custom-field>
+        <custom-field action="copy">_project_mousewheel_mode</custom-field>
+        <custom-field action="copy">_project_color_overlay</custom-field>
+        <custom-field action="copy">_project_show_headline</custom-field>
+        <custom-field action="copy">_project_title_typography</custom-field>
+        <custom-field action="copy">_project_show_categories</custom-field>
+        <custom-field action="copy">_project_category_typography</custom-field>
+        <custom-field action="copy">_project_show_date</custom-field>
+        <custom-field action="copy">_project_date_typography</custom-field>
+        <custom-field action="copy">_project_show_description</custom-field>
+        <custom-field action="copy">_project_description_typography</custom-field>
+        <custom-field action="copy">_project_show_task</custom-field>
+        <custom-field action="copy">_project_task_typography</custom-field>
+        <custom-field action="copy">_project_show_details</custom-field>
+        <custom-field action="copy">_project_details_typography</custom-field>
+        <custom-field action="copy">_project_show_link</custom-field>
+        <custom-field action="copy">_project_link_typography</custom-field>
+        <custom-field action="copy">_project_video_button_style</custom-field>
+        <custom-field action="copy">_project_video_button_size</custom-field>
+        <custom-field action="copy">_project_grid_video_btn_bg</custom-field>
+        
+
+        <!-- Page Settings Fields -->
+        <custom-field action="copy-once">page_header_logo_style</custom-field>
+        <custom-field action="copy-once">page_header_sitename_typo</custom-field>
+        <custom-field action="copy-once">page_header_custom_logo</custom-field>
+        <custom-field action="copy-once">page_preloader_visibility</custom-field>
+        <custom-field action="copy-once">page_dark_mode</custom-field>
+        <custom-field action="copy-once">page_dark_mode_switcher</custom-field>
+        <custom-field action="copy-once">page_header_menu_type</custom-field>
+        <custom-field action="copy-once">page_fullscreen_menu_style</custom-field>
+        <custom-field action="copy-once">page_header_menu_position</custom-field>
+        <custom-field action="copy-once">page_header_search_visibility</custom-field>
+        <custom-field action="copy-once">page_header_search_position</custom-field>
+        <custom-field action="copy-once">page_header_search_color</custom-field>
+        <custom-field action="copy-once">page_header_visibility</custom-field>
+        <custom-field action="copy-once">page_header_menu_style</custom-field>
+        <custom-field action="copy-once">page_header_fixed_position</custom-field>
+        <custom-field action="copy-once">page_header_add_cap</custom-field>
+        <custom-field action="copy-once">page_header_menu_use_wrapper</custom-field>
+        <custom-field action="copy-once">page_header_menu_style_settings</custom-field>
+        <custom-field action="copy-once">page_header_menu_height</custom-field>
+        <custom-field action="copy-once">page_header_menu</custom-field>
+        <custom-field action="copy-once">page_header_menu_text_typo</custom-field>
+        <custom-field action="copy-once">page_header_menu_border_visibility</custom-field>
+        <custom-field action="copy-once">page_header_menu_border_type</custom-field>
+        <custom-field action="copy-once">page_header_menu_border_color</custom-field>
+        <custom-field action="copy-once">page_header_dynamic_typography_color</custom-field>
+        <custom-field action="copy-once">page_header_menu_fixed</custom-field>
+        <custom-field action="copy-once">page_subheader_visibility</custom-field>
+        <custom-field action="copy-once">page_subheader_style</custom-field>
+        <custom-field action="copy-once">page_subheader_height</custom-field>
+        <custom-field action="copy-once">page_subheader</custom-field>
+        <custom-field action="copy-once">page_subheader_text_typo</custom-field>
+        <custom-field action="copy-once">page_post_style_in_grid</custom-field>
+        <custom-field action="copy-once">page_add_wrapper</custom-field>
+        <custom-field action="copy-once">page_content_wrapper_width</custom-field>
+        <custom-field action="copy-once">page_full_width_margins_size</custom-field>
+        <custom-field action="copy-once">page_add_top_padding</custom-field>
+        <custom-field action="copy-once">page_top_padding_spacing</custom-field>
+        <custom-field action="copy-once">page_bottom_padding_spacing</custom-field>
+        <custom-field action="copy-once">page_use_boxed_wrapper</custom-field>
+        <custom-field action="copy-once">page_boxed_wrapper_margins_size</custom-field>
+        <custom-field action="copy-once">page_header_title_visibility</custom-field>
+        <custom-field action="copy-once">page_header_title_fullscreen</custom-field>
+        <custom-field action="copy-once">page_header_title_height</custom-field>
+        <custom-field action="copy-once">page_header_title_subtitle_type</custom-field>
+        <custom-field action="copy-once">page_header_title_custom_subtitle_text</custom-field>
+        <custom-field action="copy-once">page_header_title_align</custom-field>
+        <custom-field action="copy-once">page_header_title</custom-field>
+        <custom-field action="copy-once">page_header_title_use_overlay</custom-field>
+        <custom-field action="copy-once">page_header_title_overlay_color</custom-field>
+        <custom-field action="copy-once">page_header_title_use_parallax</custom-field>
+        <custom-field action="copy-once">page_typography_settings</custom-field>
+        <custom-field action="copy-once">page_header_previous_button_typo</custom-field>
+        <custom-field action="copy-once">page_header_title_typo</custom-field>
+        <custom-field action="copy-once">page_header_subtitle_typo</custom-field>
+        <custom-field action="copy-once">page_sidebar_position</custom-field>
+        <custom-field action="copy-once">page_sidebar_layout</custom-field>
+        <custom-field action="copy-once">page_breadcrumbs_visibility</custom-field>
+        <custom-field action="copy-once">page_breadcrumbs_text_typo</custom-field>
+        <custom-field action="copy-once">page_show_arrow</custom-field>
+        <custom-field action="copy-once">page_arrow_typo</custom-field>
+        <custom-field action="copy-once">page_footer_visibility</custom-field>
+        <custom-field action="copy-once">page_footer_is_wrapped</custom-field>
+        <custom-field action="copy-once">page_footer_text_typo</custom-field>
+        <custom-field action="copy-once">page_footer</custom-field>
+        <custom-field action="copy-once">page_footer_is_sticky</custom-field>
+        <custom-field action="copy-once">page_footer_copyright_visibility</custom-field>
+        <custom-field action="copy-once">page_footer_copyright_section</custom-field>
+        <custom-field action="copy-once">page_footer_copyright_section_text_typo</custom-field>
+        <custom-field action="copy-once">page_footer_copyright_section_links_color</custom-field>
+        <custom-field action="copy-once">page_footer_logo_widget_type</custom-field>
+        <custom-field action="copy-once">page_footer_sitename_typo</custom-field>
+        <custom-field action="copy-once">page_footer_custom_logo</custom-field>
+        <custom-field action="copy-once">page_custom_css</custom-field>
+        <custom-field action="copy-once">page_social_networks_typo</custom-field>
+        <custom-field action="copy-once">page_icon_preloading_fontawesome</custom-field>
+        <custom-field action="copy-once">page_icon_preloading_ionicons</custom-field>
+        <custom-field action="copy-once">page_icon_preloading_bootstrap</custom-field>
+        <custom-field action="copy-once">page_icon_preloading_linea</custom-field>
+        <!-- System Fields -->
+        <custom-field action="copy">_page_header_logo_style</custom-field>
+        <custom-field action="copy">_page_header_sitename_typo</custom-field>
+        <custom-field action="copy">_page_header_custom_logo</custom-field>
+        <custom-field action="copy">_page_preloader_visibility</custom-field>
+        <custom-field action="copy">_page_dark_mode</custom-field>
+        <custom-field action="copy">_page_dark_mode_switcher</custom-field>
+        <custom-field action="copy">_page_header_menu_type</custom-field>
+        <custom-field action="copy">_page_fullscreen_menu_style</custom-field>
+        <custom-field action="copy">_page_header_menu_position</custom-field>
+        <custom-field action="copy">_page_header_search_visibility</custom-field>
+        <custom-field action="copy">_page_header_search_position</custom-field>
+        <custom-field action="copy">_page_header_search_color</custom-field>
+        <custom-field action="copy">_page_header_visibility</custom-field>
+        <custom-field action="copy">_page_header_menu_style</custom-field>
+        <custom-field action="copy">_page_header_fixed_position</custom-field>
+        <custom-field action="copy">_page_header_add_cap</custom-field>
+        <custom-field action="copy">_page_header_menu_use_wrapper</custom-field>
+        <custom-field action="copy">_page_header_menu_style_settings</custom-field>
+        <custom-field action="copy">_page_header_menu_height</custom-field>
+        <custom-field action="copy">_page_header_menu</custom-field>
+        <custom-field action="copy">_page_header_menu_text_typo</custom-field>
+        <custom-field action="copy">_page_header_menu_border_visibility</custom-field>
+        <custom-field action="copy">_page_header_menu_border_type</custom-field>
+        <custom-field action="copy">_page_header_menu_border_color</custom-field>
+        <custom-field action="copy">_page_header_dynamic_typography_color</custom-field>
+        <custom-field action="copy">_page_header_menu_fixed</custom-field>
+        <custom-field action="copy">_page_subheader_visibility</custom-field>
+        <custom-field action="copy">_page_subheader_style</custom-field>
+        <custom-field action="copy">_page_subheader_height</custom-field>
+        <custom-field action="copy">_page_subheader</custom-field>
+        <custom-field action="copy">_page_subheader_text_typo</custom-field>
+        <custom-field action="copy">_page_post_style_in_grid</custom-field>
+        <custom-field action="copy">_page_add_wrapper</custom-field>
+        <custom-field action="copy">_page_content_wrapper_width</custom-field>
+        <custom-field action="copy">_page_full_width_margins_size</custom-field>
+        <custom-field action="copy">_page_add_top_padding</custom-field>
+        <custom-field action="copy">_page_top_padding_spacing</custom-field>
+        <custom-field action="copy">_page_bottom_padding_spacing</custom-field>
+        <custom-field action="copy">_page_use_boxed_wrapper</custom-field>
+        <custom-field action="copy">_page_boxed_wrapper_margins_size</custom-field>
+        <custom-field action="copy">_page_header_title_visibility</custom-field>
+        <custom-field action="copy">_page_header_title_fullscreen</custom-field>
+        <custom-field action="copy">_page_header_title_height</custom-field>
+        <custom-field action="copy">_page_header_title_subtitle_type</custom-field>
+        <custom-field action="copy">_page_header_title_custom_subtitle_text</custom-field>
+        <custom-field action="copy">_page_header_title_align</custom-field>
+        <custom-field action="copy">_page_header_title</custom-field>
+        <custom-field action="copy">_page_header_title_use_overlay</custom-field>
+        <custom-field action="copy">_page_header_title_overlay_color</custom-field>
+        <custom-field action="copy">_page_header_title_use_parallax</custom-field>
+        <custom-field action="copy">_page_typography_settings</custom-field>
+        <custom-field action="copy">_page_header_previous_button_typo</custom-field>
+        <custom-field action="copy">_page_header_title_typo</custom-field>
+        <custom-field action="copy">_page_header_subtitle_typo</custom-field>
+        <custom-field action="copy">_page_sidebar_position</custom-field>
+        <custom-field action="copy">_page_sidebar_layout</custom-field>
+        <custom-field action="copy">_page_breadcrumbs_visibility</custom-field>
+        <custom-field action="copy">_page_breadcrumbs_text_typo</custom-field>
+        <custom-field action="copy">_page_show_arrow</custom-field>
+        <custom-field action="copy">_page_arrow_typo</custom-field>
+        <custom-field action="copy">_page_footer_visibility</custom-field>
+        <custom-field action="copy">_page_footer_is_wrapped</custom-field>
+        <custom-field action="copy">_page_footer_text_typo</custom-field>
+        <custom-field action="copy">_page_footer</custom-field>
+        <custom-field action="copy">_page_footer_is_sticky</custom-field>
+        <custom-field action="copy">_page_footer_copyright_visibility</custom-field>
+        <custom-field action="copy">_page_footer_copyright_section</custom-field>
+        <custom-field action="copy">_page_footer_copyright_section_text_typo</custom-field>
+        <custom-field action="copy">_page_footer_copyright_section_links_color</custom-field>
+        <custom-field action="copy">_page_footer_logo_widget_type</custom-field>
+        <custom-field action="copy">_page_footer_sitename_typo</custom-field>
+        <custom-field action="copy">_page_footer_custom_logo</custom-field>
+        <custom-field action="copy">_page_custom_css</custom-field>
+        <custom-field action="copy">_page_social_networks_typo</custom-field>
+        <custom-field action="copy">_page_icon_preloading_fontawesome</custom-field>
+        <custom-field action="copy">_page_icon_preloading_ionicons</custom-field>
+        <custom-field action="copy">_page_icon_preloading_bootstrap</custom-field>
+        <custom-field action="copy">_page_icon_preloading_linea</custom-field>
+
+        <!-- Product Fields -->
+        <custom-field action="copy-once">ecommerce_product_type</custom-field>
+        <custom-field action="copy-once">page_show_category_breadcrumbs</custom-field>
+        <custom-field action="copy-once">product_style_in_grid</custom-field>
+        <custom-field action="copy-once">woocommerce_product_sticky</custom-field>
+        <custom-field action="copy-once">woocommerce_product_sale_tag</custom-field>
+        <custom-field action="copy-once">woocommerce_product_sku</custom-field>
+        <custom-field action="copy-once">woocommerce_product_category</custom-field>
+        <custom-field action="copy-once">woocommerce_product_tags</custom-field>
+        <custom-field action="copy-once">woocommerce_product_related</custom-field>
+        <custom-field action="copy-once">woocommerce_single_product_title_typo</custom-field>
+        <custom-field action="copy-once">woocommerce_single_product_price_typo</custom-field>
+        <custom-field action="copy-once">woocommerce_single_product_category_typo</custom-field>
+        <custom-field action="copy-once">page_footer_widget_title_typo</custom-field>
+        <!-- System Fields -->
+        <custom-field action="copy">_ecommerce_product_type</custom-field>
+        <custom-field action="copy">_page_show_category_breadcrumbs</custom-field>
+        <custom-field action="copy">_product_style_in_grid</custom-field>
+        <custom-field action="copy">_woocommerce_product_sticky</custom-field>
+        <custom-field action="copy">_woocommerce_product_sale_tag</custom-field>
+        <custom-field action="copy">_woocommerce_product_sku</custom-field>
+        <custom-field action="copy">_woocommerce_product_category</custom-field>
+        <custom-field action="copy">_woocommerce_product_tags</custom-field>
+        <custom-field action="copy">_woocommerce_product_related</custom-field>
+        <custom-field action="copy">_woocommerce_single_product_title_typo</custom-field>
+        <custom-field action="copy">_woocommerce_single_product_price_typo</custom-field>
+        <custom-field action="copy">_woocommerce_single_product_category_typo</custom-field>
+        <custom-field action="copy">_page_footer_widget_title_typo</custom-field>
+    </custom-fields>
+
+    <custom-fields-texts>
+    </custom-fields-texts>
+</wpml-config>

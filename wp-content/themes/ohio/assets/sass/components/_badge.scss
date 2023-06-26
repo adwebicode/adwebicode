@@ -1,0 +1,101 @@
+body {
+
+	.badge,
+	.tag,
+	.tagcloud > a,
+	.wp-block-tag-cloud > a,
+	.testimonial-headline > b {
+		font-weight: 500;
+		padding: 0.35rem 0.55rem;
+		line-height: 1;
+		font-size: $font-size-caption;
+
+		@include border-radius;
+		@include inline-flex;
+	}
+
+	.badge {
+
+		&.-primary {
+			background-color: $color-red;
+		}
+
+		&:not(.-outlined) {
+			background-color: $color-black-light;
+			color: $color-white;
+		}
+
+		// Outlined
+
+		&.-outlined {
+			padding: 0.25rem 0.55rem;
+			border: 2px solid currentColor;
+		}
+
+		&.-pill {
+			margin-bottom: 0.75rem;
+
+			&.-inverse {
+				color: $color-white;
+			}
+
+			> svg {
+				fill: currentColor;
+				margin-right: 0.25rem;
+			}
+
+			@include border-radius(0.8rem);
+		}
+	}
+
+	.tag,
+	.tagcloud > a,
+	.wp-block-tag-cloud > a,
+	.testimonial-headline > b {
+		background: $color-neutral-15;
+
+		@include inline-flex;
+
+		> a {
+
+			@include unlink;
+		}
+
+		&:not(.tag-sale) {
+
+			&:hover,
+			&:focus,
+			&:active {
+				background: $color-neutral-35;
+				color: $color-black;
+			}
+		}
+
+		&.tag-sale {
+			background-color: $color-red;
+			color: $color-white;
+		}
+	}
+
+	// .minimal-scheme {
+
+	// 	.badge,
+	// 	.tag {
+
+	// 		@include border-radius(0);
+	// 	}
+
+	// 	a.tag {
+	// 		background-color: transparent;
+	// 		padding: 0.25rem 0;
+	// 		font-size: $font-size-small;
+
+	// 		&:hover,
+	// 		&:focus,
+	// 		&:active {
+	// 			background-color: transparent;
+	// 			color: $color-red;
+	// 		}
+	// 	}
+	// }
+}

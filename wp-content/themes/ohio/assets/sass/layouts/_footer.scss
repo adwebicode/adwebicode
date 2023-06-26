@@ -1,0 +1,100 @@
+.site-footer {
+	background-color: $color-neutral-6;
+
+	@include sm-screen {
+
+		.widgets-column {
+
+			&:not(:last-child) {
+				margin-bottom: 2.5rem;
+			}
+		}
+	}
+
+	// Widgets overrides
+	
+	.widgets {
+
+		@include spacer5x(padding-top);
+		@include spacer5x(padding-bottom);
+
+		p {
+			margin-top: 0;
+		}
+	}
+
+	// Copyright bar
+
+	&-copyright {
+		font-size: $font-size-small;
+
+		.holder {
+
+			@include spacer2x(padding-top);
+	 		@include spacer2x(padding-bottom);
+
+			&:not(.-center) {
+
+				@include flex;
+				@include flex-just(space-between);
+
+				@include sm-screen {
+
+					> div {
+						text-align: center;
+
+						&:not(:last-child) {
+							margin-bottom: 0.5rem;
+						}
+					}
+
+					@include flex-direction(column);
+					@include align-items(center);
+				}
+			}
+		}
+	}
+
+	.page-container {
+
+	 	& + .site-footer-copyright {
+
+	 		.holder {
+		 		border-top: 1px solid $color-neutral-15;
+		 	}
+	 	}
+
+	 	&.-full-w {
+
+	 		@include spacer(padding-left);
+	 		@include spacer(padding-right);
+	 	}
+	}
+}
+
+// Sticky footer
+
+.with-sticky-footer {
+
+	@include lg-screen {
+
+		.site-content {
+			position: relative;
+			z-index: 2;
+		}
+		
+		.site-footer {
+			width: auto;
+			position: fixed;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			z-index: 1;
+			visibility: hidden;
+
+			&.visible {
+				visibility: visible;
+			}
+		}
+	}
+}

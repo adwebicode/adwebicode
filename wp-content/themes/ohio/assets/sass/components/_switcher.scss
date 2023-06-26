@@ -1,0 +1,47 @@
+.form-switch {
+
+	> .form-check-input[type="checkbox"] {
+		position: relative;
+		width: $button-small-height;
+		border-radius: 2em;
+
+		@include border-radius(1.1rem);
+
+		&::before {
+			content: "";
+			position: absolute;
+			width: 0.625rem;
+			height: 0.625rem;
+			left: 0.125rem;
+			background-color: $color-grey;
+
+			@include border-radius(100%);
+			@include transition;
+		}
+
+		&:checked {
+			background-color: transparent;
+			background-image: none;
+
+			&::before {
+				left: calc(100% - 0.125rem);
+				transform: translate(-100%);
+				background-color: $color-red;
+			}
+		}
+	}
+
+	> .form-check-label {
+		color: $color-black-light;
+	}
+}
+
+// .minimal-scheme {
+
+// 	.form-switch {
+
+// 		> .form-check-input[type="checkbox"] {
+// 			border-width: 1px;
+// 		}
+// 	}
+// }

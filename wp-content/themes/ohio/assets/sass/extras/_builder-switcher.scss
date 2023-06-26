@@ -1,0 +1,41 @@
+.builder-switcher {
+    margin-top: 0.5rem;
+
+    @include inline-flex;
+
+    a {
+	    padding: 0 0.65rem;
+	    height: 1.8rem;
+	    border: 1px solid $color-grey;
+	    font-size: .8em;
+	    font-weight: 500;
+	    color: $color-grey;
+
+	    @include inline-flex;
+	    @include unlink;
+	    @include transition;
+
+	    &:first-child {
+
+			@include border-left-radius(0.9rem);
+		}
+
+		&:last-child {
+			
+			@include border-right-radius(0.9rem);
+		}
+
+		&.active,
+		&:hover {
+		    background-color: $color-grey;
+		    color: $color-white !important;
+		}
+
+		&:not(.active) {
+
+			&:hover {
+				background-color: $color-grey-light;
+			}
+		}
+	}
+}

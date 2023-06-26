@@ -1,0 +1,261 @@
+@media (max-width: 767px) {
+
+    .vc_hidden-xs {
+        display: none !important;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+
+    .vc_hidden-sm {
+        display: none !important;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+
+    .vc_hidden-md {
+        display: none !important;
+    }
+}
+
+@media (min-width: 1200px) {
+    
+    .vc_hidden-lg {
+        display: none !important;
+    }
+}
+
+.vc_row {
+    position: relative;
+
+    @include clearfix;
+
+    &:not(.-nospace) {
+        margin-left: -$grid-spacer;
+        margin-right: -$grid-spacer;
+
+        [class^='vc_col'],
+        .grid-item {
+            position: relative;
+            min-height: 1px;
+            padding-left: $grid-spacer;
+            padding-right: $grid-spacer;
+        }
+    }
+
+    // Blog
+
+    &.blog-posts,
+    &.portfolio-grid {
+
+        + .pagination-standard,
+        + .lazy-load {
+            margin-top: $grid-spacer;
+        }
+    }
+
+    // Row vertical lines (WPBakery only)
+
+    @include md-screen {
+        
+        .vc-bg-lines {
+            position: absolute;
+            height: 100%;
+            left: 0;
+            right: 0;
+
+            div {
+                background: $color-neutral-8;
+                width: 1px;
+                height: 100%;
+                position: absolute;
+
+                &:nth-child(2) {
+                    margin-left: calc((100% / 4)*1);
+                }
+
+                &:nth-child(3) {
+                    margin-left: calc((100% / 4)*2);
+                }
+
+                &:nth-child(4) {
+                    margin-left: calc((100% / 4)*3);
+                }
+
+                &:nth-child(5) {
+                    margin-left: calc((100% / 4)*4 - 40px);
+                }
+            }
+        }
+    }
+
+    // Row side title (WPBakery only)
+
+    .vc-bg-text {
+        position: absolute;
+        font-size: 5vw;
+        font-weight: 600;
+        line-height: 120%;
+        letter-spacing: -.04em;
+        top: 0;
+        transform-origin: 0 0;
+        font-family: $font-headlines;
+        color: $color-neutral-15;
+
+        &.left {
+            transform: rotate(-90deg) translateX(-100%) translateY(-100%);
+        }
+
+        &.right {
+            transform: rotate(-90deg) translateX(-100%) translateY(0);
+
+            @include container(left);
+        }
+    }
+
+    // Stretch row
+
+    &.vc_row-fluid {
+
+        // Row side title (WPBakery only)
+
+        .vc-bg-text {
+
+            &.right {
+                margin-left: calc((100vw - #{$container})/2);
+
+                @include note-screen {
+
+                    margin-left: calc((100vw - #{$container-laptop})/2);
+                }
+            }
+        }
+    }
+}
+
+// Col Extra Small
+
+div[class*='vc_col-xs'] {
+    float: left;
+}
+
+@for $i from 1 through 12 {
+
+    .vc_col-xs-#{$i} {
+        width: calc(100%/12 * #{$i});
+    }
+}
+
+// Col Small
+
+// div[class*='vc_col-sm'] {
+//     float: left;
+// }
+
+@media (min-width: 768px) {
+
+    div[class*='vc_col-sm-'] {
+        float: left;
+    }
+
+    @for $i from 1 through 12 {
+
+        .vc_col-sm-#{$i} {
+            width: calc(100%/12 * #{$i});
+        }
+    }
+}
+
+// Col Medium
+
+@media (min-width: 769px) {
+
+    div[class*='vc_col-md'] {
+        float: left;
+    }
+
+    @for $i from 1 through 12 {
+
+        .vc_col-md-#{$i} {
+            width: calc(100%/12 * #{$i});
+        }
+    }
+
+    @for $i from 1 through 12 {
+
+        .vc_col-md-push-#{$i} {
+            left: calc(100%/12 * #{$i});
+            position: relative;
+        }
+    }
+}
+
+// Col Large
+
+@media (min-width: 1200px) {
+
+    div[class*='vc_col-lg'] {
+        float: left;
+    }
+
+    @for $i from 1 through 12 {
+
+        .vc_col-lg-#{$i} {
+            width: calc(100%/12 * #{$i});
+        }
+    }
+
+    @for $i from 1 through 12 {
+
+        .vc_col-lg-push-#{$i} {
+            left: calc(100%/12 * #{$i});
+            position: relative;
+        }
+    }
+}
+
+.vc_row:not(.vc_row-no-padding) {
+
+    .vc_column_container {
+
+        > .vc_column-inner {
+            padding-left: $grid-spacer;
+            padding-right: $grid-spacer;
+        }
+    }
+}
+
+section {
+
+    &.vc_section {
+        padding-left: $grid-spacer;
+        padding-right: $grid-spacer;
+        margin-left: -$grid-spacer;
+        margin-right: -$grid-spacer;
+    }
+}
+
+// Portfolio and blog grid
+
+.grid-item {
+
+    &:not(.-nospace) {
+        padding-top: $grid-spacer;
+        padding-bottom: $grid-spacer;
+    }
+}
+
+// Remove spacing between grid items
+
+.-nospace {
+    // padding-top: $grid-spacer;
+
+    &.vc_row {
+        margin: 0;
+
+        .grid-item {
+            padding: 0;
+        }
+    }
+}

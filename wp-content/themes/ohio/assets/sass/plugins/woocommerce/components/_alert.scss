@@ -1,0 +1,86 @@
+.woo-alert-group {
+	margin-bottom: 1rem;
+
+	.alert {
+		margin-bottom: 0.25rem;
+
+		&-message {
+			margin: 0;
+		}
+	}
+
+	+ .woo-alert-group {
+		margin-top: -1rem;
+	}
+}
+
+// With animation
+
+.single-product {
+
+	// Add to cart button with AJAX
+
+	> .woo-alert-group {
+		
+		.alert {
+
+			&:not(.-danger) {
+				margin-bottom: 0px;
+				animation: 0.4s slide_up $transition-function;
+				z-index: 51;
+
+				@include sm-screen {
+					
+					padding-right: 3rem;
+					left: $grid-spacer;
+					right: $grid-spacer;
+					transform: translateX(0);
+					display: block;
+					animation: 0.4s slide_up_mobile $transition-function;
+
+					.icon-button {
+						position: absolute;
+						top: 0.57rem;
+						right: 0.75rem;
+					}
+				}
+			}
+		}
+	}
+
+	.entry-summary {
+
+		.woo-alert-group {
+		
+			.alert {
+				display: block;
+			}
+		}
+	}
+}
+
+@keyframes slide_up {
+
+	0% { 
+		transform: translateX(-50%) translateY(150%);
+		opacity: .5;
+	}
+
+	100% { 
+		transform: translateX(-50%) translateY(0%);
+		opacity: 1;
+	}
+}
+
+@keyframes slide_up_mobile {
+
+	0% { 
+		transform: translateX(0) translateY(150%);
+		opacity: .5;
+	}
+
+	100% { 
+		transform: translateX(0) translateY(0%);
+		opacity: 1;
+	}
+}

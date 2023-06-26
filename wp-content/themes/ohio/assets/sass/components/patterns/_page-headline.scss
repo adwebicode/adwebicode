@@ -1,0 +1,172 @@
+.page-headline {
+	position: relative;
+	overflow: hidden;
+
+	@include flex;
+	@include align-items(flex-end);
+
+	.holder {
+		width: 100%;
+		position: relative;
+		z-index: 2;
+
+		@include spacer4x(padding-top);
+		@include spacer4x(padding-bottom);
+	}
+
+	.animated-holder {
+
+		@include flex;
+		@include flex-direction(column);
+	}
+
+	// Content
+
+	.headline-meta {
+		margin-bottom: 1.25rem;
+	}
+
+	.title {
+		max-width: 65%;
+
+		@include note-screen {
+			
+			font-size: 4rem;
+		}
+	}
+
+	.post-meta-holder {
+	    font-size: $font-size-large;
+	    max-width: 60%;
+	    margin-top: 1.25rem;
+	    
+	    .btn, // old version fallback
+	    .button {
+	        margin-top: 1.25rem;
+	    }
+	}
+
+	.bg-image {
+		background-position: center center;
+		background-size: cover;
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+	}
+
+	&::after {
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		z-index: 1;
+
+		@include pseudo;
+	}
+
+	&.without-cap {
+		padding-top: $header-height;
+	}
+
+	&.-full-vh {
+		padding-top: 0;
+	}
+
+	// Alignments
+
+	&.-center {
+
+		.animated-holder {
+
+			@include align-items(center);
+		}
+	}
+
+	&.-right {
+
+		.animated-holder {
+			
+			@include align-items(flex-end);
+		}
+	}
+
+	// With parallax
+
+	.parallax {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+	}
+
+	// Mobile styles
+
+	@include sm-screen {
+
+		& {
+			min-height: 30vh;
+			margin-bottom: -1rem;
+
+			// Decoration
+
+			&::before {
+				background-color: $color-white;
+				width: 100%;
+				height: 1rem;
+				bottom: 0;
+				left: 0;
+				z-index: 2;
+
+				@include pseudo;
+				@include border-top-radius(1rem);
+			}
+
+			+ .page-container {
+				padding-top: $grid-spacer;
+			}
+		}
+
+		.title,
+		.post-meta-holder {
+			max-width: 100%;
+		}
+	}
+}
+
+// Overrides
+
+@include lg-screen {
+
+	.with-header-2 {
+
+		.page-headline {
+
+			&.without-cap {
+				padding-top: $header-height-2;
+			}
+		}
+	}
+
+	.with-header-5,
+	.with-header-6,
+	.with-header-7 {
+
+		.page-headline {
+
+			&.without-cap {
+				padding-top: initial;
+			}
+		}
+	}
+
+	.single-post {
+
+		.page-headline {
+
+			.title {
+			    max-width: 80%;
+			}
+		}
+	}
+}

@@ -1,0 +1,53 @@
+.horizontal-accordion {
+
+	@include flex;
+
+	&-item {
+		min-width: 50%;
+		position: relative;
+		background-color: $color-white;
+
+		@include transition;
+
+		.accordion-body {
+			height: 100%;
+
+			@include transition;
+		}
+
+		&:not(:last-child) {
+			box-shadow: 0 0.75rem 2.5rem rgba(#000, .08);
+		}
+
+		&:not(.active) {
+			cursor: pointer;
+
+			&:hover {
+
+				.accordion-body {
+					background-color: $color-neutral-6;
+				}
+			}
+		}
+	}
+
+	&:not(.open) {
+		overflow-x: hidden;
+	}
+}
+
+@include sm-screen {
+
+	.horizontal-accordion {
+
+		@include flex-direction(column);
+
+		.horizontal-accordion-item {
+			box-shadow: none;
+	
+			.accordion-body {
+				padding-left: 0;
+			}
+		}
+	}
+}

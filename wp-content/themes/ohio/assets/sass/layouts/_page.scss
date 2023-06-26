@@ -1,0 +1,293 @@
+.site-content {
+	background-color: $color-white;
+	min-height: calc(100vh - 25vh);
+
+	// @include clearfix;
+
+	&::before {
+		content: "";
+		display: table;
+		clear: both;
+	}
+}
+
+@supports (-webkit-touch-callout: none) {
+
+	.site-content {
+		overflow-x: hidden; //for ios devices
+	}
+}
+
+// Page container
+
+.page-container {
+	margin: 0 auto;
+	position: relative;
+	padding-left: $grid-spacer;
+	padding-right: $grid-spacer;
+
+	&:not(.-full-w) {
+
+		&,
+		.entry-content > .elementor > .elementor-section.elementor-section-boxed > .elementor-container { // Set page container width for elementor stretch section
+			
+			&,
+			.elementor-section.elementor-section-boxed > .elementor-container {
+
+				@include container;
+			}
+		}
+	}
+
+	// Portfolio page template paddings reset
+
+	&.-full-w {
+
+		&.-reset {
+			padding-left: 0;
+			padding-right: 0;
+		}
+	}
+
+	&.top-offset {
+
+		@include spacer5x(padding-top);
+	}
+
+	&.bottom-offset {
+
+		@include spacer5x(padding-bottom);
+	}
+
+	@include clearfix;
+}
+
+// Boxed layout
+
+.boxed-container {
+	position: relative;
+
+	@include lg-screen {
+
+		margin-left: 12vw;
+		margin-right: 12vw;
+	}
+}
+
+// Sidebar layout
+
+.page-content {
+
+	@include md-screen {
+
+		width: 100%;
+		float: left;
+
+		&.-with-left-sidebar {
+			width: 75%;
+			float: right;
+			padding-left: 2.5%;
+		}
+
+		&.-with-right-sidebar {
+			width: 75%;
+			float: left;
+			padding-right: 2.5%;
+		}
+	}
+}
+
+// Container width (specific headers)
+
+body {
+
+	&.with-header-6.with-spacer,
+	&.with-header-7.with-spacer,
+	.boxed-container {
+		.page-container:not(.-full-w),
+		.page-container:not(.-full-w) .elementor-section.elementor-section-boxed > .elementor-container {
+
+			@include note-screen {
+
+				max-width: calc(#{$container-laptop} - #{$header-height-6});
+			}
+
+			@include sm-note-screen {
+
+				max-width: calc(#{$container-laptop-sm} - #{$header-height-6});
+			}
+
+			@include xs-note-screen {
+
+				max-width: calc(#{$container-laptop-xs} - #{$header-height-6});
+			}
+		}
+	}
+}
+
+// Add extra space for 6th and 7th header types
+// Without header spacer case
+
+.with-header-6,
+.with-header-7 {
+
+	&:not(.with-spacer) {
+
+		@media screen and (min-width: 769px) and (max-width: 1600px) {
+
+			.page-container:not(.-full-w),
+			.vc_row[data-vc-full-width]:not(.vc_row-no-padding) {
+				padding-left: calc(#{$header-height-6} + #{$grid-spacer});
+			}
+
+			.elementor-section-full_width > .elementor-container,
+			.elementor-section-stretched > .elementor-container,
+			.project.-layout4 .holder {
+				padding-left: $header-height-6;
+			}
+		}
+	}
+}
+
+body {
+
+	&.with-header-5.with-spacer {
+
+		.page-container:not(.-full-w),
+		.page-container:not(.-full-w) .elementor-section.elementor-section-boxed > .elementor-container {
+
+			@include note-screen {
+
+				max-width: calc(#{$container-laptop} - #{$header-height-5});
+			}
+
+			@include sm-note-screen {
+
+				max-width: calc(#{$container-laptop-sm} - #{$header-height-5});
+			}
+
+			@include xs-note-screen {
+
+				max-width: calc(#{$container-laptop-xs} - #{$header-height-5});
+			}
+		}
+	}
+}
+
+// Custom page width
+
+@include lg-screen {
+
+	.single-post:not(.single-post-sidebar),
+	.error404,
+	.search-no-results,
+	.woocommerce-page:not(.archive):not(.single) {
+
+		.page-headline {
+
+			.title {
+				max-width: 100%;
+			}
+		}
+
+		.page-headline,
+		.site-content {
+
+			.page-container {
+				padding-left: 8vw;
+				padding-right: 8vw;
+			}
+		}
+	}
+}
+
+// Archive page
+
+.archive-holder {
+	margin-top: -$grid-spacer;
+}
+
+// Page for projects
+
+.page-template-page_for-projects {
+
+	.-with-sorting {
+
+		.portfolio-filter {
+
+			+ .portfolio-grid {
+
+				&:not(.-nospace) {
+					margin-top: -$grid-spacer;
+				}
+			}
+		}
+	}
+}
+
+// Single post
+
+.single-post {
+
+	.page-content {
+
+		&.-left,
+		&.-right {
+
+			.content-area {
+
+				.vc_col-lg-8 {
+					left: auto;
+					width: 100%;
+				}
+			}
+		}
+	}
+}
+
+// Hide breadcrumbs from the search results page
+
+.search-no-results {
+
+    .breadcrumbs,
+    .woo-sidebar {
+        display: none;
+    }
+
+    .page-content {
+
+        &.-left,
+        &.-right {
+            width: 100%;
+        }
+    }
+}
+
+// Global page animation
+
+.global-page-animation {
+
+	> #page {
+		opacity: 0;
+		margin-top: -1.5rem;
+		transition-duration: .5s;
+
+		@include transition;
+	}
+
+	&.global-page-animation-active {
+
+		> #page {
+			opacity: 1;
+			margin-top: 0;
+		}	
+	}
+
+	&.global-page-animation-fade-out {
+
+		> #page {
+			opacity: 0;
+			margin-top: -1.5rem;
+		}
+	}
+}

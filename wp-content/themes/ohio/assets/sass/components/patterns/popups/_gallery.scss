@@ -1,0 +1,147 @@
+.clb-gallery-lightbox {
+
+	.close-bar {
+
+		@include flex;
+		@include flex-just(space-between);
+	}
+
+	.clb-popup-holder {
+		padding-top: 0;
+		padding-bottom: 0;
+
+		.slider {
+			opacity: 0;
+
+			@include transition;
+
+			&.ready {
+
+				.clb-slider-item {
+
+					&:not(.active) {
+						transform: scale(.5);
+					}
+
+					@include transition;	
+				}
+			}
+		}
+
+		.slider,
+		.clb-slider-stage {
+			height: 100%;
+
+			.image-wrap {
+				position: relative;
+
+				img {
+					max-height: calc(100% - 3rem - 7rem);
+
+					@include md-screen {
+
+						margin-top: 3rem;
+					}
+				}
+			}
+		}
+	}
+
+	.clb-slider {
+
+		@include md-screen {
+
+			max-width: 70%;
+		}
+
+		&-outer-stage {
+			overflow: visible;
+		}
+
+		&-stage {
+
+			@include align-items(center);
+		}
+
+		&-item {
+			height: 100vh;
+			text-align: center;
+
+			@include flex;
+			@include flex-direction(column);
+			@include align-items(center);
+			@include flex-just(center);
+
+			&.active {
+				transform: none;
+
+				@include transition;
+			}
+		}
+
+		&-item {
+
+			&:not(.active) {
+
+				@include transition;
+			}	
+		}
+
+		&-nav-btn {
+			position: fixed;
+			color: $color-white;
+			transform: none !important;
+
+			@include spacer(margin-right);
+			@include spacer(margin-bottom);
+		}
+	}
+
+	.card-details {
+		width: 100%;
+		text-align: center;
+		min-height: 7rem;
+
+		@include flex;
+		@include flex-direction(column);
+		@include flex-just(center);
+
+		.title {
+			color: $color-white;
+			font-size: 18px;
+		}
+
+		.caption {
+			margin-top: 0.5rem;
+			display: block;
+			width: auto;
+			color: $color-grey;
+		}
+	}
+
+	&.-metro {
+
+		.clb-slider-item {
+
+			img {
+
+				@include metro-img;
+			}
+		}
+	}
+
+	&:not(.active) {
+		
+	}
+}
+
+.gallery-tmpimage {
+	position: fixed;
+	z-index: 9999999;
+
+	@include transition;
+
+	&.active {
+		left: 50%;
+	}
+}

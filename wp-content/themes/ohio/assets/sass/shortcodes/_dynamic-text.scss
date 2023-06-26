@@ -1,0 +1,23 @@
+.dynamic-text {
+
+	.typed-cursor {
+		opacity: 1;
+		margin-right: -0.2em;
+		animation: Blink 0.75s infinite;
+	}
+}
+
+@-webkit-keyframes Blink {
+
+	0% { 
+		opacity: 1; 
+	}
+
+	50% { 
+		opacity: 0; 
+	}
+
+	100% { 
+		opacity: 1; 
+	}
+}

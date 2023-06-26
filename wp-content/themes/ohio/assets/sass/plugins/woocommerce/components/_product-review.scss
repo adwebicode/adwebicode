@@ -1,0 +1,91 @@
+.woocommerce {
+
+	// Rating
+
+	.stars,
+	.star-rating {
+		display: inline-block;
+		vertical-align: middle;
+		margin-top: -0.25rem;
+		height: 1rem;
+		line-height: 1rem;
+		font-family: "Font Awesome 5 Free";
+	}
+
+	.star-rating {
+	    overflow: hidden;
+	    position: relative;
+	    width: 80px;
+	    font-style: normal;
+	    color: $color-neutral-60;
+
+		&::before,
+		span::before {
+			content: "★★★★★";
+		    line-height: 1rem;
+		    font-size: 1rem;
+			top: 0;
+		    left: 0;
+		    position: absolute;
+		}
+
+		span {
+			overflow: hidden;
+		    float: left;
+		    top: 0;
+		    left: 0;
+		    position: absolute;
+		    padding-top: 1em;
+
+			&::before {
+			    color: $color-black-light;
+			}
+		}
+	}
+
+	// Set rating
+
+	.stars {
+		width: auto;
+		margin: 0 10px;
+
+		a {
+			position: relative;
+			height: 1rem;
+			line-height: 1rem;
+			width: 0.75rem;
+		    font-size: 1rem;
+			text-indent: -999em;
+			display: inline-block;
+
+			&::before {
+				content: "★";
+				display: block;
+				background: transparent;
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 1em;
+				height: 1em;
+				line-height: 1;
+				text-indent: 0;
+				color: $color-neutral-60;
+			}
+		}
+
+		&:hover a:hover ~ a::before,
+		&.selected a.active ~ a::before,
+		&.selected:hover span a:hover ~ a::before {
+			content: "★";
+			color: $color-neutral-60;
+		}
+
+		&:hover a::before,
+		&.selected a::before,
+		&.selected:hover span a::before {
+			content: "★";
+			opacity: 1;
+			color: $color-black-light;
+		}
+	}
+}

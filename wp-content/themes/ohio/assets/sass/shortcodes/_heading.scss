@@ -1,0 +1,100 @@
+.heading {
+
+	.title {
+
+		+ .divider {
+			margin-block-start: 1em;
+		}
+
+		+ .subtitle {
+			padding-top: 0.5em;
+		}
+
+		// New badge
+
+		> .badge {
+			color: $color-red;
+		  	background-color: rgba($color-red, 0.12) !important;
+		    padding: 0.3rem 0.5rem;
+		    margin-left: 6px;
+		    margin-top: -2px;
+		  	font-size: 0.85rem;
+		  	letter-spacing: 0;
+		}
+	}
+
+	// Highlighted text
+
+	.highlighted-text {
+		background-image: linear-gradient(rgba($color-red, .5), rgba($color-red, .5));
+	    background-repeat: no-repeat;
+	    background-position: 0% 100%;
+	    background-size: 0% 10%;
+	    backface-visibility: hidden;
+
+	    @include transition;
+
+	    &:not([data-aos="animation"]),
+	    &.aos-animate {
+	    	background-size: 100% 10%;
+
+	    	&:hover {
+	    		transition-duration: $transition-duration;
+	    	}
+	    }
+
+	    &:hover {
+	    	background-size: 100% 100%;
+	    }
+	}
+
+	.subtitle {
+		font-size: 0.9em;
+		font-weight: 500;
+
+		+ .divider {
+			margin-block-start: 1em;
+		}
+
+		+ .title {
+			padding-top: 0.15em;
+		}
+	}
+
+	.divider {
+		width: 100%;
+		height: 1px;
+		display: block;
+		background-color: rgba($color-grey, 0.65);
+
+		+ .title {
+			padding-top: 0.35em;
+		}
+
+		+ .subtitle {
+			padding-top: 1em;
+		}
+	}
+
+	&:not(.title) {
+
+		+ * {
+			margin-block-start: 1em;
+		}
+
+		+ .vc_empty_space {
+			margin-block-start: initial;
+		}
+	}
+}
+
+// .minimal-scheme {
+
+// 	.heading {
+		
+// 		.subtitle {
+// 			text-transform: uppercase;
+// 			font-size: 0.85em;
+// 		}
+// 	}
+// }

@@ -1,0 +1,56 @@
+.tooltip {
+	position: relative;
+	background-color: $color-black;
+	padding: 0.375rem 0.5rem;
+	font-size: $font-size-caption;
+	font-weight: 500;
+	color: $color-white;
+	z-index: 10;
+
+	@include border-radius;
+
+	&::before {
+		content: "";
+		position: absolute;
+		width: 0.625rem;
+		height: 0.625rem;
+		background-color: $color-black;
+		transform: rotate(45deg);
+		bottom: -0.3125rem;
+		left: calc(50% - 0.3125rem);
+		z-index: -1;
+	}
+
+	&.-right {
+
+		&::before {
+			bottom: calc(50% - 0.3125rem);
+			left: -0.3125rem;
+		}
+	}
+
+	&.-left {
+
+		&::before {
+			bottom: calc(50% - 0.3125rem);
+			right: -0.3125rem;
+			left: auto;
+		}
+	}
+
+	&.-bottom {
+
+		&::before {
+			top: -0.3125rem;
+			bottom: auto
+		}
+	}
+}
+
+// .minimal-scheme {
+
+// 	.tooltip {
+
+// 		@include border-radius(0);
+// 	}
+// }

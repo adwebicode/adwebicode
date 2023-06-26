@@ -1,0 +1,46 @@
+.scroll-top {
+    opacity: 0;
+    visibility: hidden;
+
+    &-holder {
+        white-space: nowrap;
+    }
+
+    &-bar {
+        width: 60px;
+        height: 2px;
+        margin-right: 15px;
+        position: relative;
+
+        &::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 100%;
+            background-color: currentColor;
+            opacity: .3;
+        }
+
+        .scroll-track {
+            position: absolute;
+            top: 0;
+            right: 0;
+            height: 100%;
+            background-color: currentColor;
+        }
+    }
+
+    &.clb-slider-scroll-top {
+        visibility: visible;
+        opacity: 1;
+
+        .scroll-top-bar {
+            .scroll-track {
+                width: 0;
+                @include transition;
+            }
+        }
+    }
+}

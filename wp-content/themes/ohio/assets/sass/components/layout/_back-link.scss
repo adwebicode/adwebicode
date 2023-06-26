@@ -1,0 +1,59 @@
+.back-link {
+    position: fixed;
+    z-index: 5;
+    padding-top: $header-height;
+
+    @include spacer(top);
+    @include spacer(left);
+    @include flex;
+    @include align-items(center);
+
+    .icon {
+        transform: rotate(180deg);
+    }
+
+    .caption {
+        color: initial;
+        opacity: 0;
+        transform: translateX(0.5rem);
+        @include transition;
+    }
+
+    &:hover {
+
+        .caption {
+            opacity: 1;
+            transform: none;
+        }   
+    }
+
+    &.showed {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+.with-header-2 {
+
+    .back-link {
+        padding-top: $header-height-2;
+    }
+}
+
+.with-header-5,
+.with-header-6,
+.with-header-7 {
+
+    .back-link {
+        padding-top: 0;
+    }
+}
+
+// With subheader
+
+.with-subheader {
+
+    .back-link {
+        margin-top: $subheader-height;
+    }
+}

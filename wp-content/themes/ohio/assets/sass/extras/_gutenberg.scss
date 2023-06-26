@@ -1,0 +1,271 @@
+// Preset Colors
+
+.has-beige-dark-background-color {
+	background-color: darken($color-red, 10%);
+
+	&.wp-block-button__link {
+		border-color: darken($color-red, 10%);
+	}
+}
+
+.has-dark-strong-background-color {
+	background-color: $color-black;
+
+	&.wp-block-button__link {
+		border-color: $color-black;
+	}
+}
+
+.has-dark-light-background-color {
+	background-color: $color-black-light;
+
+	&.wp-block-button__link {
+		border-color: $color-black-light;
+	}
+}
+
+.has-grey-strong-background-color {
+	background-color: lighten($color-grey, 10%);
+
+	&.wp-block-button__link {
+		border-color: lighten($color-grey, 10%);
+	}
+}
+
+.has-grey-light-background-color {
+	background-color: lighten($color-grey, 20%);
+
+	&.wp-block-button__link {
+		border-color: lighten($color-grey, 20%);
+	}
+}
+
+.has-beige-dark-color {
+	color: darken($color-red, 10%);
+}
+
+.has-dark-strong-color {
+	color: $color-black;
+}
+
+.has-dark-light-color {
+	color: $color-black-light;
+}
+
+.has-grey-strong-color {
+	color: $color-grey;
+}
+
+.has-grey-light-color {
+	color: lighten($color-grey, 20%);
+}
+
+.is-style-outline {
+
+	.wp-block-button__link {
+
+		&.has-beige-dark-color {
+			color: $color-red;
+		}
+
+		&.has-dark-strong-color {
+			color: $color-black;
+		}
+
+		&.has-dark-light-color {
+			color: $color-black-light;
+		}
+
+		&.has-grey-strong-color {
+			color: $color-grey;
+		}
+
+		&.has-grey-light-color {
+			color: lighten($color-grey, 10%);
+		}
+	}
+}
+
+.wp-block-separator {
+	border-color: $color-neutral;
+}
+
+.has-regular-font-size {
+	font-size: $font-size-main;
+	font-family: inherit;
+}
+
+.has-extra-small-font-size {
+	font-size: 0.867em;
+}
+
+.has-small-font-size {
+	font-size: 0.934em;
+}
+
+.has-large-font-size {
+	font-size: 1.6875em;
+	font-weight: 500;
+}
+
+.has-larger-font-size {
+	font-size: 1.9875em;
+}
+
+// Extras for WP (Gutenberg Review)
+
+// @include lg-screen {
+
+// 	.wp-block-cover,
+// 	.wp-block-cover-image {
+// 		padding: 2rem 12%;
+
+// 		&.alignleft {
+// 			padding: 1rem calc(2*1rem);
+// 		    min-width: 50%;
+// 		}
+
+// 		&.-alignfull {
+// 		    padding-left: calc(15% + (2*1rem));
+// 		    padding-right: calc(15% + (2*1rem));
+// 		}
+// 	}
+
+// 	.wp-block-columns.-alignfull, 
+// 	.wp-block-columns.-alignfull .wp-block-column {
+// 	    padding-left: calc(2*1rem);
+// 	    padding-right: calc(2*1rem);
+// 	}
+// }
+
+// @include sm-screen {
+
+// 	.wp-block-columns.-alignfull, 
+// 	.wp-block-columns.-alignfull .wp-block-column {
+// 	    padding-left: 10px;
+// 	    padding-right: 10px;
+// 	}
+
+// 	.wp-block-pullquote {
+// 	    padding: 1em 0;
+// 	}
+// }
+
+// .wp-block-latest-comments__comment-date,
+// .wp-block-latest-comments__comment-excerpt p {
+// 	font-size: inherit;
+// 	line-height: inherit;
+// }
+
+// .wp-block-latest-comments__comment-link,
+// .wp-block-latest-comments__comment-author {
+// 	font-weight: 600;
+// }
+
+// .wp-block-button__link {
+// 	font-size: inherit;
+// }
+
+// .blocks-gallery-item {
+// 	padding: 0;
+// }
+
+// .wp-block-cover {
+
+// 	.wp-block-cover-text {
+// 		font-family: $font-headlines;
+// 		font-size: 2.8em;
+// 		max-width: 100%;
+// 		font-weight: bold;
+
+// 		@include sm-screen {
+
+// 			font-size: 2.0em;
+// 		}
+
+// 		&:not(.has-text-color) {
+// 			color: $color-white;
+
+// 			a {
+// 				color: $color-white;
+// 			}
+// 		}
+// 	}
+// }
+
+// .wp-block-image .aligncenter,
+// .aligncenter {
+//     display: block;
+//     margin-left: auto;
+//     margin-right: auto;
+//     clear: both;
+// }
+
+// .wp-block-image .alignleft,
+// .alignleft {
+//     float: left;
+//     margin-right: 1rem;
+
+//     @include lg-screen {
+
+// 	    margin-right: calc(2 * 1rem);
+//     }
+// }
+
+// .wp-block-image .alignright,
+// .alignright {
+// 	float: right;
+//     margin-left: 1rem;
+
+//     @include lg-screen {
+
+// 	    margin-left: calc(2 * 1rem);
+//     }
+// }
+
+// .wp-caption-text {
+
+// 	&.gallery-caption {
+// 		white-space: initial;
+// 	}
+// }
+
+// .wp-caption {
+// 	max-width: 100%;
+// }
+
+// .wp-block-quote {
+
+// 	&:not(.is-large):not(.is-style-large) {
+// 		border-color: $color-border;
+// 	}
+// }
+
+// .wp-block-quote.is-large, 
+// .wp-block-quote.is-style-large {
+// 	border: none;
+// 	padding: 0;
+// }
+
+// .wp-block-pullquote {
+
+// 	blockquote {
+// 		border: none;
+// 	}
+// }
+
+// .wp-block-file {
+
+// 	* {
+// 		& + .wp-block-file__button {
+// 			display: table;
+// 			margin: 20px 0px 0px 0px;
+// 			color: $color-white !important;
+// 		}
+// 	}
+// }
+
+// .wp-caption-text {
+// 	padding: 0.5rem;
+//     text-align: center;
+// }

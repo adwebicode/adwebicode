@@ -1,0 +1,51 @@
+{
+	"ohio-sidebar-blog": {
+		"block-2": {
+			"content": "<!-- wp:search /-->"
+		},
+		"block-3": {
+			"content": "<!-- wp:group --><div class=\"wp-block-group\"><!-- wp:heading --><h2>Recent Posts</h2><!-- /wp:heading --><!-- wp:latest-posts /--></div><!-- /wp:group -->"
+		},
+		"block-4": {
+			"content": "<!-- wp:group --><div class=\"wp-block-group\"><!-- wp:heading --><h2>Recent Comments</h2><!-- /wp:heading --><!-- wp:latest-comments {\"displayAvatar\":false,\"displayDate\":false,\"displayExcerpt\":false} /--></div><!-- /wp:group -->"
+		}
+	},
+	"ohio-sidebar-page": {
+		"block-5": {
+			"content": "<!-- wp:group --><div class=\"wp-block-group\"><!-- wp:heading --><h2>Archives</h2><!-- /wp:heading --><!-- wp:archives /--></div><!-- /wp:group -->"
+		},
+		"block-6": {
+			"content": "<!-- wp:group --><div class=\"wp-block-group\"><!-- wp:heading --><h2>Categories</h2><!-- /wp:heading --><!-- wp:categories /--></div><!-- /wp:group -->"
+		}
+	},
+	"ohio-sidebar-footer-1": {
+		"ohio_widget_logo-2": {
+			"custom_css": ""
+		},
+		"block-7": {
+			"content": "<strong><a target=\"_blank\" href=\"https://www.facebook.com/colabrio/\">Fb.</a>&nbsp;/&nbsp;&nbsp;<a target=\"_blank\" href=\"https://www.facebook.com/colabrio/\">Ig.</a>&nbsp;&nbsp;/&nbsp;&nbsp; <a target=\"_blank\" href=\"https://www.facebook.com/colabrio/\">Tw.</a>&nbsp;&nbsp;/&nbsp;&nbsp; <a target=\"_blank\" href=\"https://www.facebook.com/colabrio/\">Be.</a></strong>"
+		}
+	},
+	"ohio-sidebar-footer-2": {
+		"block-8": {
+			"content": "<h3 class=\"title widget-title\">Rotterdam</h3>\n\n<b>Ohio Digital Media LTD.</b><br class=\"vc_hidden-xs\">\nGraaf Florisstraat 22A,<br class=\"vc_hidden-xs\">\n3021 CH Rotterdam<br class=\"vc_hidden-xs\">\nNetherlands"
+		},
+		"block-9": {
+			"content": "<h3 class=\"title widget-title\">Barcelona</h3>\n\n<b>Ohio Digital LTD.</b><br class=\"vc_hidden-xs\">\n365 Gran Via de Corts<br class=\"vc_hidden-xs\">\nCatalanes, BA 08015"
+		}
+	},
+	"ohio-sidebar-footer-3": {
+		"block-10": {
+			"content": "<h3 class=\"title widget-title\">Work inquiries</h3>\n\nInterested in working with us?<br class=\"vc_hidden-xs\">\n<b><a href=\"mailto:hello@clbthemes.com\">hello@clbthemes.com</a></b>"
+		},
+		"block-11": {
+			"content": "<h3 class=\"title widget-title\">Career</h3>\n\nLooking for a job opportunity?<br class=\"vc_hidden-xs\">\n<b><a href=\"#\">See open positions</a></b>"
+		}
+	},
+	"ohio-sidebar-footer-4": {
+		"ohio_widget_subscribe-2": {
+			"title": "Sign up for the newsletter",
+			"feedburner": "5"
+		}
+	}
+}

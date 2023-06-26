@@ -1,0 +1,558 @@
+/*
+	Helpers
+*/
+
+@mixin column-width($numberColumns: 3) {
+	width: map-get($columns, $numberColumns) - ( ( $columns__margin * ( $numberColumns - 1 ) ) / $numberColumns );
+}
+
+@mixin fluid-typo($min-font-size: 28px, $max-font-size: 72px, $lower-range: 576px, $upper-range: 1440px) {
+	font-size: calc(#{$min-font-size} + #{(($max-font-size / ($max-font-size * 0 + 1)) - ($min-font-size / ($min-font-size * 0 + 1)))} * ( (100vw - #{$lower-range}) / #{(($upper-range / ($upper-range * 0 + 1)) - ($lower-range / ($lower-range * 0 + 1)))}));
+
+	@media screen and (max-width: $lower-range) {
+		font-size: $min-font-size;
+	}
+
+	@media screen and (min-width: $upper-range) {
+		font-size: $max-font-size;
+	}
+}
+
+/*
+	Headlines
+*/
+
+@function headings($from:1, $to:6) {
+    @if $from == $to {
+        @return 'h#{$from}';
+    } @else {
+        @return 'h#{$from},' + headings($from+1, $to);
+    }
+}
+
+@mixin headings-typo($value: h1) {
+
+	@if $value == h1 {
+		letter-spacing: -.045em;
+		line-height: 1;
+
+		@include fluid-typo($font-size-h1-mobile, $font-size-h1);
+
+		@include note-screen {
+
+			font-size: $font-size-h1-note;
+			letter-spacing: -.035em;
+		}
+
+	} @else if $value == h2 {
+		letter-spacing: -.04em;
+		line-height: 1.05;
+
+		@include fluid-typo($font-size-h2-mobile, $font-size-h2);
+
+		@include note-screen {
+			
+			font-size: $font-size-h2-note;
+		}
+
+	} @else if $value == h3 {
+		letter-spacing: -.035em;
+		line-height: 1.15;
+
+		@include fluid-typo($font-size-h3-mobile, $font-size-h3);
+
+	} @else if $value == h4 {
+		letter-spacing: -.03em;
+		line-height: 1.2;
+
+		@include fluid-typo($font-size-h4-mobile, $font-size-h4);
+
+	} @else if $value == h5 {
+		letter-spacing: -.025em;
+		line-height: 1.25;
+
+		@include fluid-typo($font-size-h5-mobile, $font-size-h5);
+		
+	} @else {
+		font-size: $font-size-h6;
+		letter-spacing: -.02em;
+		line-height: 1.35;
+	}
+}
+
+/*
+	Flex
+*/
+
+@mixin flex {
+	display: -webkit-box;
+	display: -moz-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+}
+
+@mixin flex-just($value: center) {
+	@if $value == flex-start {
+		-webkit-box-pack: start;
+		-moz-box-pack: start;
+		-ms-flex-pack: start;
+	} @else if $value == flex-end {
+		-webkit-box-pack: end;
+		-moz-box-pack: end;
+		-ms-flex-pack: end;
+	} @else if $value == space-between {
+		-webkit-box-pack: justify;
+		-moz-box-pack: justify;
+		-ms-flex-pack: justify;
+	} @else if $value == space-around {
+		-ms-flex-pack: distribute;
+	} @else {
+		-webkit-box-pack: $value;
+		-moz-box-pack: $value;
+		-ms-flex-pack: $value;
+	}
+	-webkit-justify-content: $value;
+	justify-content: $value;
+}
+
+@mixin flex-direction($value: row) {
+	@if $value == row-reverse {
+		-webkit-box-direction: reverse;
+		-webkit-box-orient: horizontal;
+		-moz-box-direction: reverse;
+		-moz-box-orient: horizontal;
+	} @else if $value == column {
+		-webkit-box-direction: normal;
+		-webkit-box-orient: vertical;
+		-moz-box-direction: normal;
+		-moz-box-orient: vertical;
+	} @else if $value == column-reverse {
+		-webkit-box-direction: reverse;
+		-webkit-box-orient: vertical;
+		-moz-box-direction: reverse;
+		-moz-box-orient: vertical;
+	} @else {
+		-webkit-box-direction: normal;
+		-webkit-box-orient: horizontal;
+		-moz-box-direction: normal;
+		-moz-box-orient: horizontal;
+	}
+	-webkit-flex-direction: $value;
+	-ms-flex-direction: $value;
+	flex-direction: $value;
+}
+
+@mixin inline-flex {
+	display: -webkit-inline-box;
+	display: -moz-inline-box;
+	display: -webkit-inline-flex;
+	display: -ms-inline-flexbox;
+	display: inline-flex;
+	vertical-align: middle;
+	align-items: center;
+}
+
+@mixin align-items($value: stretch) {
+  	@if $value == flex-start {
+	    -webkit-box-align: start;
+	    -moz-box-align: start;
+	    -ms-flex-align: start;
+  	} @else if $value == flex-end {
+	    -webkit-box-align: end;
+	    -moz-box-align: end;
+	    -ms-flex-align: end;
+  	} @else {
+	    -webkit-box-align: $value;
+	    -moz-box-align: $value;
+	    -ms-flex-align: $value;
+  	}
+	-webkit-align-items: $value;
+	align-items: $value;
+}
+
+@mixin border-radius($radius-size: $radius) {
+	-webkit-border-radius: $radius-size;
+	border-radius: $radius-size;
+}
+
+@mixin border-top-radius($radius-size: $radius) {
+	-webkit-border-top-right-radius: $radius-size;
+	border-top-right-radius: $radius-size;
+	-webkit-border-top-left-radius: $radius-size;
+	border-top-left-radius: $radius-size;
+}
+
+@mixin border-right-radius($radius-size: $radius) {
+	-webkit-border-bottom-right-radius: $radius-size;
+	border-bottom-right-radius: $radius-size;
+	-webkit-border-top-right-radius: $radius-size;
+	border-top-right-radius: $radius-size;
+}
+
+@mixin border-bottom-radius($radius-size: $radius) {
+	-webkit-border-bottom-right-radius: $radius-size;
+	border-bottom-right-radius: $radius-size;
+	-webkit-border-bottom-left-radius: $radius-size;
+	border-bottom-left-radius: $radius-size;
+}
+
+@mixin border-left-radius($radius-size: $radius) {
+	-webkit-border-bottom-left-radius: $radius-size;
+	border-bottom-left-radius: $radius-size;
+	-webkit-border-top-left-radius: $radius-size;
+	border-top-left-radius: $radius-size;
+}
+
+@mixin transition($property: all, $duration: $transition-duration, $ease: $transition-function) {
+	-webkit-transition: $property $duration $ease;
+	-moz-transition: $property $duration $ease;
+	-o-transition: $property $duration $ease;
+	transition: $property $duration $ease;
+}
+
+/*
+	Shadows
+*/
+
+@mixin dropdown-shadow {
+	-webkit-box-shadow: 0 20px 32px -8px rgba($color-black, .15), 0 0 1px rgba($color-black, .05);
+	box-shadow: 0 20px 32px -8px rgba($color-black, .15), 0 0 1px rgba($color-black, .05);
+}
+
+@mixin box-shadow($inset: false, $top: 0, $left: 0, $blur: 0, $spread: 0.3125rem, $color: $color-neutral-15) {
+	@if $inset {
+		-webkit-box-shadow:inset $top $left $blur $spread $color;
+		-moz-box-shadow:inset $top $left $blur $spread $color;
+		box-shadow:inset $top $left $blur $spread $color;
+	} @else {
+		-webkit-box-shadow: $top $left $blur $spread $color;
+		-moz-box-shadow: $top $left $blur $spread $color;
+		box-shadow: $top $left $blur $spread $color;
+	}
+}
+
+/*
+	Misc
+*/
+
+@mixin antialias {
+	font-smoothing: antialiased;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+@mixin appearance($val: none) {
+	-webkit-appearance: $val;
+	-moz-appearance: $val;
+	appearance: $val;
+}
+
+@mixin pseudo($display: block, $pos: absolute, $content: ''){
+	content: $content;
+	display: $display;
+	position: $pos;
+}
+
+@mixin centered {
+	position: absolute;
+	top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@mixin selection {
+	::-moz-selection { @content; }
+	::selection { @content; }
+}
+
+@mixin input-placeholder {
+    &:-moz-placeholder { @content; }
+    &::-moz-placeholder { @content; }
+    &:-ms-input-placeholder { @content; }
+    &::-webkit-input-placeholder { @content; }
+}
+
+@mixin metro-img($width: 100%, $height: 100%) {
+	object-fit: cover;
+	width: $width;
+	min-width: $width;
+	height: $height;
+}
+
+@mixin alert-fixed($width: 100%, $height: 100%) {
+	object-fit: cover;
+	width: $width;
+	min-width: $width;
+	height: $height;
+}
+
+$unquoted-inputs-list: ();
+
+@each $input-type in $inputs-list {
+  	$unquoted-inputs-list: append($unquoted-inputs-list, unquote($input-type), comma);
+}
+
+$all-text-inputs: $unquoted-inputs-list;
+
+@mixin truncate {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+@mixin unlist {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+
+	> li {
+		margin: 0;
+		padding: 0;
+
+		&::before {
+			content: "";
+			display: none;
+		}
+	}
+}
+
+@mixin unlink {
+	background-image: none !important;
+}
+
+@mixin unselectable {
+	-webkit-touch-callout: none;
+	user-select: none;
+}
+
+@mixin gradient($angle: 360deg, $transparency: 0.5, $color: $color-black) {
+	background: $color;
+	background: -moz-linear-gradient($angle, rgba($color, $transparency) 0%, rgba($color, 0) 100%);
+	background: -webkit-linear-gradient($angle, rgba($color, $transparency) 0%, rgba($color, 0) 100%);
+	background: linear-gradient($angle, rgba($color, $transparency) 0%, rgba($color, 0) 100%);
+}
+
+@mixin clearfix {
+	&::after {
+		content: "";
+		display: table;
+		clear: both;
+	}
+}
+
+/*
+	Animations
+*/
+
+@mixin transition($property: all, $ease: $transition-function, $duration: $transition_duration) {
+	-webkit-transition: $property $ease $duration;
+	-moz-transition: $property $ease $duration;
+	-o-transition: $property $ease $duration;
+	transition: $property $ease $duration;
+}
+
+@mixin fadeUp-hidden {
+	transform: translateY(6%);
+	opacity: 0;
+
+	@include transition;
+}
+
+@mixin fadeDown-hidden {
+	transform: translateY(-6%);
+	opacity: 0;
+
+	@include transition;
+}
+
+@mixin faded {
+	transform: none;
+	opacity: 1;
+}
+
+@mixin flip-up {
+    opacity: 0;
+    visibility: hidden;
+    transform-origin: 50% -50px;
+    transform: perspective(400px) rotateX(-10deg);
+
+    @include transition;
+}
+
+@mixin flip-up-active {
+	transform: none;
+	visibility: visible;
+    opacity: 1;
+}
+
+/*
+	Breakpoints
+*/
+
+@mixin sm-screen {
+	@media screen and (max-width: 768px) {
+		@content;
+	}
+}
+
+@mixin tablet-screen {
+	@media screen and (max-width: 1180px) {
+		@content;
+	}
+}
+
+@mixin md-screen {
+	@media screen and (min-width: 769px) {
+		@content;
+	}
+}
+
+@mixin xs-note-screen {
+	@media screen and (min-width: 1181px) and (max-width: 1280px) {
+		@content;
+	}
+}
+
+@mixin sm-note-screen {
+	@media screen and (min-width: 1181px) and (max-width: 1366px) {
+		@content;
+	}
+}
+
+@mixin note-screen {
+	@media screen and (min-width: 1181px) and (max-width: 1440px) {
+		@content;
+	}
+}
+
+@mixin lg-screen {
+	@media screen and (min-width: 1181px) {
+		@content;
+	}
+}
+
+@mixin xl-screen {
+	@media screen and (min-width: 1441px) {
+		@content;
+	}
+}
+
+@mixin xxl-screen {
+	@media screen and (min-width: 1921px) {
+		@content;
+	}
+}
+
+/*
+	Adaptive spacers
+*/
+
+@mixin spacer($property: padding) {
+	#{$property}: #{$spacer};
+
+	@include note-screen {
+		#{$property}: 2.75vh;
+	}
+
+	@include tablet-screen {
+		#{$property}: $grid-spacer;
+	}
+}
+
+@mixin spacer2x($property: padding) {
+	#{$property}: 3vh;
+
+	@include tablet-screen {
+		#{$property}: $grid-spacer;
+	}
+}
+
+@mixin spacer3x($property: padding) { // 48px
+	#{$property}: $spacer3x;
+
+	@include tablet-screen {
+		#{$property}: $spacer2x;
+	}
+}
+
+@mixin spacer4x($property: padding) { // 64px
+	#{$property}: $spacer4x;
+
+	@include tablet-screen {
+		#{$property}: $spacer3x;
+	}
+}
+
+@mixin spacer5x($property: padding) { // 80px
+	#{$property}: $spacer5x;
+
+	@include tablet-screen {
+		#{$property}: $spacer3x;
+	}
+}
+
+@mixin spacer6x($property: padding) { // 96px
+	#{$property}: $spacer6x;
+
+	@include tablet-screen {
+		#{$property}: $spacer3x;
+	}
+}
+
+@mixin spacer-side($property: padding) {
+	#{$property}: calc(#{$spacer} + #{$elements-bar} + #{$spacer});
+
+	@include note-screen {
+		#{$property}: calc(3vh + #{$elements-bar} + 3vh);
+	}
+}
+
+/*
+	Adaptive page container
+*/
+
+@mixin container($property: max-width) {
+	#{$property}: $container;
+
+	@include xxl-screen {
+		#{$property}: $container-xxl;
+	}
+
+	@include note-screen {
+		#{$property}: $container-laptop;
+	}
+
+	@include sm-note-screen {
+		#{$property}: $container-laptop-sm;
+	}
+
+	@include xs-note-screen {
+		#{$property}: $container-laptop-xs;
+	}
+}
+
+/*
+	Divider
+*/
+
+@mixin divider {
+	content: '•';
+    display: inline-block;
+    vertical-align: middle;
+    font-size: .8em;
+    margin-top: -2px;
+    color: $color-red;
+}
+
+/*
+	Select chevron
+*/
+
+@mixin chevron($value: dark) {
+	@if $value == light {
+		background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23bbbbbb' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e");
+	} @else {
+		background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%231b1b28' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e");
+	}
+}

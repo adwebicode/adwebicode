@@ -1,0 +1,69 @@
+.meta-item {
+    line-height: 1.4;
+    text-align: left;
+
+    .prefix {
+        font-size: $font-size-extra-small;
+        display: block;
+        opacity: 0.75;
+    }
+
+    span, 
+    time {
+
+        &:not(.prefix) {
+            font-weight: 600;
+            font-size: $font-size-small;
+        }
+    }
+}
+
+.headline-meta {
+    font-size: $font-size-small;
+    flex-wrap: wrap;
+    white-space: nowrap;
+    
+    @include flex;
+    @include align-items(center);
+
+    .category-holder,
+    .date {
+        font-weight: 500;
+
+        + * {
+
+            &::before {
+                margin-left: 0.25rem;
+                margin-right: 0.25rem;
+                
+                @include divider;
+            }
+        }
+    }
+
+    .post-meta-estimate {
+        white-space: nowrap;
+    }
+}
+
+// Meta Stack
+
+.meta-holder {
+
+    @include flex;
+    @include align-items(center);
+
+    @include sm-screen {
+
+        font-size: $font-size-small;
+    }
+
+    .meta-item {
+
+        @include spacer2x(margin-right);
+
+        &:first-child {
+            margin-right: 1rem;
+        }
+    }
+}

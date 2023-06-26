@@ -1,0 +1,124 @@
+* {
+
+	&,
+	&::before,
+	&::after {
+		box-sizing: border-box;
+	}
+}
+
+dfn,
+cite,
+em,
+i {
+	font-style: italic;
+}
+
+blockquote,
+q {
+	margin: 0;
+	padding: 0 0 0 1.5rem;
+	quotes: "" "";
+	position: relative;
+	border-left: 0.25rem solid rgba($color-neutral, .5);
+
+	p {
+		margin: 0;
+		font-style: normal;
+		font-weight: 400;
+		position: relative;
+	}
+
+	cite, h4 {
+		position: relative;
+		text-align: left;
+		margin-top: 5px;
+		font-weight: 600;
+		font-size: $font-size-small;
+		font-style: normal;
+	}
+}
+
+address {
+	margin: 0 0 1.5em;
+	font-style: normal;
+}
+
+pre {
+	font-family: $font-code;
+	font-size: $font-size-extra-small;
+	background-color: $color-neutral-8;
+	border-left: 5px solid $color-neutral-8;
+	margin-bottom: 1.6em;
+	max-width: 100%;
+	overflow: auto;
+	padding: 1rem;
+
+	> a {
+		color: inherit !important;
+		font-weight: 600;
+	}
+
+	// Docs styles
+
+	&:not(.-warning) {
+		@include border-radius($radius);
+	}
+
+	&.-warning {
+		margin: 0;
+
+		@include border-top-radius($radius);
+
+		& + pre {
+			margin-top: 0;
+			background-color: rgba($color-warning, 0.15);
+			color: $color-warning;
+
+			@include border-top-radius(0);
+		}
+	}
+}
+
+code {
+	font-family: $font-code;
+	font-size: $font-size-small;
+	color: $color-grey;
+	background-color: $color-neutral-8;
+    padding: 3px 6px;
+    word-break: normal;
+    
+    @include border-radius($radius-small);
+}
+
+caption {
+	font-size: $font-size-caption;
+	font-weight: 600;
+}
+
+code,
+kbd,
+tt,
+var {
+	font-family: $font-code;
+}
+
+abbr,
+acronym {
+	border-bottom: 1px dotted $color-neutral-8;
+	cursor: help;
+}
+
+mark,
+ins {
+	text-decoration: none;
+}
+
+mark {
+	background-color: rgba($color-warning, 0.15);
+	padding: 0.25rem 0;
+}
+
+big {
+	font-size: 125%;
+}

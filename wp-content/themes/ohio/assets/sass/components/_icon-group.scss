@@ -1,0 +1,93 @@
+.icon-group {
+	color: inherit;
+
+	@include inline-flex;
+	@include flex-just;
+	@include border-radius(100%);
+
+	&.-contained,
+	&.-outlined {
+		min-width: $circle;
+		max-width: $circle;
+		height: $circle;
+
+		.icon {
+			font-size: 1.75em;
+		}
+	}
+
+	&.-contained {
+		background: $color-neutral-15;
+	}
+
+	&.-outlined {
+		border: 2px solid $color-black-light;
+	}
+
+	> img {
+
+		&,
+		&.icon {
+			max-width: 50%;
+			max-height: 50%;
+		}
+	}
+
+	&:not(.-contained):not(.-outlined) {
+
+		@include flex-just(flex-start);
+
+		> img {
+			max-height: 2rem;
+			max-width: initial;
+		}
+
+		.icon {
+			font-size: 2em;
+		}
+
+		&.-small {
+
+			.icon {
+				font-size: 1.75em;
+			}
+		}
+
+		&.-large {
+
+			.icon {
+				font-size: 2.25em;
+			}
+		}
+	}
+
+	&.-small {
+
+		&.-contained,
+		&.-outlined {
+			min-width: $circle-small;
+			max-width: $circle-small;
+			height: $circle-small;
+		}
+	}
+
+	&.-large {
+
+		&.-contained,
+		&.-outlined {
+			min-width: $circle-large;
+			max-width: $circle-large;
+			height: $circle-large;
+		}
+	}
+}
+
+// .minimal-scheme {
+
+// 	.icon-group {
+
+// 		&.-outlined {
+// 			border-width: 1px;
+// 		}
+// 	}
+// }

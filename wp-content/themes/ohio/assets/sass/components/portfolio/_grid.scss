@@ -1,0 +1,1524 @@
+.portfolio-item {
+
+	.title {
+
+		@include fluid-typo(1.25rem, 1.55rem);
+	}
+
+	// Grid Only
+
+	&:not(.-with-slider) {
+
+		// Video button
+
+		.video-button {
+			z-index: 1;
+
+			@include centered;
+		}
+	}
+
+	// Lightbox trigger button
+
+	.overlay-details {
+
+		&.-top {
+			top: 0;
+			bottom: auto;
+		}
+	}
+
+	// Show project
+
+	.show-project {
+		font-size: $font-size-small;
+
+		// Remove divider
+
+		&-link {
+
+			&::before {
+				display: none;
+			}
+		}
+	}
+
+	// Sliders
+
+	&.-with-slider {
+		min-width: 100%;
+		overflow: hidden;
+
+		.project-content {
+			position: relative;
+			min-height: 100%;
+			padding-left: 0;
+			padding-right: 0;
+
+			@include flex;
+			@include align-items(flex-start);
+			@include flex-direction(column);
+
+			@include sm-screen {
+
+				padding-right: 3rem;
+				padding-left: 0;
+			}
+
+			.headline {
+				margin-bottom: 0;
+			}
+
+			h2 {
+
+				@include headings-typo(h1);
+			}
+
+			h3 {
+
+				@include headings-typo(h3);
+
+				@include sm-screen {
+
+					&.headline {
+						font-size: $font-size-h1-mobile;
+					}
+				}
+			}
+		}
+
+		// Image
+
+		.portfolio-item-image {
+		    background-size: cover;
+		    background-position: center;
+		    position: absolute;
+		}
+
+		// With tilt effect
+
+		&:not(.-with-gradient) {
+
+			.portfolio-item-image {
+
+				&[data-tilt="true"] {
+
+			    	min-width: calc(100vw + 5vw);
+			    	min-height: calc(100vh + 5vh);
+			    	left: -2.5vw;
+			    	top: -2.5vh;
+			    }
+			}
+		}
+
+		// Image overlay
+
+		.overlay {
+
+			&::after {
+				content: "";
+				position: absolute;
+				left: 0;
+				top: 0;
+				width: 100%;
+				height: 100%;
+			}
+		}
+
+		// Headline decoration
+
+		.headline-decor {
+			position: absolute;
+			z-index: 1;
+			bottom: -0.5rem;
+
+			.title {
+				z-index: -1;
+				line-height: .5;
+				white-space: nowrap;
+				letter-spacing: -.06em;
+				font-size: 16vw;
+				font-weight: bold;
+				font-family: $font-headlines;
+				color: rgba($color_neutral, 0.04);
+
+				@include transition;
+			}
+
+			@include sm-screen {
+
+				transform: rotate(-90deg);
+				transform-origin: left bottom;
+				left: calc(100% - 3rem);
+				bottom: 1rem;
+				top: auto;
+
+				.title {
+					font-size: 25vw;
+				}
+			}
+		}
+	}
+
+	// With Gradient
+
+	&.-with-gradient {
+
+		.portfolio-item-image {
+
+			@include sm-screen {
+
+				height: 45vh;
+				position: relative;
+				overflow: hidden;
+
+				+ .project {
+					min-height: 55vh;
+				}
+			}
+
+			// Gradient overlay
+
+			&::before {
+				content: "";
+				position: absolute;
+				width: 75%;
+				top: 0;
+				bottom: 0;
+
+				@include gradient(270deg, .85, $color-white);
+
+				@include sm-screen {
+	
+					top: 35%;
+					width: 100%;
+
+					@include gradient(360deg, 1, $color-white);
+				}
+			}
+		}
+
+		@include sm-screen {
+
+			.project-content {
+				top: -10vh;
+			}
+		}
+	}
+
+	// Layout Type 2 - Minimal
+
+	&.-layout2 {
+
+		.overlay-details {
+
+			.heading {
+				width: 100%;
+			}
+
+			&:not(.-top) {
+
+				@include gradient;
+			}
+
+			.title {
+				color: $color-white;
+			}
+		}
+
+		.portfolio-item-headline {
+
+			+ .show-project {
+				position: relative;
+				left: 0;
+				bottom: 0 !important;
+			}
+		}
+
+		// Color overlay effect
+
+		&.-img-overlay {
+
+			// Hide standard overlay
+
+			.image-holder {
+
+				&::after {
+					display: none;
+				}
+			}
+		}
+	}
+
+	// Layout Type 1, 2
+
+	&.-layout1,
+	&.-layout2,
+	&.-layout13 {
+
+		// Show project
+
+		.show-project {
+			overflow: hidden;
+			position: relative;
+			margin-top: 0.4rem;
+
+			a {
+				color: inherit;
+			}
+
+			&-link {
+				position: absolute;
+				font-weight: 600;
+				opacity: 0;
+				left: 0;
+
+				@include transition;
+
+				a {
+					position: relative;
+
+					&::after {
+					    content: "";
+					    width: 3rem;
+					    height: 2px;
+					    background-color: currentColor;
+					    position: absolute;
+					    right: -0.5rem;
+					    top: 48%;
+					    transform: translate(100%, 50%);
+					}
+				}
+			}
+
+			.category-holder {
+				display: block;
+
+				@include transition;
+			}
+		}
+
+		// Hover
+
+		&:hover {
+
+			.show-project {
+
+				&-link {
+					transform: translate(0, -100%);
+					opacity: 1;
+				}
+
+				.category-holder {
+					transform: translate(0, -100%);
+					opacity: 0;
+				}
+			}
+		}
+	}
+
+	// Layout Type 3, 5, 6
+
+	&.-layout3,
+	&.-layout5,
+	&.-layout6 {
+
+		.overlay {
+
+			&::after {
+				background-color: rgba($color-white, 0.98);
+			}
+		}
+
+		.project-content {
+			padding-left: 0;
+			padding-right: 0;
+			
+			@include spacer4x(padding-top);
+			@include spacer4x(padding-bottom);
+
+			@include md-screen {
+
+				@include flex-just(flex-end);
+			}
+		}
+
+		&.-full-vh {
+
+			.project-content {
+				padding-top: $header-height;
+				min-height: 65vh;
+
+				@include note-screen {
+
+					min-height: 70vh;
+				}
+			}
+		}
+	}
+
+	// Layout Type 4
+
+	&.-layout4 {
+
+		.overlay {
+
+			&::after {
+				background-color: rgba($color-white, 0.5);
+			}
+		}
+
+		.portfolio-item-image,
+		.page-container,
+		.project {
+			height: 100%;
+		}
+
+		.project-content {
+			
+			@include flex-just(center);
+
+			@include note-screen {
+
+				padding-right: 12vw;
+			}
+		}
+
+		@include lg-screen {
+
+			.project-details {
+				margin-right: 35%;
+			}
+		}
+
+		&:not(.-full-vh) {
+
+			.project-content {
+				min-height: 50vh;
+				padding-top: 10vh;
+				padding-bottom: 10vh;
+			}
+		}
+	}
+
+	// Layout Type 5
+
+	&.-layout5 {
+
+		@include md-screen {
+
+			.overlay {
+				width: 50%;
+				height: 100%;
+			}
+		}
+
+		.headline-decor {
+			top: 100%;
+		    left: 15%;
+		    transform-origin: left center;
+		    transform: translateY(0%) rotate(-90deg);
+		}
+
+		.project-content {
+
+			@include spacer(padding-bottom);
+			@include spacer(padding-right);
+			@include flex-just(flex-end);
+
+			&::before {
+				height: 25%;
+			}
+		}
+
+		&:not(.-full-vh) {
+
+			.project-content {
+				min-height: 50vh;
+				padding-top: 10vh;
+				padding-bottom: 10vh;
+			}
+		}
+
+		// Slider effects
+
+		&.active {
+
+			.portfolio-item-image {
+				transform: none !important;
+
+				@include transition(transform .5s );
+			}
+		}
+
+		&.prev-slide {
+
+			.portfolio-item-image {
+				transform: translateY(-100%) !important;
+
+				@include transition(transform .5s);
+			}
+
+			&.last-slide {
+
+				.portfolio-item-image {
+					transform: translateY(-20%) !important;
+
+					@include transition(transform .5s);
+				}
+			}
+		}
+
+		&.next-slide {
+
+			.portfolio-item-image {
+				transform: translateY(100%);
+
+				@include transition(transform .5s);
+			}
+
+			&.last-slide {
+
+				.portfolio-item-image {
+					transform: translateY(20%) !important;
+
+					@include transition(transform .5s);
+				}
+			}
+		}
+	}
+
+	// Layout Type 6
+
+	&.-layout6 {
+
+		.portfolio-item-image {
+			background-position: left bottom;
+		}
+
+		.overlay {
+
+			@include md-screen {
+				padding: 0 6.75vw;
+			}
+
+			@include note-screen {
+				padding-right: 3.8vw;
+			}
+
+			@include tablet-screen {
+				padding-left: $grid-spacer;
+			}
+		}
+	}
+
+	// Layout Type 7
+
+	&.-layout7 {
+
+		.portfolio-item-image {
+
+			@include md-screen {
+
+				width: 50vw;
+				height: auto;
+				z-index: 2;
+				top: 20vh;
+				bottom: 20vh;
+			}
+
+			// Gradient overlay
+
+			&::before {
+				right: 0;
+			}
+		}
+
+		&:not(.-full-vh) {
+			height: 50vh;
+
+			.portfolio-item-image {
+
+				@include md-screen {
+
+					top: 0;
+					bottom: 0;
+				}
+			}
+		}
+
+		.project-content {
+
+			&::before {
+				height: $header-height;
+			}
+
+			@include flex-just(center);
+		}
+
+		@include md-screen {
+
+			.overlay {
+				height: 100%;
+			}
+		}
+
+		.headline-decor {
+			left: calc(100% / 3);
+			bottom: 20vh;
+		}
+	}
+
+	// Layout Type 7, 9
+
+	&.-layout7,
+	&.-layout9 {
+
+		.video-button {
+			
+			@include centered;
+		}
+	}
+
+	// Layout Type 9
+
+	&.-layout9 {
+
+		&:not(.-full-vh) {
+			height: 50vh;
+		}
+
+		.portfolio-item-image {
+			position: relative;
+			z-index: 1;
+
+			// Hide image overlay
+
+			@include md-screen {
+
+				&::before {
+					display: none;
+				}
+			}
+		}
+
+		.project-content {
+
+			@include flex-just(space-around);
+
+			@include spacer(padding-bottom);
+
+			&::before {
+				height: 25%;
+			}
+
+			@include md-screen {
+
+				.project-details {
+					font-weight: 600;
+					font-size: $font-size-large;
+				}
+			}
+		}
+
+		.headline-decor {
+			top: 50%;
+			bottom: auto;
+			transform: translateY(-50%);
+			left: 25px;
+			opacity: 0;
+
+			@include transition(.45s);
+		}
+
+		// Next slide
+
+		.next-slide-preview {
+		    position: absolute;
+		    top: 50%;
+		    left: 0;
+		    transform: translate(-60%, -50%);
+		    width: 16.5rem;
+		    height: 16.5rem;
+		    background-size: cover;
+	    	background-position: center;
+	    	z-index: 1;
+
+	    	@include transition;
+		    @include border-radius;
+
+		    &:hover {
+		    	transform: translate(-55%, -50%);
+		    }
+
+		    @include note-screen {
+
+				transform: translate(-65%, -50%);
+			}
+
+			@include tablet-screen {
+
+				display: none;
+			}
+		}
+
+		// Slider effects
+
+		.image-holder {
+			opacity: 0;
+			z-index: 1;
+			padding: 0;
+
+			+ .vc_col-md-5 {
+
+				@include tablet-screen {
+
+					padding-right: calc(#{$grid-spacer} + #{$bullets-spacer});
+				}
+
+				@include sm-screen {
+
+					padding-right: $grid-spacer;
+				}
+			}
+		}
+
+		&.active {
+
+			.image-holder {
+				opacity: 1;
+
+				@include transition(.45s);
+			}
+
+			.headline-decor,
+			.next-project-img-box {
+				opacity: 1;
+			}
+		}
+
+		@include sm-screen {
+
+			.page-container {
+				padding: 0;
+			}
+		}
+
+
+		.page-container {
+			padding-left: 0;
+		}
+
+		@include sm-screen {
+
+			.project-content {
+
+				@include flex-just(flex-end);
+				@include flex-direction(column-reverse);
+				
+				.project-details {
+					padding-top: 1rem;
+				}
+			}
+		}
+	}
+
+	// Layout Type 10
+
+	&.-layout10 {
+
+		.overlay {
+
+			&,
+			&-image {
+				background-size: cover;
+				background-position: center;
+			}
+
+			&-image {
+
+				.headline-decor {
+					z-index: initial;
+				}
+
+				&::before {
+					content: "";
+					position: absolute;
+					top: 0;
+					left: 0;
+					width: 100%;
+					height: 100%;
+					background-color: rgba($color-white, 0.98);
+				}
+			}	
+		}
+
+		.preview {
+			top: 18vh;
+			bottom: 18vh;
+			position: absolute;
+
+			@include sm-screen {
+
+			    padding: 0;
+			    top: 0;
+			    left: -$grid-spacer;
+			    right: $grid-spacer;
+			}
+		}
+
+		.portfolio-item-image {
+		    right: $grid-spacer;
+		    left: $grid-spacer;
+
+		    @include md-screen {
+
+		    	transform: scale(.9);
+		    }
+		    
+		    @include transition;
+
+			&::before {
+				left: 0;
+
+				@include gradient(90deg, .85, $color-white);
+			}
+		}
+
+		.project-content {
+
+			@include md-screen {
+
+				@include flex-just(center);
+			}
+
+			@include sm-screen {
+
+				@include flex-just(flex-end);
+			}
+		}
+
+		.headline-decor {
+		    top: 50%;
+		    transform: translateY(-50%);
+		    bottom: auto;
+		    opacity: 0;
+
+		    @include transition;
+		}
+
+		&:not(.-full-vh) {
+			height: 50vh;
+
+			.preview {
+				top: 0;
+				bottom: 0;
+			}
+		}
+
+		// Slider effects
+
+		&.active {
+
+			.page-container {
+
+				.portfolio-item-image {
+				    transform: none;
+				}
+			}
+
+			.headline-decor {
+				opacity: 1;
+			}
+		}
+	}
+
+	// Layout Type 11 - Caption Cursor Grid
+
+	&.-layout11 {
+
+		@include lg-screen {
+
+			.card-details {
+				opacity: 0;
+				visibility: hidden;
+				position: fixed;
+				top: 0.5rem;
+				left: 1rem;
+				z-index: 10;
+				will-change: transform;
+
+				&.-center {
+
+					.category-holder {
+						align-self: center;
+					}
+				}
+
+				&.-right {
+
+					.category-holder {
+						align-self: flex-end;
+					}
+				}
+			}
+
+			.title,
+			.category-holder {
+				background-color: rgba($color-black, .5);
+				margin: 0;
+				padding: 0.2rem 0.75rem;
+				width: fit-content;
+				color: $color-white;
+			}
+
+			&:hover {
+
+				.card-details {
+					opacity: 1;
+					visibility: visible;
+
+					.category-holder {
+						transform: translateY(0px) !important;
+						opacity: 1 !important;
+					}
+				}
+			}
+		}
+
+		
+	}
+
+	// Layout Type 11 - Sticky Grid
+
+	&.-layout13 {
+
+		@include flex;
+
+		.card-details {
+			flex-grow: 2;
+
+			.holder {
+
+				@include spacer(padding-top);
+			}
+
+			.category-holder {
+
+				.category {
+					font-weight: 600;
+				}
+			}
+
+			.project-details {
+				padding-top: $grid-spacer;
+			}
+		}
+
+		&:not(.-contained) {
+
+			.card-details {
+				padding-top: 0;
+				padding-left: 2.5rem;
+			}
+		}
+
+		&.-contained {
+
+			&.-with-shadow {
+
+				.image-holder,
+				.card-details {
+
+					@include drop-shadow;
+				}
+			}
+			
+			.card-image {
+
+				.image-holder {
+
+					@include border-radius;
+				}
+			}
+
+			.card-details {
+				margin-left: 2.5rem;
+				padding-top: 0;
+
+				@include border-radius;
+				@include spacer(padding-left);
+				@include spacer(padding-right);
+				@include spacer(padding-bottom);
+			}
+		}
+
+		// Mobile
+
+		@include sm-screen {
+
+			@include flex-direction(column);
+
+			&:not(.-contained) {
+
+				.card-details {
+					padding-left: 0;
+				}
+			}
+
+			&.-contained {
+
+				.card-details {
+					margin-left: 0;
+					margin-top: $grid-spacer;
+				}
+			}
+		}
+	}
+}
+
+// Dots decor
+
+.portfolio-links,
+.-with-slider {
+
+	.project-content {
+	
+		&::before {
+			content: "";
+			position: absolute;
+			left: 0;
+			right: 0;
+			top: 0;
+			height: 50%;
+			background-image: radial-gradient(circle at 1px 1px, lighten($color-black, 70%) 1px, transparent 0);
+  			background-size: 20px 20px;
+		}
+	}
+}
+
+.portfolio-grid {
+
+	&.is-loading {
+		max-height: 0px !important;
+
+		.portfolio-item {
+
+			&:not(.-with-slider) {
+				visibility: hidden;
+				opacity: 0;
+			}
+		}
+	}
+}
+
+.portfolio-links {
+
+	// Layout Type 8 - Interactive Links
+
+	&.grid_8 {
+		position: relative;
+		
+		@include flex;
+		@include flex-just(center);
+		@include flex-direction(column);
+
+		&.-with-sorting.-with-pagination {
+
+			@include flex-just(space-between);
+
+		}
+
+		// Dots decor
+
+		.project-content {
+			padding: 0;
+		
+			&::before {
+				height: 25%;
+				left: 50%;
+			}
+		}
+
+		.portfolio-grid {
+			z-index: 2;
+			height: auto !important;
+
+			@include spacer4x(padding-top);
+			@include spacer4x(padding-bottom);
+
+			@include sm-screen {
+
+				@include flex;
+				@include flex-direction(column);
+			}
+		}
+
+		.grid-item {
+			position: relative !important;
+			top: auto !important;
+			left: auto !important;
+			padding: 0 $grid-spacer !important;
+
+			@include inline-flex;
+			@include transition;
+
+			.portfolio-item {
+				padding: 0.4rem 0;
+				flex-wrap: wrap;
+
+				@include flex;
+				@include align-items(flex-end);
+
+				.headline {
+					margin: 0;
+					line-height: 100%;
+				}
+
+				.category-holder {
+					margin-left: 0.5rem;
+
+					@include md-screen {
+
+						transform: translateY(-0.25rem);
+					}
+				}
+
+				&.active {
+					transform: scale(2.5);
+				}
+
+				&.invisible {
+					opacity: .05 !important;
+					visibility: visible !important;
+				}
+			}
+
+			.project-title {
+
+				&:hover {
+
+					.headline {
+						color: inherit;
+					}
+				}
+			}
+		}
+
+		// Project images
+
+		.portfolio-grid-images {
+			position: absolute;
+			top: 0;
+			height: 100%;
+			width: 100%;
+			overflow: hidden;
+		}
+
+		.thumbnail {
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-position: center;
+			position: absolute;
+			top: 0;
+			left: 0;
+			height: 100%;
+			width: 100%;
+			opacity: 0;
+			z-index: 1;
+			transform: scale(1);
+
+			@include transition;
+
+			// Overlay
+
+			&::after {
+				left: 0;
+				top: 0;
+				width: 100%;
+				height: 100%;
+				z-index: 2;
+
+				@include pseudo;
+			}
+
+			&.scale {
+				opacity: 1;
+				animation: imageScale 12s 1;
+				animation-fill-mode: forwards;
+			}
+		}
+	}
+
+	// Grid Type 12 - Interactive Links Horizontal
+
+	&.grid_12 {
+		position: relative;
+		counter-reset: portfolio-number;
+
+		.portfolio-item {
+			overflow: visible;
+			white-space: nowrap;
+			counter-increment: portfolio-number;
+			height: 100%;
+
+			@include flex;
+			@include align-items(center);
+
+			&-details {
+
+				@include inline-flex;
+				@include align-items(flex-start);
+
+				.category-holder {
+					opacity: 0;
+					transform: translateX(1.75rem);
+
+					@include transition;
+
+					a {
+						font-weight: 600;
+					}
+				}
+
+				&-headline {
+					position: relative;
+
+					&::after {
+						content: '0'counter(portfolio-number);
+						opacity: .65;
+						font-weight: bold;
+						top: 0;
+						right: 0;
+						transform: translateX(110%);
+						position: absolute;
+
+						@include transition;
+
+						@include sm-screen {
+
+							font-size: .9em;
+						}
+					}
+
+					> a {
+						position: relative;
+						display: block;
+	
+						.title  {
+							font-size: 6vw;
+
+							@include transition;
+
+							@include sm-screen {
+								
+								font-size: 14vw;
+							}
+
+							&:hover {
+								-webkit-text-stroke: 1px currentColor;
+								-webkit-text-fill-color: transparent;
+							}
+						}
+					}
+				}
+			}
+
+			.portfolio-item-image {
+				opacity: 0;
+				height: 0;
+				width: 0;
+				visibility: hidden;
+				position: absolute;
+				top: 0;
+				left: 0;
+				padding: 0;
+				z-index: -1;
+
+				> img {
+					mix-blend-mode: multiply;
+					opacity: .3;
+				}
+			}
+
+			&:hover {
+
+				.portfolio-item-details {
+
+					.portfolio-item-details-headline {
+
+						&::after {
+							transform: translateX(-0.75rem);
+							opacity: 0;
+						}
+					}
+
+					.category-holder {
+						opacity: 1;
+						transform: translateX(0px);
+					}
+				}
+			}
+
+			@include sm-screen {
+
+				white-space: normal;
+
+				.portfolio-item-details {
+
+					> a {
+						display: block;
+					}
+
+					.category-holder  {
+						display: none;
+					}
+				}
+			}
+		}
+
+		.portfolio-grid-images {
+			height: 0;
+			width: 0;
+			z-index: 10;
+			position: relative;
+
+			.portfolio-item-image {
+				position: fixed;
+				left: 0.75rem;
+				top: 0.75rem;
+				opacity: 0;
+				visibility: hidden;
+				pointer-events: none;
+				will-change: transform;
+	
+				.card {
+					width: 35vh;
+					height: 35vh;
+					padding: 1rem;
+					will-change: transform;
+
+					@include transition(all, linear, 2s);
+
+					img {
+						transform: scale(.8);
+
+						@include transition;
+					}
+				}
+
+				&.transition {
+	
+					@include transition(all, linear, 0.25s);
+				}
+	
+				&.visible {
+
+					img {
+						transform: scale(1);
+					}
+				}
+			}
+		}
+
+		.portfolio-grid-holder {
+			position: relative;
+			flex-grow: 2;
+			overflow-x: hidden;
+
+			.portfolio-grid {
+				margin-top: 0;
+				margin-bottom: 0;
+				transform-origin: bottom left;
+				transform: rotate(-90deg) translateY(100%);
+				overflow: hidden;
+				left: $grid-spacer;
+				bottom: 0;
+				right: 0;
+				width: max-content;
+				top: auto !important;
+				position: absolute !important;
+				border-left: 1px solid rgba($color_neutral, .25);
+
+				&::-webkit-scrollbar,
+				&::-webkit-scrollbar-thumb {
+				    visibility: hidden;
+				}
+
+				@include sm-screen {
+
+					transform: none;
+					overflow: visible;
+					position: relative !important;
+					top: auto !important;
+					height: auto !important;
+					left: $grid-spacer;
+					max-width: 100%;
+
+					.grid-item {
+						padding: 0 0 0.25rem 1.25rem !important;
+					}
+				}
+			}
+
+			.grid-item {
+				position: static !important;
+				left: auto !important;
+				top: auto !important;
+				padding: 0 0 0 2rem !important;
+				min-height: calc(100% / 10);
+
+				@include flex;
+
+				@include note-screen {
+					
+					padding: 0 0 0 1.5625rem !important;
+				}
+			}
+
+			&-underline {
+				position: absolute;
+				bottom: 0;
+				height: 1px;
+				width: 1px;
+				background-color: $color_grey;
+
+				@include transition;
+			}
+		}
+
+		&.-full-vh {
+
+			@include flex;
+            @include align-items(stretch);
+            @include flex-direction(column);
+		}
+
+		@include sm-screen {
+
+			.portfolio-grid-holder {
+				height: auto !important;
+
+				&-underline {
+					bottom: auto;
+					top: 0;
+				}
+			}
+		}
+	}
+
+	// Pagination
+
+	.portfolio-filter,
+	.pagination,
+	.lazy-load {
+		z-index: 3;
+		position: relative;
+		padding-top: 2rem;
+		padding-bottom: 2rem;
+	}
+
+	// Decor
+
+	.project-content {
+	
+		&::before {
+			display: none;
+		}
+	}
+}
+
+// Grid Type 13
+
+@include md-screen {
+
+	.grid_13 {
+
+		&.-reversed {
+
+			.grid-item {
+
+				&:nth-child(2n) {
+
+					.-layout13 {
+
+						@include flex-direction(row-reverse);
+
+						&:not(.-contained) {
+
+							.card-details {
+								padding-left: 0;
+								padding-right: 2.5rem;
+							}
+						}
+
+						&.-contained {
+
+							.card-details {
+								margin-left: 0;
+								margin-right: 2.5rem;
+							}
+						}		
+					}
+				}
+			}
+		}
+
+		.grid-item {
+
+			// Set image width for 1 column layout
+
+			&.vc_col-lg-12 {
+
+				.-layout13 {
+
+					.card-image {
+						min-width: calc(((100% / 3) * 2) - 1.25rem);
+						width: calc(((100% / 3) * 2) - 1.25rem);
+					}
+				}
+			}
+
+			// Set image width for 2, 3, 4, 6 columns layout
+
+			&.vc_col-lg-2,
+			&.vc_col-lg-3,
+			&.vc_col-lg-4,
+			&.vc_col-lg-6 {
+
+				.-layout13 {
+
+					.card-image {
+						min-width: calc((100% / 2) - 1.25rem);
+						width: calc((100% / 2) - 1.25rem);
+					}
+				}
+			}
+		}
+	}
+}
+
+.ohio-recent-projects-sc {
+
+	// WPBakery styles override (Sliders visibility issue)
+
+	.vc_row[data-vc-full-width] {
+
+		&.vc_hidden {
+			opacity: 1;
+		}
+	}
+}
+
+// Animation
+
+@keyframes imageScale {
+
+	0% {
+		transform: scale(1);
+	}
+
+	100% {
+		transform: scale(1.1);
+	}
+}

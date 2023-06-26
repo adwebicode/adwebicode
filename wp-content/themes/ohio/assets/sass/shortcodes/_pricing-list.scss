@@ -1,0 +1,61 @@
+.pricing-list {
+
+	&-headline,
+	&-details {
+
+		@include flex;
+		@include flex-just(space-between);
+	}
+
+	&-headline {
+
+		@include align-items(center);
+	}
+
+	&-price {
+		margin: 0;
+
+		@include flex;
+	}
+
+	&-details {
+		margin-top: 0.25em;
+
+		@include align-items(flex-start);
+
+		p {
+			margin: 0;
+		}
+
+		.badge {
+			background-color: $color-red;
+		}
+	}
+
+	&.-with-discount {
+
+		.pricing-list-price {
+
+			.regular-price {
+				color: $color-grey;
+				text-decoration: line-through;
+			}
+		}
+	}
+}
+
+.dark-scheme {
+
+	.pricing-list {
+	
+		&.-with-discount {
+	
+			.pricing-list-price {
+	
+				.regular-price {
+					color: $color-grey-light;
+				}
+			}
+		}
+	}
+}

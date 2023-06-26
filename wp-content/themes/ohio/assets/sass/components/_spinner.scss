@@ -1,0 +1,90 @@
+.container-loading,
+.yith-wcan-loading,
+.tp-loader.spinner5,
+.btn-loading,
+.spinner {
+
+	&::before {
+		content: "";
+		width: 1.5rem;
+		height: 1.5rem;
+		border: 0.2rem solid rgba($color-neutral, .25);
+		border-top: 0.2rem solid currentColor;
+		border-right: 0.2rem solid currentColor;
+		opacity: 0.75;
+		animation: 0.75s spinner $transition-function infinite;
+
+		@include border-radius(50%);
+	}
+
+	> .icon {
+		display: none;
+	}
+
+	&.-large {
+		width: 2.5rem;
+		height: 2.5rem;
+	}
+}
+
+.btn-loading {
+
+	&::before {
+		margin-right: 0.5rem;
+	}
+}
+
+.container-loading,
+.tp-loader.spinner5,
+.yith-wcan-loading {
+	background-image: none !important;
+	background: transparent;
+
+	&::before {
+		position: absolute;
+		left: calc(50% - 20px);
+		top: calc(50% - 20px);
+		width: 2.5rem;
+		height: 2.5rem;
+	}
+
+	&.hidden {
+
+		&::before {
+			display: none;
+		}
+	}
+}
+
+@-webkit-keyframes spinner {
+
+	0% {
+		transform: rotate(0deg);
+	}
+
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+@keyframes spinner {
+
+	0% {
+		transform: rotate(0deg);
+	}
+  
+  	100% {
+		transform: rotate(360deg);
+	}
+}
+
+// .minimal-scheme {
+
+// 	.spinner {
+
+// 		&::after,
+// 		&::before {
+// 			border-width: 0.125rem;
+// 		}
+// 	}
+// }

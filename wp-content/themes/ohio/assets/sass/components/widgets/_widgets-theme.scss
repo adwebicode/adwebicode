@@ -1,0 +1,85 @@
+// Ohio Widget: Author
+
+.widget_ohio_widget_about_author {
+	max-width: 100%;
+
+	@include flex;
+	@include flex-direction(column);
+
+	.avatar {
+		margin-bottom: 1rem;
+	}
+
+	.social-networks {
+
+		.network {
+			margin-top: 1rem;
+		}
+	}
+
+	.content {
+		flex-grow: 2;
+
+		.details {
+			margin-bottom: 0.4rem;
+
+			.site {
+				font-size: $font-size-small;
+				color: $color-grey;
+			}
+		}
+	}
+}
+
+// Ohio Widget: Contacts
+
+.widget_ohio_widget_contact {
+
+	li {
+
+		font-weight: 500;
+
+		address {
+			display: inline;
+			font-weight: normal;
+		}
+	}
+}
+
+// Ohio Widget: Logo
+
+.widget_ohio_widget_logo {
+
+	img {
+
+		&:hover {
+			opacity: .65;
+
+			@include transition;
+		}
+	}
+}
+
+// Ohio Widget: Recent Posts
+
+.widget_ohio_widget_recent_posts {
+
+	.content-holder {
+		
+		.comments + .author,
+		.date + .categories {
+
+			&::before {
+				margin-right: 0.25rem;
+
+				@include divider;
+			}
+		}
+	}
+}
+
+// Ohio Widget: Social Networks
+
+.widget_ohio_widget_socialbar_subscribe {
+
+}
